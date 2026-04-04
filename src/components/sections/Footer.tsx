@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Instagram, Facebook } from 'lucide-react';
 import { useLanguageStore, translations } from '@/lib/language-store';
+import { FloatingBokeh } from '@/components/AnimatedBackground';
 
 function FooterButterflySVG() {
   return (
@@ -73,11 +74,16 @@ export default function Footer() {
       className="relative mt-auto"
       style={{ backgroundColor: 'var(--salon-dark)' }}
     >
-      {/* Top gradient line */}
+      {/* Floating bokeh */}
+      <FloatingBokeh count={4} variant="dark" />
+
+      {/* Animated shimmer line */}
       <div
-        className="h-0.5"
+        className="h-[2px] animate-shimmer-bg"
         style={{
-          background: 'linear-gradient(90deg, transparent, var(--salon-gold), transparent)',
+          background: 'linear-gradient(90deg, transparent 0%, var(--salon-pink-light) 20%, var(--salon-gold) 40%, var(--salon-pink) 60%, var(--salon-gold) 80%, transparent 100%)',
+          backgroundSize: '1000px 100%',
+          willChange: 'background-position',
         }}
       />
 

@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguageStore, translations } from '@/lib/language-store';
 import Image from 'next/image';
+import { LightStreaks, FloatingBokeh, AuroraOverlay } from '@/components/AnimatedBackground';
 
 const galleryImages = [
   { src: '/images/gallery-1.png', alt: 'Gallery 1' },
@@ -40,6 +41,15 @@ export default function GallerySection() {
         background: 'linear-gradient(135deg, #1A1A2E 0%, #2A1A2E 50%, #1A1A2E 100%)',
       }}
     >
+      {/* Animated aurora */}
+      <AuroraOverlay variant="mixed" />
+
+      {/* Light streaks */}
+      <LightStreaks count={4} />
+
+      {/* Floating bokeh */}
+      <FloatingBokeh count={5} variant="dark" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div

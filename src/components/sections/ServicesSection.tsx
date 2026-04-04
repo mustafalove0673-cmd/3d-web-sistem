@@ -4,6 +4,7 @@ import { useRef, useState, useCallback } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useLanguageStore, translations } from '@/lib/language-store';
 import Image from 'next/image';
+import { AnimatedGradientOrbs, FloatingBokeh } from '@/components/AnimatedBackground';
 
 const serviceImages = [
   '/images/service-haircut.png',
@@ -119,11 +120,19 @@ export default function ServicesSection() {
       className="section-padding relative overflow-hidden"
       style={{ backgroundColor: 'var(--salon-beige)' }}
     >
-      {/* Decorative element */}
+      {/* Animated gradient orbs */}
+      <AnimatedGradientOrbs variant="pink" />
+
+      {/* Floating bokeh particles */}
+      <FloatingBokeh count={6} variant="pink" />
+
+      {/* Animated gradient line at top */}
       <div
-        className="absolute top-0 left-0 right-0 h-1"
+        className="absolute top-0 left-0 right-0 h-[2px] animate-glow-pulse z-10"
         style={{
-          background: 'linear-gradient(90deg, var(--salon-pink-light), var(--salon-gold), var(--salon-pink-light))',
+          background: 'linear-gradient(90deg, transparent, var(--salon-pink-light), var(--salon-gold), var(--salon-pink-light), transparent)',
+          backgroundSize: '200% 100%',
+          willChange: 'opacity',
         }}
       />
 

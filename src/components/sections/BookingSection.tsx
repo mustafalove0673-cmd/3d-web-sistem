@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MessageCircle, Phone } from 'lucide-react';
 import { useLanguageStore, translations } from '@/lib/language-store';
+import { AuroraOverlay, FloatingBokeh, AnimatedGradientOrbs } from '@/components/AnimatedBackground';
 
 export default function BookingSection() {
   const { language } = useLanguageStore();
@@ -18,15 +19,18 @@ export default function BookingSection() {
       className="section-padding relative overflow-hidden"
       style={{ backgroundColor: 'var(--salon-dark)' }}
     >
-      {/* Background decorative elements */}
-      <div
-        className="absolute top-10 right-10 w-64 h-64 rounded-full opacity-5"
-        style={{ background: 'radial-gradient(circle, var(--salon-pink), transparent)' }}
-      />
-      <div
-        className="absolute bottom-10 left-10 w-48 h-48 rounded-full opacity-5"
-        style={{ background: 'radial-gradient(circle, var(--salon-gold), transparent)' }}
-      />
+      {/* Animated aurora background */}
+      <AuroraOverlay variant="pink" />
+
+      {/* Animated gradient orbs */}
+      <AnimatedGradientOrbs variant="pink" />
+
+      {/* Floating bokeh */}
+      <FloatingBokeh count={5} variant="dark" />
+
+      {/* Animated glow ring */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] rounded-full animate-ring-expand pointer-events-none z-0" style={{ border: '1px solid rgba(139,34,82,0.1)' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[550px] sm:h-[550px] rounded-full animate-ring-expand pointer-events-none z-0" style={{ border: '1px solid rgba(201,169,110,0.08)', animationDelay: '2s' }} />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Glassmorphism Card */}

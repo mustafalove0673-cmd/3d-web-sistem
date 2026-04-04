@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown, Sparkles } from 'lucide-react';
 import { useLanguageStore, translations } from '@/lib/language-store';
 import Image from 'next/image';
+import { AuroraOverlay, FloatingBokeh, LightStreaks, RisingParticles } from '@/components/AnimatedBackground';
 
 function ButterflySVG({ className }: { className?: string }) {
   return (
@@ -96,22 +97,31 @@ export default function HeroSection() {
       ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Animated Background Image with Ken Burns effect */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-bg.png"
-          alt="Melek Yüksel Hair Beauty Salon"
-          fill
-          className="object-cover"
-          priority
-          quality={90}
-        />
+        <div className="absolute inset-0 overflow-hidden">
+          <Image
+            src="/images/hero-bg.png"
+            alt="Melek Yüksel Hair Beauty Salon"
+            fill
+            className="object-cover"
+            priority
+            quality={90}
+            style={{
+              transform: 'scale(1.08)',
+              animation: 'gradient-shift 20s ease infinite',
+              willChange: 'transform',
+            }}
+          />
+        </div>
+        {/* Animated aurora overlay */}
+        <AuroraOverlay variant="mixed" />
         {/* Dark gradient overlay */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, rgba(26,26,46,0.7) 0%, rgba(139,34,82,0.5) 40%, rgba(26,26,46,0.6) 100%)',
+              'linear-gradient(135deg, rgba(26,26,46,0.75) 0%, rgba(139,34,82,0.5) 40%, rgba(26,26,46,0.65) 100%)',
           }}
         />
         <div
@@ -123,26 +133,38 @@ export default function HeroSection() {
         />
       </div>
 
+      {/* Floating Bokeh Particles */}
+      <FloatingBokeh count={10} variant="dark" />
+
+      {/* Rising Particles */}
+      <RisingParticles count={5} />
+
+      {/* Light Streaks */}
+      <LightStreaks count={3} />
+
       {/* Floating Glass Panels */}
       <div
-        className="absolute top-20 right-[10%] w-32 h-32 sm:w-48 sm:h-48 rounded-full glass animate-float opacity-30 z-[1]"
+        className="absolute top-20 right-[10%] w-32 h-32 sm:w-48 sm:h-48 rounded-full glass animate-float opacity-30 z-[2]"
         style={{ animationDelay: '0s' }}
       />
       <div
-        className="absolute bottom-32 left-[8%] w-24 h-24 sm:w-40 sm:h-40 rounded-2xl glass animate-float-slow opacity-20 z-[1]"
+        className="absolute bottom-32 left-[8%] w-24 h-24 sm:w-40 sm:h-40 rounded-2xl glass animate-float-slow opacity-20 z-[2]"
         style={{ animationDelay: '2s' }}
       />
       <div
-        className="absolute top-[40%] left-[15%] w-16 h-16 sm:w-28 sm:h-28 rounded-xl glass animate-float-reverse opacity-25 z-[1]"
+        className="absolute top-[40%] left-[15%] w-16 h-16 sm:w-28 sm:h-28 rounded-xl glass animate-float-reverse opacity-25 z-[2]"
         style={{ animationDelay: '4s' }}
       />
 
-      {/* Butterfly Decoration */}
+      {/* Butterfly Decorations with glowing ring */}
+      <div className="absolute top-[16%] right-[11%] z-[2]">
+        <div className="absolute inset-0 w-16 h-14 sm:w-20 sm:h-18 rounded-full animate-ring-expand" style={{ border: '1px solid rgba(201,169,110,0.15)' }} />
+        <ButterflySVG
+          className="relative w-12 h-10 sm:w-16 sm:h-14 text-white animate-butterfly"
+        />
+      </div>
       <ButterflySVG
-        className="absolute top-[18%] right-[12%] w-12 h-10 sm:w-16 sm:h-14 text-white animate-butterfly z-[1]"
-      />
-      <ButterflySVG
-        className="absolute bottom-[25%] left-[8%] w-10 h-8 sm:w-14 sm:h-12 text-white animate-butterfly z-[1] opacity-50"
+        className="absolute bottom-[25%] left-[8%] w-10 h-8 sm:w-14 sm:h-12 text-white animate-butterfly z-[2] opacity-50"
         style={{ animationDelay: '5s' }}
       />
 

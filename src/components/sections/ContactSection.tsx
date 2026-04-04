@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import { useLanguageStore, translations } from '@/lib/language-store';
+import { AnimatedGradientOrbs, FloatingBokeh, RisingParticles } from '@/components/AnimatedBackground';
 
 export default function ContactSection() {
   const { language } = useLanguageStore();
@@ -49,11 +50,21 @@ export default function ContactSection() {
       className="section-padding relative overflow-hidden"
       style={{ backgroundColor: 'var(--salon-cream)' }}
     >
-      {/* Decorative gradient line */}
+      {/* Animated gradient orbs */}
+      <AnimatedGradientOrbs variant="gold" />
+
+      {/* Floating bokeh */}
+      <FloatingBokeh count={5} variant="gold" />
+
+      {/* Rising particles */}
+      <RisingParticles count={4} />
+
+      {/* Animated gradient line */}
       <div
-        className="absolute top-0 left-0 right-0 h-1"
+        className="absolute top-0 left-0 right-0 h-[2px] animate-glow-pulse z-10"
         style={{
-          background: 'linear-gradient(90deg, var(--salon-gold), var(--salon-pink-light), var(--salon-gold))',
+          background: 'linear-gradient(90deg, transparent, var(--salon-gold), var(--salon-pink-light), var(--salon-gold), transparent)',
+          willChange: 'opacity',
         }}
       />
 
