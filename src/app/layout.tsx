@@ -17,9 +17,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "NOVA AI | Web Site Üretim Sistemi",
-  description: "Tek komutla Awwwards-seviye web sitesi üret. 19 paket, 777+ repo referansı, 14 sektör template'i.",
-  keywords: ["NOVA AI", "website generator", "3D website", "Awwwards", "AI web"],
+  title: "MELAKON | Premium Villa Construction",
+  description: "Luxury villa construction and architectural design. Where vision meets craftsmanship.",
+  keywords: ["villa", "construction", "luxury", "architecture", "design"],
 };
 
 export default function RootLayout({

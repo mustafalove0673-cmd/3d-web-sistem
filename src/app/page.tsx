@@ -1,21 +1,61 @@
-export default function SystemPage() {
+'use client';
+
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useLenisSmoothScroll } from '@/hooks/use-lenis';
+import Navbar from '@/components/sections/Navbar';
+import HeroSection from '@/components/sections/HeroSection';
+import AboutSection from '@/components/sections/AboutSection';
+import ServicesSection from '@/components/sections/ServicesSection';
+import ProjectsSection from '@/components/sections/ProjectsSection';
+import StatsSection from '@/components/sections/StatsSection';
+import TestimonialsSection from '@/components/sections/TestimonialsSection';
+import ContactSection from '@/components/sections/ContactSection';
+import Footer from '@/components/sections/Footer';
+import Preloader from '@/components/sections/Preloader';
+
+export default function Home() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useLenisSmoothScroll();
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background text-foreground">
-      <div className="text-center space-y-4">
-        <div className="text-6xl font-bold tracking-tight">
-          NOVA<span className="text-muted-foreground">.ai</span>
-        </div>
-        <p className="text-muted-foreground text-lg">
-          Digital Arts Production System
-        </p>
-        <div className="flex items-center justify-center gap-2 pt-4">
-          <span className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500" />
-          </span>
-          <span className="text-sm text-muted-foreground">Sistem Aktif</span>
-        </div>
-      </div>
-    </div>
+    <>
+      <AnimatePresence mode="wait">
+        {!isLoaded && <Preloader key="preloader" onComplete={() => setIsLoaded(true)} />}
+      </AnimatePresence>
+
+      {isLoaded && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="noise-overlay relative min-h-screen"
+        >
+          <Navbar />
+          <main>
+            <HeroSection />
+            <div className="section-divider mx-auto max-w-7xl" />
+            <AboutSection />
+            <div className="section-divider mx-auto max-w-7xl" />
+            <ServicesSection />
+            <div className="section-divider mx-auto max-w-7xl" />
+            <ProjectsSection />
+            <div className="section-divider mx-auto max-w-7xl" />
+            <StatsSection />
+            <div className="section-divider mx-auto max-w-7xl" />
+            <TestimonialsSection />
+            <div className="section-divider mx-auto max-w-7xl" />
+            <ContactSection />
+          </main>
+          <Footer />
+        </motion.div>
+      )}
+    </>
   );
 }
