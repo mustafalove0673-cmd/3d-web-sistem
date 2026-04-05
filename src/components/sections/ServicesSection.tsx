@@ -190,7 +190,7 @@ export default function ServicesSection() {
                 transition={{ delay: 0.2 + i * 0.15, duration: 0.6 }}
               >
                 <div className="perspective-1000 h-full">
-                  <div className="glass rounded-2xl overflow-hidden h-full card-3d group-hover:scale-[1.02] transition-transform duration-500">
+                  <div className="glass glow-border rounded-2xl overflow-hidden h-full premium-card" data-cursor-hover>
                     {/* Image */}
                     <div className="relative aspect-[4/3] overflow-hidden img-reveal">
                       <Image

@@ -7,10 +7,12 @@ import BookingSection from '@/components/sections/BookingSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/sections/Footer';
 import FloatingButtons from '@/components/sections/FloatingButtons';
+import CustomCursor from '@/components/sections/CustomCursor';
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-dark">
+      <CustomCursor />
       <Navbar />
       <main className="flex-1">
         <HeroSection />

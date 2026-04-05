@@ -187,7 +187,7 @@ export default function HeroSection() {
             variants={letterVariants}
           />
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Premium Magnetic Style */}
           <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
             variants={letterVariants}
@@ -195,15 +195,18 @@ export default function HeroSection() {
             <a
               href="#booking"
               onClick={(e) => { e.preventDefault(); document.querySelector('#booking')?.scrollIntoView({ behavior: 'smooth' }); }}
-              className="group relative px-8 py-4 bg-gradient-to-r from-rose-deep to-rose rounded-full text-white font-body text-sm tracking-wider uppercase overflow-hidden transition-all duration-300 hover:shadow-[0_10px_40px_rgba(200,80,111,0.3)]"
+              className="magnetic-btn glow-border group relative px-10 py-4 bg-gradient-to-r from-rose-deep to-rose rounded-full text-white font-body text-sm tracking-wider uppercase overflow-hidden transition-all duration-500 data-cursor-hover"
+              data-cursor-hover
             >
               <span className="relative z-10">{t.hero.cta1}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-rose to-rose-light opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-rose to-rose-light opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute -inset-px bg-gradient-to-r from-rose/50 to-gold/30 rounded-full opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500" />
             </a>
             <a
               href="#services"
               onClick={(e) => { e.preventDefault(); document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' }); }}
-              className="px-8 py-4 glass rounded-full text-cream/80 font-body text-sm tracking-wider uppercase hover:text-cream hover:border-cream/20 transition-all duration-300"
+              className="px-10 py-4 glass rounded-full text-cream/80 font-body text-sm tracking-wider uppercase hover:text-cream hover:border-gold/30 hover:bg-white/[0.06] transition-all duration-500 data-cursor-hover"
+              data-cursor-hover
             >
               {t.hero.cta2}
             </a>

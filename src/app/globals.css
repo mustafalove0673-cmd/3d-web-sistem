@@ -80,6 +80,16 @@
 /* ========== BASE ========== */
 html {
   scroll-behavior: smooth;
+  cursor: none;
+}
+@media (max-width: 1023px) {
+  html { cursor: auto; }
+}
+a, button, [data-cursor-hover], input, textarea, select {
+  cursor: none;
+}
+@media (max-width: 1023px) {
+  a, button, [data-cursor-hover], input, textarea, select { cursor: pointer; }
 }
 
 @layer base {
@@ -432,4 +442,67 @@ html {
 .stagger-children.visible > * {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ========== MAGNETIC BUTTON ========== */
+.magnetic-btn {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.magnetic-btn:hover {
+  box-shadow: 0 10px 40px rgba(200, 80, 111, 0.3), 0 0 80px rgba(200, 80, 111, 0.08);
+}
+
+/* ========== GLOW BORDER ========== */
+.glow-border {
+  position: relative;
+}
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(200,80,111,0.4), rgba(212,165,116,0.4), rgba(200,80,111,0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.glow-border:hover::before {
+  opacity: 1;
+}
+
+/* ========== TEXT SHIMMER LINE ========== */
+.shimmer-line {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212,165,116,0.3), transparent);
+  animation: shimmer-pass 3s ease-in-out infinite;
+}
+@keyframes shimmer-pass {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ========== PREMIUM CARD HOVER ========== */
+.premium-card {
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+.premium-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 
+    0 25px 60px rgba(0,0,0,0.4),
+    0 0 40px rgba(200,80,111,0.06),
+    0 0 80px rgba(212,165,116,0.04);
 }

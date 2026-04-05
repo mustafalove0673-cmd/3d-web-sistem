@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { Sparkles, Award, Users, Clock } from 'lucide-react';
 import { useLanguageStore, translations } from '@/lib/language-store';
+import TextSplit from '@/components/sections/TextSplit';
 
 const stats = [
   { tr: { value: '10+', label: 'Yıllık Deneyim' }, en: { value: '10+', label: 'Years Experience' }, icon: Award },
@@ -27,6 +28,29 @@ export default function AboutSection() {
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
   const { language } = useLanguageStore();
   const [imgLoaded, setImgLoaded] = useState(false);
+  const [counts, setCounts] = useState({ exp: 0, clients: 0, services: 0, days: 0 });
+
+  // Animated counters
+  useEffect(() => {
+    if (!isInView) return;
+    const duration = 2000;
+    const start = performance.now();
+    const targets = { exp: 10, clients: 5000, services: 15, days: 6 };
+
+    function update(now: number) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCounts({
+        exp: Math.floor(targets.exp * eased),
+        clients: Math.floor(targets.clients * eased),
+        services: Math.floor(targets.services * eased),
+        days: Math.floor(targets.days * eased),
+      });
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }, [isInView]);
 
   // Parallax image on scroll
   const { scrollYProgress } = useScroll({
@@ -35,6 +59,9 @@ export default function AboutSection() {
   });
   const imageY = useTransform(scrollYProgress, [0, 1], [60, -60]);
   const imageScale = useTransform(scrollYProgress, [0, 0.5], [1.15, 1]);
+
+  // Horizontal line reveal on scroll
+  const lineWidth = useTransform(scrollYProgress, [0.1, 0.4], ['0%', '100%']);
 
   return (
     <section
@@ -83,16 +110,33 @@ export default function AboutSection() {
               <div className="absolute bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-gold/40 rounded-br-lg" />
             </motion.div>
 
-            {/* Floating accent card */}
+            {/* Floating accent card with animated counter */}
             <motion.div
               className="absolute -bottom-6 -right-6 md:bottom-8 md:-right-8 glass-strong p-4 md:p-6 rounded-xl"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ delay: 0.5, duration: 0.5 }}
+              transition={{ delay: 0.5, duration: 0.5, type: 'spring', stiffness: 200, damping: 20 }}
             >
-              <div className="text-3xl md:text-4xl font-display font-bold text-gradient-rose">10+</div>
+              <div className="text-3xl md:text-4xl font-display font-bold text-gradient-rose">
+                {counts.exp}+
+              </div>
               <div className="text-xs text-cream/50 tracking-wider uppercase font-body mt-1">
                 {language === 'tr' ? 'Yıllık Deneyim' : 'Years Experience'}
+              </div>
+            </motion.div>
+
+            {/* Second floating card */}
+            <motion.div
+              className="absolute top-8 -left-4 md:top-12 md:-left-8 glass-strong px-4 py-3 rounded-xl"
+              initial={{ opacity: 0, x: -30 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: 0.7, duration: 0.5 }}
+            >
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                <span className="text-xs text-cream/60 font-body">
+                  {language === 'tr' ? 'Randevu Alınabilir' : 'Available Now'}
+                </span>
               </div>
             </motion.div>
           </motion.div>
@@ -112,25 +156,27 @@ export default function AboutSection() {
               </span>
             </motion.div>
 
-            {/* Title */}
-            <motion.h2
-              custom={1}
-              variants={fadeInUp}
-              initial="hidden"
-              animate={isInView ? 'visible' : 'hidden'}
-              className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-cream mb-2 leading-tight"
+            {/* Title with TextSplit */}
+            <motion.div
+              className="mb-6"
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.2 }}
             >
-              {language === 'tr' ? 'Güzelliğe' : 'Where Beauty'}
-            </motion.h2>
-            <motion.h3
-              custom={1.5}
-              variants={fadeInUp}
-              initial="hidden"
-              animate={isInView ? 'visible' : 'hidden'}
-              className="font-display text-3xl md:text-4xl lg:text-5xl font-light italic text-gradient-gold mb-6"
-            >
-              {language === 'tr' ? 'Değer Katıyoruz' : 'Meets Passion'}
-            </motion.h3>
+              <TextSplit
+                as="h2"
+                className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-cream leading-tight"
+                delay={0.2}
+              >
+                {language === 'tr' ? 'Güzelliğe Değer Katıyoruz' : 'Where Beauty Meets Passion'}
+              </TextSplit>
+            </motion.div>
+
+            {/* Animated horizontal line */}
+            <motion.div
+              className="w-full h-[1px] bg-gradient-to-r from-rose/40 via-gold/30 to-transparent mb-6"
+              style={{ width: lineWidth }}
+            />
 
             {/* Description */}
             <motion.div
@@ -152,11 +198,17 @@ export default function AboutSection() {
               </p>
             </motion.div>
 
-            {/* Stats Grid */}
+            {/* Stats Grid with animated counters */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((stat, i) => {
                 const Icon = stat.icon;
                 const s = stat[language];
+                const counterValues = [
+                  counts.exp + '+',
+                  counts.clients.toLocaleString() + '+',
+                  counts.services + '+',
+                  counts.days.toString(),
+                ];
                 return (
                   <motion.div
                     key={i}
@@ -164,11 +216,15 @@ export default function AboutSection() {
                     variants={fadeInUp}
                     initial="hidden"
                     animate={isInView ? 'visible' : 'hidden'}
-                    className="glass p-4 rounded-xl group hover:bg-white/[0.06] transition-all duration-300"
-                    whileHover={{ y: -4 }}
+                    className="glass p-4 rounded-xl group hover:bg-white/[0.06] transition-all duration-300 cursor-pointer"
+                    whileHover={{ y: -4, scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    data-cursor-hover
                   >
                     <Icon size={18} className="text-gold/50 mb-2 group-hover:text-gold transition-colors" />
-                    <div className="text-2xl font-display font-bold text-cream">{s.value}</div>
+                    <div className="text-2xl font-display font-bold text-cream tabular-nums">
+                      {counterValues[i]}
+                    </div>
                     <div className="text-[11px] text-cream/40 tracking-wider uppercase font-body mt-0.5">
                       {s.label}
                     </div>
