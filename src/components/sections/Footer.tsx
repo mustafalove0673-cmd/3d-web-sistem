@@ -1,114 +1,90 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, ArrowUp } from 'lucide-react'
+import { HardHat, Phone, Mail, MapPin, ArrowUp } from 'lucide-react'
+
+const footerLinks = {
+  'Hizmetler': ['Konut', 'Ticari', 'Endüstriyel', 'Otel', 'Restorasyon', 'Dekorasyon'],
+  'Şirket': ['Hakkımızda', 'Projeler', 'Kariyer', 'Blog', 'İletişim'],
+}
 
 export default function Footer() {
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+  const scrollUp = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
-    <footer id="contact" className="bg-foreground text-white">
-      {/* CTA Bar */}
-      <div className="border-b border-white/10">
-        <div className="max-w-[1200px] mx-auto px-6 py-14 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                Hayalinizdeki Evi Mi İstiyorsunuz?
-              </h2>
-              <p className="text-white/50 text-[14px] leading-relaxed">
-                Ücretsiz danışmanlık için hemen iletişime geçin. Size en uygun projeyi birlikte belirleyelim.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 md:justify-end">
-              <a
-                href="tel:+905551234567"
-                className="inline-flex items-center justify-center gap-2 bg-accent text-white text-[14px] font-semibold px-7 py-3 rounded-lg hover:bg-accent/90 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                0555 123 45 67
-              </a>
-              <a
-                href="mailto:info@ahsapvilla.com"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 text-white text-[14px] font-semibold px-7 py-3 rounded-lg hover:bg-white/20 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                İletişim
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <footer className="relative bg-card overflow-hidden">
+      {/* Top divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
 
-      {/* Main Footer */}
-      <div className="max-w-[1200px] mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <svg className="w-4 h-4 text-foreground" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M3 21V7l9-4 9 4v14H3zm2-2h14V8.2l-7-3.1-7 3.1V19z"/>
-                  <rect x="9" y="13" width="6" height="6" rx="0.5"/>
-                </svg>
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="relative w-10 h-10">
+                <div className="absolute inset-0 bg-accent rounded-lg rotate-45" />
+                <span className="absolute inset-0 flex items-center justify-center text-sm font-black text-dark-card">S</span>
               </div>
-              <span className="text-base font-bold">Ahşap<span className="text-accent">Villa</span></span>
+              <div>
+                <span className="text-lg font-extrabold text-foreground">STRUCTURA</span>
+                <div className="text-[8px] font-bold tracking-[0.35em] text-muted-foreground -mt-1">İNŞAAT & MİMARLİK</div>
+              </div>
             </div>
-            <p className="text-white/40 text-[13px] leading-relaxed mb-4 max-w-xs">
-              Modern ahşap ev teknolojisi ile Türkiye genelinde hizmet veriyoruz.
+            <p className="text-[13px] text-muted-foreground leading-relaxed mb-5 max-w-sm">
+              25 yılı aşkın deneyimimizle, modern inşaat ve mimarlık çözümleri sunuyoruz.
             </p>
             <div className="space-y-2">
-              <a href="tel:+905551234567" className="flex items-center gap-2 text-[13px] text-white/50 hover:text-accent transition-colors">
+              <a href="tel:+905551234567" className="flex items-center gap-2 text-[13px] text-muted-foreground hover:text-accent transition-colors">
                 <Phone className="w-3.5 h-3.5" /> 0555 123 45 67
               </a>
-              <a href="mailto:info@ahsapvilla.com" className="flex items-center gap-2 text-[13px] text-white/50 hover:text-accent transition-colors">
-                <Mail className="w-3.5 h-3.5" /> info@ahsapvilla.com
+              <a href="mailto:info@structura.com.tr" className="flex items-center gap-2 text-[13px] text-muted-foreground hover:text-accent transition-colors">
+                <Mail className="w-3.5 h-3.5" /> info@structura.com.tr
               </a>
+              <div className="flex items-center gap-2 text-[13px] text-muted-foreground">
+                <MapPin className="w-3.5 h-3.5" /> Atatürk Blv. No:123, Ankara
+              </div>
             </div>
           </div>
 
           {/* Links */}
-          <div>
-            <h3 className="text-[13px] font-bold uppercase tracking-wider text-white/70 mb-4">Hizmetler</h3>
-            <ul className="space-y-2.5">
-              {['Ahşap Ev İnşaatı', 'Prefabrik Evler', 'Karkas Teknolojisi', 'İç Dekorasyon', 'Proje Tasarımı', 'Bakım & Onarım'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-[13px] text-white/40 hover:text-accent transition-colors">{link}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Address */}
-          <div>
-            <h3 className="text-[13px] font-bold uppercase tracking-wider text-white/70 mb-4">İletişim</h3>
-            <div className="flex items-start gap-2 mb-3">
-              <MapPin className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-              <span className="text-[13px] text-white/40 leading-relaxed">
-                Atatürk Blv. No:123, Çankaya, Ankara
-              </span>
+          {Object.entries(footerLinks).map(([title, links], i) => (
+            <div key={title}>
+              <h3 className="text-[13px] font-bold text-foreground mb-4">{title}</h3>
+              <ul className="space-y-2.5">
+                {links.map(l => (
+                  <li key={l}><a href="#" className="text-[13px] text-muted-foreground hover:text-accent transition-colors">{l}</a></li>
+                ))}
+              </ul>
             </div>
-            <p className="text-[12px] text-white/30">
-              Pzt - Cmt: 09:00 - 18:00
-            </p>
-          </div>
+          ))}
         </div>
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-white/10">
-        <div className="max-w-[1200px] mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[12px] text-white/30">
-            © {new Date().getFullYear()} AhşapVilla. Tüm hakları saklıdır.
+      <div className="border-t border-border">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-[11px] text-muted-foreground/50">
+            © {new Date().getFullYear()} STRUCTURA İnşaat. Tüm hakları saklıdır.
           </p>
-          <button
-            onClick={scrollToTop}
-            className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"
-          >
-            <ArrowUp className="w-4 h-4" />
-          </button>
+          <div className="flex items-center gap-2">
+            {['in', 'ig', 'tw', 'fb'].map(s => (
+              <a key={s} href="#" className="w-8 h-8 rounded-lg glass flex items-center justify-center text-[10px] font-bold text-muted-foreground hover:bg-accent hover:text-dark-card transition-all duration-300 uppercase">{s}</a>
+            ))}
+          </div>
         </div>
       </div>
+
+      {/* Scroll to top */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={scrollUp}
+        className="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-accent text-dark-card flex items-center justify-center glow hover:glow-strong transition-shadow"
+      >
+        <ArrowUp className="w-5 h-5" />
+      </motion.button>
     </footer>
   )
 }

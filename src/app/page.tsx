@@ -2,10 +2,10 @@
 
 import Navbar from '@/components/sections/Navbar'
 import HeroSection from '@/components/sections/HeroSection'
-import TechSection from '@/components/sections/TechSection'
-import CatalogSection from '@/components/sections/CatalogSection'
-import PaymentSection from '@/components/sections/PaymentSection'
-import StepsSection from '@/components/sections/StepsSection'
+import ServicesSection from '@/components/sections/ServicesSection'
+import ProjectsSection from '@/components/sections/ProjectsSection'
+import StatsSection from '@/components/sections/StatsSection'
+import ContactSection from '@/components/sections/ContactSection'
 import Footer from '@/components/sections/Footer'
 
 export default function Home() {
@@ -13,10 +13,10 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       <Navbar />
       <HeroSection />
-      <TechSection />
-      <CatalogSection />
-      <PaymentSection />
-      <StepsSection />
+      <ServicesSection />
+      <ProjectsSection />
+      <StatsSection />
+      <ContactSection />
       <Footer />
     </main>
   )

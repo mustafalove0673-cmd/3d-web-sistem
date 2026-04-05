@@ -1,120 +1,143 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { Building2, Calendar, Users, Phone } from 'lucide-react'
-
-const stats = [
-  { icon: Building2, value: '65+', label: 'Tamamlanan Proje' },
-  { icon: Calendar, value: '7+', label: 'Yıllık Deneyim' },
-  { icon: Users, value: '180+', label: 'Mutlu Müşteri' },
-]
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { ArrowDown } from 'lucide-react'
 
 export default function HeroSection() {
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '40%'])
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
+
+  const words = 'Geleceğin Yapılarını İnşa Ediyoruz'.split(' ')
+
   return (
-    <section id="hero" className="relative bg-background pt-[72px]">
-      <div className="max-w-[1200px] mx-auto px-6 py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
+    <section id="hero" ref={ref} className="relative min-h-screen flex items-center overflow-hidden bg-background">
+      {/* BG */}
+      <motion.div style={{ y }} className="absolute inset-0">
+        <div className="absolute inset-0 grid-bg" />
+        <div className="absolute top-20 left-[10%] w-[500px] h-[500px] bg-accent/[0.06] rounded-full blur-[120px] float-1" />
+        <div className="absolute bottom-20 right-[10%] w-[400px] h-[400px] bg-glow-2/[0.05] rounded-full blur-[100px] float-2" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-accent/[0.03] rounded-full blur-[150px]" />
+
+        {/* Geometric */}
+        <div className="absolute top-32 right-[20%] w-28 h-28 border border-accent/10 rounded-2xl float-2" style={{ animationDuration: '20s' }} />
+        <div className="absolute bottom-40 left-[15%] w-16 h-16 border border-accent/[0.08] rounded-full float-1" />
+        <div className="absolute top-[60%] right-[12%] w-3 h-3 bg-accent/20 rounded-full float-3" />
+        <div className="absolute top-[25%] left-[25%] w-2 h-2 bg-glow-2/30 rounded-full float-2" />
+
+        {/* Lines */}
+        <svg className="absolute inset-0 w-full h-full opacity-[0.03]">
+          <line x1="20%" y1="0" x2="20%" y2="100%" stroke="#e8a838" strokeWidth="1" />
+          <line x1="80%" y1="0" x2="80%" y2="100%" stroke="#e8a838" strokeWidth="1" />
+          <line x1="0" y1="30%" x2="100%" y2="30%" stroke="#e8a838" strokeWidth="1" />
+          <line x1="0" y1="70%" x2="100%" y2="70%" stroke="#e8a838" strokeWidth="1" />
+        </svg>
+      </motion.div>
+
+      {/* Content */}
+      <motion.div style={{ opacity }} className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 pb-24">
+        <div className="max-w-4xl">
+          {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="inline-flex items-center gap-3 mb-8"
           >
-            <h1 className="text-4xl md:text-[44px] lg:text-[52px] font-extrabold text-foreground leading-[1.15] tracking-tight mb-5">
-              Hazır Ahşap Ev{' '}
-              <span className="text-gradient-accent">100 m²</span>{' '}
-              Üzeri Anahtar Teslim{' '}
-              <span className="text-gradient-accent">2 Ayda</span>
-            </h1>
-
-            <p className="text-[15px] text-muted-foreground leading-relaxed mb-8 max-w-lg">
-              Modern teknolojiler ve yüksek kaliteli malzemeler kullanarak hayalinizdeki ahşap evi en kısa sürede inşa ediyoruz.
-            </p>
-
-            <div className="flex flex-wrap gap-3 mb-10">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center bg-foreground text-white text-[14px] font-semibold px-7 py-3 rounded-lg hover:bg-foreground/90 transition-colors"
-              >
-                Ücretsiz Teklif Al
-              </a>
-              <a
-                href="tel:+905551234567"
-                className="inline-flex items-center gap-2 border-2 border-foreground text-foreground text-[14px] font-semibold px-7 py-3 rounded-lg hover:bg-foreground hover:text-white transition-all"
-              >
-                <Phone className="w-4 h-4" />
-                0555 123 45 67
-              </a>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              {stats.map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                  className="bg-white border border-border rounded-xl p-4"
-                >
-                  <stat.icon className="w-5 h-5 text-accent mb-2" />
-                  <div className="text-2xl font-bold text-foreground">{stat.value}</div>
-                  <div className="text-[11px] text-muted-foreground font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
+            <div className="relative w-2.5 h-2.5 bg-accent rounded-full pulse-dot" />
+            <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-muted-foreground">
+              1998&apos;den beri • 350+ proje
+            </span>
           </motion.div>
 
-          {/* Right - Hero Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            {/* House image placeholder with gradient */}
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-800 via-green-700 to-amber-900 aspect-[4/3]">
-              {/* Simulated house image */}
-              <div className="absolute inset-0 flex items-end justify-center">
-                {/* Sky gradient */}
-                <div className="absolute inset-0 bg-gradient-to-b from-sky-400/30 via-transparent to-green-900/40" />
-                
-                {/* Tree silhouettes */}
-                <div className="absolute bottom-0 left-[5%] w-16 h-32 bg-green-900/40 rounded-t-full" />
-                <div className="absolute bottom-0 left-[12%] w-12 h-24 bg-green-800/30 rounded-t-full" />
-                <div className="absolute bottom-0 right-[8%] w-20 h-36 bg-green-900/40 rounded-t-full" />
-                <div className="absolute bottom-0 right-[20%] w-14 h-28 bg-green-800/30 rounded-t-full" />
-                
-                {/* House shape */}
-                <div className="relative w-[70%] h-[75%] flex flex-col items-center justify-end">
-                  {/* Roof */}
-                  <div className="w-[110%] h-[30%] bg-amber-800/60" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }} />
-                  {/* Wall */}
-                  <div className="w-[85%] h-[55%] bg-amber-100/70 rounded-sm relative border border-amber-200/30">
-                    {/* Windows */}
-                    <div className="absolute top-[15%] left-[15%] w-[25%] h-[35%] bg-sky-300/40 border border-sky-400/30 rounded-sm" />
-                    <div className="absolute top-[15%] right-[15%] w-[25%] h-[35%] bg-sky-300/40 border border-sky-400/30 rounded-sm" />
-                    {/* Door */}
-                    <div className="absolute bottom-0 left-[38%] w-[24%] h-[40%] bg-amber-700/50 rounded-t-sm" />
-                  </div>
-                  {/* Ground */}
-                  <div className="w-[120%] h-[8%] bg-green-800/30 rounded-full" />
-                </div>
-              </div>
+          {/* Title */}
+          <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-[1.08] tracking-tight mb-8">
+            {words.map((w, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 50, rotateX: -40 }}
+                animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + i * 0.07, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="inline-block mr-[0.22em]"
+              >
+                {w === 'Yapılarını' || w === 'İnşa' ? (
+                  <span className="text-gradient-gold">{w}</span>
+                ) : w === 'Geleceğin' ? (
+                  <span className="text-accent">{w}</span>
+                ) : (
+                  w
+                )}
+              </motion.span>
+            ))}
+          </h1>
 
-              {/* Top right badge */}
-              <div className="absolute top-4 right-4 flex gap-2">
-                <a href="#contact" className="bg-white/95 backdrop-blur-sm text-foreground text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-sm hover:bg-white transition-colors">
-                  Teklif Al
-                </a>
-                <a href="tel:+905551234567" className="bg-white/95 backdrop-blur-sm text-foreground text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-sm hover:bg-white transition-colors">
-                  0555 123 45 67
-                </a>
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1 }}
+            className="text-lg text-muted-foreground max-w-xl leading-relaxed mb-10"
+          >
+            Konut, ticari ve endüstriyel projelerinizde modern mühendislik, kaliteli malzeme ve zamanında teslim.
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1.2 }}
+            className="flex flex-col sm:flex-row gap-4"
+          >
+            <a
+              href="#contact"
+              className="btn-shine magnetic inline-flex items-center justify-center bg-accent text-dark-card font-bold px-8 py-4 rounded-full glow hover:glow-strong transition-shadow text-[15px]"
+            >
+              Ücretsiz Keşif &amp; Teklif
+            </a>
+            <a
+              href="#projects"
+              className="magnetic inline-flex items-center justify-center border border-foreground/15 text-foreground font-semibold px-8 py-4 rounded-full hover:bg-white/[0.04] transition-all text-[15px]"
+            >
+              Projelerimiz
+            </a>
+          </motion.div>
+
+          {/* Quick Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1.5 }}
+            className="flex flex-wrap gap-10 mt-16 pt-8 border-t border-border/50"
+          >
+            {[
+              { val: '350+', label: 'Proje' },
+              { val: '25+', label: 'Yıl Deneyim' },
+              { val: '500+', label: 'Müşteri' },
+              { val: '28', label: 'Ödül' },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="text-2xl font-black text-gradient-gold">{s.val}</div>
+                <div className="text-[11px] text-muted-foreground font-medium mt-0.5">{s.label}</div>
               </div>
-            </div>
+            ))}
           </motion.div>
         </div>
-      </div>
+      </motion.div>
+
+      {/* Scroll */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      >
+        <span className="text-[9px] font-bold tracking-[0.25em] uppercase text-muted-foreground/40">Keşfet</span>
+        <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+          <ArrowDown className="w-4 h-4 text-muted-foreground/30" />
+        </motion.div>
+      </motion.div>
     </section>
   )
 }
