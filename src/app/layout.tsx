@@ -17,9 +17,17 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "MELAKON | Premium Villa Construction",
-  description: "Luxury villa construction and architectural design. Where vision meets craftsmanship.",
-  keywords: ["villa", "construction", "luxury", "architecture", "design"],
+  title: "MELAKON | Premium Villa Construction & Architectural Excellence",
+  description:
+    "Luxury villa construction and architectural design. Where vision meets craftsmanship. Building dreams into reality with 25+ years of excellence.",
+  keywords: [
+    "villa construction",
+    "luxury homes",
+    "architecture",
+    "interior design",
+    "premium construction",
+    "MELAKON",
+  ],
 };
 
 export default function RootLayout({
@@ -28,8 +36,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.variable} ${dmSans.variable} font-body antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${spaceGrotesk.variable} ${dmSans.variable} font-body antialiased`}
+      >
         {children}
       </body>
     </html>
