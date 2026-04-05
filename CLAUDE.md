@@ -1,20 +1,23 @@
-# 🧠 CLAUDE CODE - VİRAL 3D WEBSITE ÜRETİM SİSTEMİ v6.0
+# 🧠 CLAUDE CODE - VİRAL 3D WEBSITE ÜRETİM SİSTEMİ v7.0
 
 > **Bu dosya Claude Code'un beynidir.** Her mesajda bu talimatları okur ve uygular.
-> Tek bir "tema [isim]" komutunda, 480 GitHub repo'sundan en uygun 25-30 tanesini SEÇER,
+> Tek bir "tema [isim]" komutunda, 231 doğrulanmış GitHub repo'sundan en uygun 25-30 tanesini SEÇER,
 > bu repo'ların tekniklerini KULLANARAK sıfırdan %100 Awwwards-seviye viral website üretir.
 >
-> **v6.0 YENİ:** 103 yeni repo eklendi (3 AI System Prompts + 100 Three.js 3D Modelleme)
+> **v7.0 GÜNCELLEMELER:**
+> - 231 GitHub API doğrulanmış repo (258 sahte silindi, 17 redirect düzeltildi)
+> - ⚠️ KRİTİK: Hatalı repo linklerini otomatik araştır, düzelt ve sisteme kur
 
 ---
 
 ## 🗄️ AKTİF REPO KAPASİTE SİSTEMİ (YENİ v4.0)
 
-### 480 Repo → 3 Türe Ayrıldı
+### 231 Doğrulanmış Repo → 3 Türe Ayrıldı (v7.0)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  TOPLAM 480 GITHUB REPO SİSTEMDE AKTİF                     │
+│  TOPLAM 231 DOĞRULANMIŞ GITHUB REPO SİSTEMDE AKTİF          │
+│  (GitHub API ile %100 doğrulanmış - 258 sahte silindi)       │
 │                                                              │
 │  📦 KURULU PAKETLER (19 adet - projede npm install edilmiş)  │
 │  ├── three, @react-three/fiber, @react-three/drei            │
@@ -847,6 +850,91 @@ AŞAMA 1-7: Mevcut akışa devam (video bilgileri dahil)
 [18] Kinetik tipografi + micro-interactions
 [19] Parallax multi-layer
 [20] Sticky footer
+```
+
+---
+
+## ⚠️ KRİTİK: HATALI REPO OTO-ARAŞTIRMA & DÜZELTME SİSTEMİ (v7.0)
+
+### Kural: HER Repo Linki Doğrulanmış Olmalı
+
+```
+┌───────────────────────────────────────────────────────────────────┐
+│  REPO DOĞRULAMA AKIŞI (HER SEFER ÇALIŞIR)                        │
+│                                                                    │
+│  [1] KULLANICI repo talep ettiğinde veya yeni repo eklendiğinde:   │
+│  [2] curl ile GitHub API kontrol → HTTP 200 mü?                   │
+│  [3] EĞER 404 → SAHTE REPO                                        │
+│  [4] EĞER 301 → REDIRECT → doğru URL'yi bul                       │
+│  [5] EĞER SAHTE veya BOZUK →                                      │
+│      a) Web'de araştır (web_search ile)                            │
+│      b) Doğru/kaliteli alternatif repo bul                         │
+│      c) Doğrula (curl + GitHub API)                               │
+│      d) MEGA_PROMPT.md'a ekle                                      │
+│      e) Eski sahte/brokun linki sil                                │
+│      f) Git commit + push                                          │
+│  [6] TOPLAM repo sayısını güncelle                                 │
+└───────────────────────────────────────────────────────────────────┘
+```
+
+### Doğrulama Komutları
+
+```bash
+# Tek repo kontrol
+curl -sI "https://api.github.com/repos/KULLANICI/REPO" \
+  -H "Authorization: token YOUR_GITHUB_PAT" \
+  | grep "status:"
+
+# Toplu kontrol (10'lu batch)
+for repo in "user/repo1" "user/repo2" "user/repo3"; do
+  code=$(curl -sI -o /dev/null -w "%{http_code}" \
+    "https://api.github.com/repos/$repo" \
+    -H "Authorization: token YOUR_GITHUB_PAT")
+  echo "$code | $repo"
+done
+```
+
+### Araştırma & Düzeltme Akışı
+
+```
+EĞER bir repo 404 verirse:
+├── 1. Web'de aynı isimle veya benzer projede ara
+│   └── z-ai function -n web_search -a '{"query":"[repo ismi] github", "num":5}'
+├── 2. Bulunan alternatifleri kontrol et (curl ile doğrula)
+├── 3. En iyi alternatifi seç
+├── 4. MEGA_PROMPT.md'a ekle (eski sahte linki sil)
+├── 5. Git commit: "fix: [repo] 404 → [yeni_repo] ile değiştirildi"
+└── 6. Her iki remote'a push: origin + cloud
+
+EĞER bir repo 301 verirse (redirect):
+├── 1. Redirect hedefini bul (curl -L ile)
+├── 2. Yeni URL'yi MEGA_PROMPT.md'da güncelle
+├── 3. Git commit + push
+└── 4. Örnek: framer/motion → motiondivision/motion
+```
+
+### Yasaklar
+
+```
+❌ 404 veren repo'yu MEGA_PROMPT.md'da BIRAKMA
+❌ Uydurma/varsayımsal repo linki EKLEME
+❌ Doğrulanmamış repo'yu referans OLARAK KULLANMA
+❌ "nicollash" veya bilinen sahte hesaplardan repo EKLEME
+✅ HER repo curl ile 200 dönmeli
+✅ Link kesinlikle github.com/KULLANICI/REPO formatında olmalı
+✅ Doğrulama yapılmadan repo SAYISINI ARTIRMA
+```
+
+### Mevcut Durum (v7.1)
+
+```
+Toplam Kontrol Edilen:  465 repo
+✅ Gerçek (200):        190 repo
+🔄 Yeniden Yönlendirme (301): 17 repo → URL'leri düzeltildi
+❌ Sahte (404):         258 repo → SİLİNDİ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MEGA_PROMPT.md Aktif:   231 DOĞRULANMIŞ repo
+GITHUB_REPOS.md Aktif:  168 repo (tümü doğrulanmış)
 ```
 
 ---
