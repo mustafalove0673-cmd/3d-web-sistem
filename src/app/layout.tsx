@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/hooks/use-lenis";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-heading",
@@ -27,8 +28,10 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning>
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased`}>
-        <div className="noise" />
-        {children}
+        <SmoothScroll>
+          <div className="noise" />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

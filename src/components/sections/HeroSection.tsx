@@ -1,8 +1,21 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { ChevronDown } from 'lucide-react'
+
+const HeroScene = dynamic(
+  () => import('@/components/three/HeroScene'),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="absolute inset-0 z-[2] flex items-center justify-center">
+        <div className="w-6 h-6 border-2 border-primary/30 border-t-primary rounded-full animate-spin" />
+      </div>
+    ),
+  }
+)
 
 const letterVariants = {
   hidden: { y: 100, opacity: 0, rotateX: -80 },
@@ -55,45 +68,19 @@ export default function HeroSection() {
 
   return (
     <section id="hero" ref={ref} className="relative h-screen overflow-hidden flex items-center justify-center">
-      {/* Animated bg gradient */}
-      <motion.div
-        animate={{
-          background: [
-            'radial-gradient(ellipse at 20% 50%, rgba(230,57,70,0.08) 0%, transparent 50%)',
-            'radial-gradient(ellipse at 80% 50%, rgba(230,57,70,0.06) 0%, transparent 50%)',
-            'radial-gradient(ellipse at 20% 50%, rgba(230,57,70,0.08) 0%, transparent 50%)',
-          ],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute inset-0"
-      />
+      {/* 3D Background */}
+      <div className="absolute inset-0 z-[1]">
+        <HeroScene />
+      </div>
+
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/70 via-transparent to-[#0A0A0A] z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/80 via-transparent to-transparent z-[2]" />
 
       {/* Diagonal lines */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'repeating-linear-gradient(-45deg, transparent, transparent 100px, rgba(255,255,255,0.1) 100px, rgba(255,255,255,0.1) 101px)',
+      <div className="absolute inset-0 z-[3] opacity-[0.02]" style={{
+        backgroundImage: 'repeating-linear-gradient(-45deg, transparent, transparent 100px, rgba(255,255,255,0.15) 100px, rgba(255,255,255,0.15) 101px)',
       }} />
-
-      {/* Floating geometric shapes */}
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-        className="absolute top-1/4 right-[15%] w-[300px] h-[300px] border border-white/[0.03] rounded-full"
-      />
-      <motion.div
-        animate={{ rotate: -360 }}
-        transition={{ duration: 45, repeat: Infinity, ease: 'linear' }}
-        className="absolute bottom-1/4 left-[10%] w-[200px] h-[200px] border border-primary/[0.06] rounded-full"
-      />
-      <motion.div
-        animate={{ rotate: 180 }}
-        transition={{ duration: 80, repeat: Infinity, ease: 'linear' }}
-        className="absolute top-[20%] left-[25%] w-[4px] h-[4px] rounded-full bg-primary/30"
-      />
-      <motion.div
-        animate={{ rotate: -180 }}
-        transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-        className="absolute bottom-[30%] right-[20%] w-[6px] h-[6px] rounded-full bg-secondary/20"
-      />
 
       {/* Main Content */}
       <motion.div style={{ y, opacity, scale }} className="relative z-10 text-center px-6">
@@ -129,7 +116,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.4 }}
-          className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
+          className="text-white/50 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
         >
           Sinematik mimari, dayanıklı yapılar ve zamanında teslim garantisiyle
           hayalinizdeki projeyi birlikte inşa ediyoruz.
@@ -171,12 +158,12 @@ export default function HeroSection() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
         <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>
-          <ChevronDown className="w-6 h-6 text-muted-foreground/50" />
+          <ChevronDown className="w-6 h-6 text-white/30" />
         </motion.div>
       </motion.div>
 
-      {/* Bottom reveal */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A0A0A] to-transparent z-10" />
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A0A0A] to-transparent z-[5]" />
     </section>
   )
 }

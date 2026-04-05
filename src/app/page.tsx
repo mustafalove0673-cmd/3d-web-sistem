@@ -4,6 +4,7 @@ import MarqueeStrip from '@/components/sections/MarqueeStrip'
 import AboutSection from '@/components/sections/AboutSection'
 import ServicesSection from '@/components/sections/ServicesSection'
 import ProjectsSection from '@/components/sections/ProjectsSection'
+import TestimonialsSection from '@/components/sections/TestimonialsSection'
 import ContactSection from '@/components/sections/ContactSection'
 import Footer from '@/components/sections/Footer'
 
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />
+      <TestimonialsSection />
       <ContactSection />
       <Footer />
     </main>
