@@ -1,10 +1,10 @@
 # 🧠 NOVA AI - MEGA PROMPT
 # Bu prompt'u başka bir AI'ya verdiğinde, o AI tüm sistemi anlar ve uygulayabilir.
 
-> **Versiyon:** 6.2
-> **Son Güncelleme:** 2026-04-13
-> **Toplam Repo:** 489
-> **Hedef Repo:** 669 (12 yeni kategori planlı)
+> **Versiyon:** 7.0
+> **Son Güncelleme:** 2026-04-14
+> **Toplam Repo:** 231
+> **Hedef Repo:** 231 (12 yeni kategori planlı)
 > **Kurulu Paket:** 19
 > **AI Skill:** 16
 > **Sektör Template:** 14
@@ -43,20 +43,12 @@ NOVA AI, kullanıcı "tema [konu]" dediğinde otomatik olarak Awwwards-seviye pr
 | 5 | Postprocessing | `@react-three/postprocessing@3.0.4` | [pmndrs/postprocessing](https://github.com/pmndrs/postprocessing) | 4K+ | Bloom, DepthOfField, Vignette, ChromaticAberration |
 | 6 | React Spring Three | `@react-spring/three@10.0.3` | [pmndrs/react-spring](https://github.com/pmndrs/react-spring) | 29K+ | 3D spring animasyon, fizik bazlı hareket |
 | 7 | GSAP | `gsap@3.14.2` | [greensock/GSAP](https://github.com/greensock/GSAP) | 20K+ | Timeline animasyon, ScrollTrigger, tween |
-| 8 | Framer Motion | `framer-motion@12.23.2` | [framer/motion](https://github.com/framer/motion) | 50K+ | React animasyon, page transition, useInView, hover |
+| 8 | Framer Motion | `framer-motion@12.23.2` | [motiondivision/motion](https://github.com/motiondivision/motion) | 50K+ | React animasyon, page transition, useInView, hover |
 | 9 | Lenis | `@studio-freight/lenis@1.0.42` | [darkroomengineering/lenis](https://github.com/darkroomengineering/lenis) | 10K+ | Ultra-smooth scroll, scroll snap, parallax |
 | 10 | Use Gesture | `@use-gesture/react@10.3.1` | [pmndrs/use-gesture](https://github.com/pmndrs/use-gesture) | 10K+ | Drag, pinch, wheel interaction, 3D kontrol |
 | 11 | Three Mesh BVH | `three-mesh-bvh@0.9.9` | [gkjohnson/three-mesh-bvh](https://github.com/gkjohnson/three-mesh-bvh) | 2K+ | Hızlandırılmış raycasting, 3D collision |
 | 12 | Zustand | `zustand@5.0.6` | [pmndrs/zustand](https://github.com/pmndrs/zustand) | 50K+ | Global state management, store |
 | 13 | shadcn/ui (Radix) | `@radix-ui/*` | [shadcn-ui/ui](https://github.com/shadcn-ui/ui) | 80K+ | Button, Card, Dialog, Sheet, Toast, Form, vb 48 component |
-| 14 | Lucide React | `lucide-react@0.525.0` | [lucide/lucide](https://github.com/lucide/lucide) | 10K+ | 1600+ SVG ikon, tüm section'larda kullanılır |
-| 15 | Next Themes | `next-themes@0.4.6` | [pacocoursey/next-themes](https://github.com/pacocoursey/next-themes) | 7K+ | Dark/Light mode toggle |
-| 16 | Tailwind CSS 4 | `tailwindcss@4` | [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) | 85K+ | Utility-first CSS, responsive, dark mode |
-| 17 | Prisma | `prisma@6.11.1` | [prisma/prisma](https://github.com/prisma/prisma) | 42K+ | ORM, SQLite veritabanı, schema |
-| 18 | React Email | `react-email@5.2.10` | [resendl/react-email](https://github.com/resendl/react-email) | 15K+ | Email template builder, form gönderimi |
-| 19 | Z-AI Web Dev SDK | `z-ai-web-dev-sdk@0.0.17` | Private | Private | LLM, VLM, Image Gen, TTS, ASR, Video, Web Search |
-
----
 
 ## 14 SEKTÖR TEMPLATE
 
@@ -318,46 +310,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 
 ### 🎨 GRUP 1: RENK PALETİ & AURA SİSTEMLERİ (#1-15)
 
-### Repo #1: colorjs-io/Color.js
-- **GitHub:** https://github.com/colorjs-io/Color.js
-- **Açıklama:** Gelişmiş renk manipülasyon kütüphanesi
-- **Stars:** 3K+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Renk dönüşümü, kontrast hesaplama, renk uzay manipülasyonu
-
-### Repo #2: chillhub/color-palette-generator
-- **GitHub:** https://github.com/chillhub/color-palette-generator
-- **Açıklama:** AI renk paleti üreteci
-- **Stars:** 1K+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** AI ile otomatik renk paleti oluşturma tekniklerini referans al
-
-### Repo #3: shideneyu/color-palette
-- **GitHub:** https://github.com/shideneyu/color-palette
-- **Açıklama:** Görüntüden renk paleti çıkarma
-- **Stars:** 800+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** AI üretilmiş görsellerden palet çıkarma algoritması
-
-### Repo #4: lucagez/awesome-design-tokens
-- **GitHub:** https://github.com/lucagez/awesome-design-tokens
-- **Açıklama:** Design token sistemleri
-- **Stars:** 2K+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CSS variable design token mimarisi
-
-### Repo #5: barklund/tinycolor2
-- **GitHub:** https://github.com/barklund/tinycolor2
-- **Açıklama:** Renk dönüşüm/sembolik işlemler
-- **Stars:** 5K+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Hex/RGB/HSL dönüşümleri ve renk manipülasyon
-
 ### Repo #6: mrmrs/colors
 - **GitHub:** https://github.com/mrmrs/colors
 - **Açıklama:** CSS renk paleti koleksiyonu
@@ -365,14 +317,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Renk Paleti & Aura Sistemleri
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Hazır renk isimleri ve CSS custom property'ler
-
-### Repo #7: madhur/awesome-design-systems
-- **GitHub:** https://github.com/madhur/awesome-design-systems
-- **Açıklama:** Design sistemleri koleksiyonu
-- **Stars:** 4K+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Enterprise design sistem referansları
 
 ### Repo #8: kyleamathews/typography.js
 - **GitHub:** https://github.com/kyleamathews/typography.js
@@ -382,38 +326,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Font-scale hesaplama ve tipografi renkleri
 
-### Repo #9: jeremyckahn/chromashift
-- **GitHub:** https://github.com/jeremyckahn/chromashift
-- **Açıklama:** CSS gradient animasyon kütüphanesi
-- **Stars:** 500+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Gradient geçiş animasyonları
-
-### Repo #10: hihayk/sanitize.css
-- **GitHub:** https://github.com/hihayk/sanitize.css
-- **Açıklama:** CSS normalizasyon + renk varsayılanları
-- **Stars:** 6K+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CSS reset ve varsayılan renk normalizasyonu
-
-### Repo #11: rainglow/rainglow
-- **GitHub:** https://github.com/rainglow/rainglow
-- **Açıklama:** 500+ VS Code renk teması
-- **Stars:** 800+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Renk teması kombinasyon fikirleri
-
-### Repo #12: mazzzaiy/gradient-palette
-- **GitHub:** https://github.com/mazzzaiy/gradient-palette
-- **Açıklama:** Gradient renk paleti üreteci
-- **Stars:** 200+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Gradient oluşturma teknikleri
-
 ### Repo #13: andreasbm/weightless
 - **GitHub:** https://github.com/andreasbm/weightless
 - **Açıklama:** CSS custom property renk sistemi
@@ -421,14 +333,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Renk Paleti & Aura Sistemleri
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** CSS variable tabanlı renk sistemi mimarisi
-
-### Repo #14: EvilWeasel/dark-theme-design
-- **GitHub:** https://github.com/EvilWeasel/dark-theme-design
-- **Açıklama:** Dark tema tasarım kılavuzu
-- **Stars:** 500+
-- **Kategori:** Renk Paleti & Aura Sistemleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Dark tema tasarım best practices
 
 ### Repo #15: sindresorhus/guides
 - **GitHub:** https://github.com/sindresorhus/guides
@@ -481,14 +385,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** 3D Website & Aura Efektleri
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Alternatif 3D motor, fizik ve PBR rendering referansı
-
-### Repo #21: pmndrs/kokomi.js
-- **GitHub:** https://github.com/pmndrs/kokomi.js
-- **Açıklama:** Three.js creative coding framework
-- **Stars:** 1K+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Creative coding pattern'leri ve shader teknikleri
 
 ### Repo #22: pmndrs/react-spring
 - **GitHub:** https://github.com/pmndrs/react-spring
@@ -554,32 +450,8 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Karmaşık animasyon sequence yönetimi
 
-### Repo #30: Activetheory/activetheory-core
-- **GitHub:** https://github.com/Activetheory/activetheory-core
-- **Açıklama:** Active Theory web framework
-- **Stars:** 300+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Awwwards-seviye interaktif web deneyim kalıpları
-
-### Repo #31: Activetheory/waypoint
-- **GitHub:** https://github.com/Activetheory/waypoint
-- **Açıklama:** Scroll-based animation framework
-- **Stars:** 200+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Scroll tabanlı 3D animasyon yönetimi
-
-### Repo #32: ActiveTheory/active-design-system
-- **GitHub:** https://github.com/ActiveTheory/active-design-system
-- **Açıklama:** Premium design system
-- **Stars:** 100+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Premium web tasarım kalıpları
-
 ### Repo #33: stackgl/glslify
-- **GitHub:** https://github.com/stackgl/glslify
+- **GitHub:** https://github.com/glslify/glslify
 - **Açıklama:** GLSL shader modül sistemi
 - **Stars:** 4K+
 - **Kategori:** 3D Website & Aura Efektleri
@@ -594,88 +466,8 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Kenar yumuşatma shader fonksiyonu
 
-### Repo #35: stackgl/glsl-fxaa
-- **GitHub:** https://github.com/stackgl/glsl-fxaa
-- **Açıklama:** FXAA anti-aliasing shader
-- **Stars:** 100+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Post-processing anti-aliasing
-
-### Repo #36: stackgl/glsl-noise
-- **GitHub:** https://github.com/stackgl/glsl-noise
-- **Açıklama:** GLSL noise fonksiyonları
-- **Stars:** 1K+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Perlin, simplex noise shader'ları
-
-### Repo #37: stackgl/glsl-lighting
-- **GitHub:** https://github.com/stackgl/glsl-lighting
-- **Açıklama:** GLSL ışık modeli
-- **Stars:** 100+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Özel ışık hesaplama shader'ları
-
-### Repo #38: stackgl/glsl-specular
-- **GitHub:** https://github.com/stackgl/glsl-specular
-- **Açıklama:** GLSL specular hesaplama
-- **Stars:** 50+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Specular highlight shader
-
-### Repo #39: stackgl/glsl-blend
-- **GitHub:** https://github.com/stackgl/glsl-blend
-- **Açıklama:** GLSL blend modları
-- **Stars:** 50+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Blend mod shader'ları
-
-### Repo #40: stackgl/glsl-voronoi
-- **GitHub:** https://github.com/stackgl/glsl-voronoi
-- **Açıklama:** GLSL Voronoi desenleri
-- **Stars:** 200+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Voronoi pattern shader'ları
-
-### Repo #41: stackgl/gamma
-- **GitHub:** https://github.com/stackgl/gamma
-- **Açıklama:** Renk uzay dönüşümü
-- **Stars:** 100+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Linear/sRGB renk uzayı dönüşümü
-
-### Repo #42: martinezjavario/glsl-worley
-- **GitHub:** https://github.com/martinezjavario/glsl-worley
-- **Açıklama:** GLSL Worley noise
-- **Stars:** 50+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Worley/cellular noise shader'ları
-
-### Repo #43: cabbibo/glsl-transition
-- **GitHub:** https://github.com/cabbibo/glsl-transition
-- **Açıklama:** GLSL geçiş efektleri
-- **Stars:** 1K+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Shader tabanlı geçiş animasyonları
-
-### Repo #44: orelay/immersive-3d
-- **GitHub:** https://github.com/orelay/immersive-3d
-- **Açıklama:** WebXR immersive 3D deneyimler
-- **Stars:** 200+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** WebXR ve VR deneyim referansı
-
 ### Repo #45: framer/motion
-- **GitHub:** https://github.com/framer/motion
+- **GitHub:** https://github.com/motiondivision/motion
 - **Açıklama:** React animasyon (KURULU)
 - **Stars:** 50K+
 - **Kategori:** 3D Website & Aura Efektleri
@@ -698,31 +490,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Alternatif 3D framework mimari referansı
 
-### Repo #48: onlineth/3d-game-engine
-- **GitHub:** https://github.com/onlineth/3d-game-engine
-- **Açıklama:** JS 3D oyun motoru
-- **Stars:** 100+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D oyun motoru mimari referansı
-
-### Repo #49: w3reality/three-stdlib
-- **GitHub:** https://github.com/w3reality/three-stdlib
-- **Açıklama:** Three.js standart kütüphane
-- **Stars:** 1K+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Three.js utility fonksiyonları
-
-### Repo #50: joakimkola/aura-ui
-- **GitHub:** https://github.com/joakimkola/aura-ui
-- **Açıklama:** Aura efektli UI kütüphanesi
-- **Stars:** 50+
-- **Kategori:** 3D Website & Aura Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Aura/glow efektli UI component tasarımı
-
----
 
 ### 🎭 GRUP 3: MOTION GRAPHICS & ANİMASYON (#51-85)
 
@@ -733,14 +500,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Motion Graphics & Animasyon
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Hazır CSS animasyon sınıfları (fadeIn, slideUp, vb.)
-
-### Repo #52: FormidableLabs/react-spring
-- **GitHub:** https://github.com/FormidableLabs/react-spring
-- **Açıklama:** Fizik bazlı React animasyon
-- **Stars:** 29K+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Spring physics tabanlı React animasyon
 
 ### Repo #53: Popmotion/popmotion
 - **GitHub:** https://github.com/Popmotion/popmotion
@@ -758,30 +517,7 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Motion graphics animasyon kalıpları
 
-### Repo #55: Legitcode/anime
-- **GitHub:** https://github.com/Legitcode/anime
-- **Açıklama:** Hafif JS animasyon kütüphanesi
-- **Stars:** 500+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Hafif animasyon API'si
-
 ### Repo #56: juliangarnier/animejs
-- **GitHub:** https://github.com/juliangarnier/anime.js
-- **Açıklama:** Hafif JS animasyon
-- **Stars:** 50K+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Timeline ve keyframe animasyon sistemi
-
-### Repo #57: callumacrae/animo
-- **GitHub:** https://github.com/callumacrae/animo
-- **Açıklama:** Zincir animasyon sistemi
-- **Stars:** 200+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Sıralı animasyon zincirleme
-
 ### Repo #58: arian/cubic-bezier
 - **GitHub:** https://github.com/arian/cubic-bezier
 - **Açıklama:** Cubic bezier eğrisi aracı
@@ -798,141 +534,13 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Spring tabanlı React animasyon referansı
 
-### Repo #60: RealOrangeOne/react-easy-rotate
-- **GitHub:** https://github.com/RealOrangeOne/react-easy-rotate
-- **Açıklama:** React kolay döndürme
-- **Stars:** 100+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React element döndürme animasyonu
-
-### Repo #61: jsayol/Flip.js
-- **GitHub:** https://github.com/jsayol/Flip.js
-- **Açıklama:** Flip animasyon kütüphanesi
-- **Stars:** 100+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Kart çevirme, flip efektleri
-
-### Repo #62: njnelson/bee-animate
-- **GitHub:** https://github.com/njnelson/bee-animate
-- **Açıklama:** CSS/JS animasyon sistemi
-- **Stars:** 50+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Deklaratif animasyon sistemi
-
-### Repo #63: DrSensor/motion.js
-- **GitHub:** https://github.com/DrSensor/motion.js
-- **Açıklama:** Basit hareket kütüphanesi
-- **Stars:** 50+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Basit motion fonksiyonları
-
-### Repo #64: aerinstrauss/react-animation-hooks
-- **GitHub:** https://github.com/aerinstrauss/react-animation-hooks
-- **Açıklama:** React animasyon hookları
-- **Stars:** 200+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React hook tabanlı animasyonlar
-
-### Repo #65: google/mobile-animation-toolbox
-- **GitHub:** https://github.com/google/mobile-animation-toolbox
-- **Açıklama:** Mobil animasyon kalıpları
-- **Stars:** 2K+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Mobil dostu animasyon performans ipuçları
-
-### Repo #66: Keyframe/Keyframe
-- **GitHub:** https://github.com/Keyframe/Keyframe
-- **Açıklama:** CSS animasyon editörü
-- **Stars:** 3K+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CSS keyframe animasyon tasarımı
-
-### Repo #67: streamich/tesla
-- **GitHub:** https://github.com/streamich/tesla
-- **Açıklama:** React animasyon framework
-- **Stars:** 1K+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React animasyon framework referansı
-
-### Repo #68: huynhandle/animore
-- **GitHub:** https://github.com/huynhandle/animore
-- **Açıklama:** React scroll animasyon hook
-- **Stars:** 200+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Scroll tetiklemeli animasyonlar
-
-### Repo #69: niclas/scroll-timeline-polyfill
-- **GitHub:** https://github.com/niclas/scroll-timeline-polyfill
-- **Açıklama:** Scroll Timeline API polyfill
-- **Stars:** 500+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Scroll tabanlı animasyon timing
-
-### Repo #70: argyleink/animxyz
-- **GitHub:** https://github.com/argyleink/animxyz
-- **Açıklama:** CSS animasyon yardımcıları
-- **Stars:** 1K+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CSS animasyon utility sınıfları
-
 ### Repo #71: davidkpiano/xstate
-- **GitHub:** https://github.com/davidkpiano/xstate
+- **GitHub:** https://github.com/statelyai/xstate
 - **Açıklama:** State machine animasyon
 - **Stars:** 27K+
 - **Kategori:** Motion Graphics & Animasyon
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** State machine ile karmaşık animasyon yönetimi
-
-### Repo #72: NickCis/tailwindcss-animate
-- **GitHub:** https://github.com/NickCis/tailwindcss-animate
-- **Açıklama:** Tailwind animasyon eklentisi
-- **Stars:** 2K+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Tailwind CSS animasyon sınıfları
-
-### Repo #73: tw-animate-css/tw-animate-css
-- **GitHub:** https://github.com/tw-animate-css/tw-animate-css
-- **Açıklama:** Tailwind CSS animasyonları
-- **Stars:** 300+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Tailwind CSS animasyon koleksiyonu
-
-### Repo #74: mattvvvv/react-animatron
-- **GitHub:** https://github.com/mattvvvv/react-animatron
-- **Açıklama:** React animasyon komponenti
-- **Stars:** 100+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Hazır React animasyon komponenti
-
-### Repo #75: FramerMotionKit/framer-motion-ui
-- **GitHub:** https://github.com/FramerMotionKit/framer-motion-ui
-- **Açıklama:** Framer Motion UI koleksiyonu
-- **Stars:** 500+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Framer Motion ile hazır UI animasyonları
-
-### Repo #76: ivopetkov/react-inlinesvg
-- **GitHub:** https://github.com/ivopetkov/react-inlinesvg
-- **Açıklama:** SVG inline animasyon
-- **Stars:** 1K+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** SVG animasyon, inline SVG yönetimi
 
 ### Repo #77: streamich/react-use
 - **GitHub:** https://github.com/streamich/react-use
@@ -942,14 +550,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** React hook'ları (useInView, useSpring, vb.)
 
-### Repo #78: joshwcomeau/usehooks
-- **GitHub:** https://github.com/joshwcomeau/usehooks
-- **Açıklama:** Premium React hook koleksiyonu
-- **Stars:** 12K+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Premium React hook kalıpları
-
 ### Repo #79: wellyshen/use-web-animations
 - **GitHub:** https://github.com/wellyshen/use-web-animations
 - **Açıklama:** Web Animations API hook
@@ -958,55 +558,22 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Web Animations API React hook'u
 
-### Repo #80: woolmington/react-floater
-- **GitHub:** https://github.com/woolmington/react-floater
-- **Açıklama:** Float animation React
-- **Stars:** 200+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Floating animasyon komponenti
-
 ### Repo #81: react-spring/react-use-gesture
-- **GitHub:** https://github.com/react-spring/react-use-gesture
+- **GitHub:** https://github.com/pmndrs/use-gesture
 - **Açıklama:** React + Spring + Gesture
 - **Stars:** 10K+
 - **Kategori:** Motion Graphics & Animasyon
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Gesture + spring animasyon entegrasyonu
 
-### Repo #82: pierpo/react-sequential-entrance
-- **GitHub:** https://github.com/pierpo/react-sequential-entrance
-- **Açıklama:** React sıralı giriş animasyonu
-- **Stars:** 500+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Sıralı reveal animasyonları
-
 ### Repo #83: FormidableLabs/urql
-- **GitHub:** https://github.com/FormidableLabs/urql
+- **GitHub:** https://github.com/urql-graphql/urql
 - **Açıklama:** React state + animasyon entegrasyonu
 - **Stars:** 15K+
 - **Kategori:** Motion Graphics & Animasyon
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** State yönetimi ve animasyon entegrasyonu
 
-### Repo #84: barajs/barajs
-- **GitHub:** https://github.com/barajs/barajs
-- **Açıklama:** CSS animasyon kütüphanesi
-- **Stars:** 300+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CSS animasyon utility'leri
-
-### Repo #85: lindelof/react-scroll-parallax
-- **GitHub:** https://github.com/lindelof/react-scroll-parallax
-- **Açıklama:** React parallax scroll
-- **Stars:** 4K+
-- **Kategori:** Motion Graphics & Animasyon
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React parallax scroll efekti
-
----
 
 
 ### 🖱️ GRUP 4: SMOOTH SCROLL & PARALLAX (#86-105)
@@ -1027,14 +594,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Premium smooth scroll teknikleri
 
-### Repo #88: vanilla-tilt/vanilla-tilt.js
-- **GitHub:** https://github.com/vanilla-tilt/vanilla-tilt.js
-- **Açıklama:** 3D tilt efekt
-- **Stars:** 8K+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D tilt hover efekti
-
 ### Repo #89: micku7zu/vanilla-tilt.js
 - **GitHub:** https://github.com/micku7zu/vanilla-tilt.js
 - **Açıklama:** Vanilla tilt fork
@@ -1042,38 +601,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Smooth Scroll & Parallax
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Tilt efekt fork'u
-
-### Repo #90: maxmarinich/react-scroll-parallax
-- **GitHub:** https://github.com/maxmarinich/react-scroll-parallax
-- **Açıklama:** React parallax hook
-- **Stars:** 2K+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React parallax scroll hook
-
-### Repo #91: rickyruiz/first-interaction
-- **GitHub:** https://github.com/rickyruiz/first-interaction
-- **Açıklama:** İlk etkileşim scroll
-- **Stars:** 100+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** İlk kullanıcı etkileşim scroll animasyonu
-
-### Repo #92: achrafha/scroll-snapping
-- **GitHub:** https://github.com/achrafha/scroll-snapping
-- **Açıklama:** CSS scroll snapping
-- **Stars:** 500+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CSS scroll snap teknikleri
-
-### Repo #93: scroll-timeline/scroll-timeline
-- **GitHub:** https://github.com/scroll-timeline/scroll-timeline
-- **Açıklama:** Scroll Timeline API polyfill
-- **Stars:** 500+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Scroll tabanlı animasyon timing API
 
 ### Repo #94: peterramsing/lost
 - **GitHub:** https://github.com/peterramsing/lost
@@ -1083,46 +610,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** CSS grid system
 
-### Repo #95: claydiffrient/scrollhint
-- **GitHub:** https://github.com/claydiffrient/scrollhint
-- **Açıklama:** Scroll hint animasyon
-- **Stars:** 200+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Scroll göstergesi animasyonu
-
-### Repo #96: kieler/scroll-anim
-- **GitHub:** https://github.com/kieler/scroll-anim
-- **Açıklama:** Scroll animasyon framework
-- **Stars:** 100+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Scroll animasyon framework'ü
-
-### Repo #97: StudioLauckeSioul/scroll-between
-- **GitHub:** https://github.com/StudioLauckeSioul/scroll-between
-- **Açıklama:** Scroll between sections
-- **Stars:** 50+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Section'lar arası scroll geçişi
-
-### Repo #98: rafrex/react-fade-in
-- **GitHub:** https://github.com/rafrex/react-fade-in
-- **Açıklama:** React fade-in on scroll
-- **Stars:** 500+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Scroll tetiklemeli fade-in
-
-### Repo #99: andreasremdt/simple-parallax
-- **GitHub:** https://github.com/andreasremdt/simple-parallax
-- **Açıklama:** Hafif parallax kütüphanesi
-- **Stars:** 2K+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Hafif parallax efekti
-
 ### Repo #100: mladenplavsic/css-ripple-effect
 - **GitHub:** https://github.com/mladenplavsic/css-ripple-effect
 - **Açıklama:** Ripple efekt kütüphanesi
@@ -1130,14 +617,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Smooth Scroll & Parallax
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** CSS ripple click efekti
-
-### Repo #101: stutrek/scrollreveal
-- **GitHub:** https://github.com/stutrek/scrollreveal
-- **Açıklama:** Scroll reveal animasyon
-- **Stars:** 15K+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Scroll reveal animasyon kütüphanesi
 
 ### Repo #102: responsivebp/Responsive
 - **GitHub:** https://github.com/responsivebp/Responsive
@@ -1155,23 +634,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Parallax scroll tekniği
 
-### Repo #104: wagersalen/parallax.js
-- **GitHub:** https://github.com/wagersalen/parallax.js
-- **Açıklama:** Vanilla JS parallax
-- **Stars:** 100+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Vanilla JS parallax implementasyonu
-
-### Repo #105: gilbitron/Scrollyteller
-- **GitHub:** https://github.com/gilbitron/Scrollyteller
-- **Açıklama:** Scroll-based storytelling
-- **Stars:** 300+
-- **Kategori:** Smooth Scroll & Parallax
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Scroll tabanlı hikaye anlatımı
-
----
 
 ### 🔮 GRUP 5: SHADER & GLSL EFEKTLERİ (#106-128)
 
@@ -1183,77 +645,13 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** GLSL shader öğrenme ve referans kaynağı
 
-### Repo #107: bradleyscale/awesome-glsl
-- **GitHub:** https://github.com/bradleyscale/awesome-glsl
-- **Açıklama:** GLSL kaynak koleksiyonu
-- **Stars:** 2K+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** GLSL kaynak ve tutorial koleksiyonu
-
 ### Repo #108: stackgl/glslify
-- **GitHub:** https://github.com/stackgl/glslify
+- **GitHub:** https://github.com/glslify/glslify
 - **Açıklama:** GLSL modül sistemi
 - **Stars:** 4K+
 - **Kategori:** Shader & GLSL Efektleri
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** GLSL shader modüler yapısı
-
-### Repo #109: stackgl/glsl-noise
-- **GitHub:** https://github.com/stackgl/glsl-noise
-- **Açıklama:** Noise fonksiyonları
-- **Stars:** 1K+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Noise fonksiyonları shader'larda
-
-### Repo #110: EvanWallace/shader-blob
-- **GitHub:** https://github.com/EvanWallace/shader-blob
-- **Açıklama:** Blob shader efekti
-- **Stars:** 200+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Blob/morphing shader efekti
-
-### Repo #111: nicoptere/glsl-fxaa
-- **GitHub:** https://github.com/nicoptere/glsl-fxaa
-- **Açıklama:** FXAA shader
-- **Stars:** 100+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Anti-aliasing shader
-
-### Repo #112: atraktmedia/glsl-circle
-- **GitHub:** https://github.com/atraktmedia/glsl-circle
-- **Açıklama:** Circle shader efekti
-- **Stars:** 50+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Dairesel shader efekti
-
-### Repo #113: synesthesiam/glsl-audio
-- **GitHub:** https://github.com/synesthesiam/glsl-audio
-- **Açıklama:** Audio shader
-- **Stars:** 100+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Ses-tabanlı shader efektleri
-
-### Repo #114: tgalal/glsl-midi
-- **GitHub:** https://github.com/tgalal/glsl-midi
-- **Açıklama:** MIDI shader
-- **Stars:** 50+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** MIDI tabanlı shader efektleri
-
-### Repo #115: cabbibo/glsl-transition
-- **GitHub:** https://github.com/cabbibo/glsl-transition
-- **Açıklama:** Geçiş shader koleksiyonu
-- **Stars:** 1K+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Shader geçiş efektleri
 
 ### Repo #116: K cryptographic/glsl-ocean
 - **GitHub:** https://github.com/K cryptographic/glsl-ocean
@@ -1262,30 +660,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Shader & GLSL Efektleri
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Su/okyanus yüzey shader'ı
-
-### Repo #117: NicoHood/glsl-dissolve
-- **GitHub:** https://github.com/NicoHood/glsl-dissolve
-- **Açıklama:** Dissolve efekti
-- **Stars:** 50+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Dissolve/erime shader efekti
-
-### Repo #118: Data-Driven-Design/shader-park
-- **GitHub:** https://github.com/Data-Driven-Design/shader-park
-- **Açıklama:** Shader park framework
-- **Stars:** 500+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Interactive shader framework
-
-### Repo #119: vis-gl/deck.gl
-- **GitHub:** https://github.com/vis-gl/deck.gl
-- **Açıklama:** Büyük veri 3D görselleştirme
-- **Stars:** 13K+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Büyük veri 3D görselleştirme
 
 ### Repo #120: visgl/luma.gl
 - **GitHub:** https://github.com/visgl/luma.gl
@@ -1303,22 +677,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** KURULU (@react-three/postprocessing@3.0.4)
 - **Nasıl Kullanılır:** Bloom, DoF, Vignette post-processing
 
-### Repo #122: Morgan3D/shader-game
-- **GitHub:** https://github.com/Morgan3D/shader-game
-- **Açıklama:** Shader oyun motoru
-- **Stars:** 100+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Shader tabanlı oyun render
-
-### Repo #123: nicollash/react-native-skia-gl
-- **GitHub:** https://github.com/nicollash/react-native-skia-gl
-- **Açıklama:** React Native GL shader
-- **Stars:** 100+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React Native shader referansı
-
 ### Repo #124: glslify/glsl-aastep
 - **GitHub:** https://github.com/glslify/glsl-aastep
 - **Açıklama:** Anti-aliased step
@@ -1327,32 +685,8 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** AA step shader fonksiyonu
 
-### Repo #125: evanw/glsl-minifier
-- **GitHub:** https://github.com/evanw/glsl-minifier
-- **Açıklama:** GLSL minifier
-- **Stars:** 300+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** GLSL kod minifikasyonu
-
-### Repo #126: Kryptos-FIA/GLSL-SHADER-TEMPLATE
-- **GitHub:** https://github.com/Kryptos-FIA/GLSL-SHADER-TEMPLATE
-- **Açıklama:** Shader şablonu
-- **Stars:** 50+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** GLSL shader başlangıç şablonu
-
-### Repo #127: HughRawlinson/glsl-marching-cubes
-- **GitHub:** https://github.com/HughRawlinson/glsl-marching-cubes
-- **Açıklama:** Marching cubes shader
-- **Stars:** 100+
-- **Kategori:** Shader & GLSL Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D marching cubes algorithm
-
 ### Repo #128: Stackgl/glsl-aastep
-- **GitHub:** https://github.com/Stackgl/glsl-aastep
+- **GitHub:** https://github.com/glslify/glsl-aastep
 - **Açıklama:** AA step fonksiyonu
 - **Stars:** 200+
 - **Kategori:** Shader & GLSL Efektleri
@@ -1363,22 +697,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 
 ### ✨ GRUP 6: PARTICLE & GENERATIVE ART (#129-150)
 
-### Repo #129: andersonaddo/awesome-creative-coding
-- **GitHub:** https://github.com/andersonaddo/awesome-creative-coding
-- **Açıklama:** Creative coding koleksiyonu
-- **Stars:** 2K+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Creative coding kaynak ve tutorial
-
-### Repo #130: generative-design/awesome-generative-art
-- **GitHub:** https://github.com/generative-design/awesome-generative-art
-- **Açıklama:** Generative art kaynakları
-- **Stars:** 2K+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Generative art teknikleri
-
 ### Repo #131: mattdesl/canvas-sketch
 - **GitHub:** https://github.com/mattdesl/canvas-sketch
 - **Açıklama:** Canvas sketch kütüphanesi
@@ -1387,159 +705,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Canvas tabanlı sketch framework
 
-### Repo #132: nicollash/canvas-sketch-cli
-- **GitHub:** https://github.com/nicollash/canvas-sketch-cli
-- **Açıklama:** Canvas sketch CLI
-- **Stars:** 100+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Canvas sketch CLI aracı
-
-### Repo #133: nicollash/react-sketch
-- **GitHub:** https://github.com/nicollash/react-sketch
-- **Açıklama:** React sketch
-- **Stars:** 50+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React ile sketch çizimi
-
-### Repo #134: nicollash/react-p5-wrapper
-- **GitHub:** https://github.com/nicollash/react-p5-wrapper
-- **Açıklama:** React p5.js wrapper
-- **Stars:** 500+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** p5.js React wrapper
-
-### Repo #135: nicollash/p5.js
-- **GitHub:** https://github.com/nicollash/p5.js
-- **Açıklama:** Processing tabanlı JS
-- **Stars:** 22K+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Creative coding kütüphanesi
-
-### Repo #136: nicollash/three-particles
-- **GitHub:** https://github.com/nicollash/three-particles
-- **Açıklama:** Three.js particle sistemi
-- **Stars:** 100+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Three.js particle implementasyonu
-
-### Repo #137: nicollash/particles.js
-- **GitHub:** https://github.com/nicollash/particles.js
-- **Açıklama:** Hafif particle kütüphanesi
-- **Stars:** 13K+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Hafif particle efekti
-
-### Repo #138: nicollash/tsparticles
-- **GitHub:** https://github.com/nicollash/tsparticles
-- **Açıklama:** TypeScript particle motoru
-- **Stars:** 7K+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** TypeScript particle engine
-
-### Repo #139: nicollash/particle-io
-- **GitHub:** https://github.com/nicollash/particle-io
-- **Açıklama:** Particle I/O kütüphanesi
-- **Stars:** 100+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Particle I/O sistemi
-
-### Repo #140: nicollash/Procedural-Draw
-- **GitHub:** https://github.com/nicollash/Procedural-Draw
-- **Açıklama:** Prosedürel çizim
-- **Stars:** 200+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Prosedürel çizim teknikleri
-
-### Repo #141: nicollash/Flow-Fields
-- **GitHub:** https://github.com/nicollash/Flow-Fields
-- **Açıklama:** Akış alanları
-- **Stars:** 500+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Flow field particle animasyonu
-
-### Repo #142: nicollash/Attractor-Fields
-- **GitHub:** https://github.com/nicollash/Attractor-Fields
-- **Açıklama:** Çekim alanları
-- **Stars:** 200+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Attractor field particle efekti
-
-### Repo #143: nicollash/noise-algorithms
-- **GitHub:** https://github.com/nicollash/noise-algorithms
-- **Açıklama:** Noise algoritmaları
-- **Stars:** 300+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Noise algoritma implementasyonları
-
-### Repo #144: nicollash/cellular-noise
-- **GitHub:** https://github.com/nicollash/cellular-noise
-- **Açıklama:** Hücresel noise
-- **Stars:** 100+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Cellular noise implementasyonu
-
-### Repo #145: nicollash/perlin-noise
-- **GitHub:** https://github.com/nicollash/perlin-noise
-- **Açıklama:** Perlin noise JS
-- **Stars:** 200+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Perlin noise JS implementasyonu
-
-### Repo #146: nicollash/simplex-noise
-- **GitHub:** https://github.com/nicollash/simplex-noise
-- **Açıklama:** Simplex noise JS
-- **Stars:** 1K+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Simplex noise implementasyonu
-
-### Repo #147: nicollash/open-simplex-noise
-- **GitHub:** https://github.com/nicollash/open-simplex-noise
-- **Açıklama:** Açık simplex noise
-- **Stars:** 500+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Açık kaynak simplex noise
-
-### Repo #148: nicollash/Perlin-Worley-Noise
-- **GitHub:** https://github.com/nicollash/Perlin-Worley-Noise
-- **Açıklama:** Perlin + Worley noise
-- **Stars:** 100+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Birleştirilmiş noise algoritması
-
-### Repo #149: nicollash/supercluster
-- **GitHub:** https://github.com/nicollash/supercluster
-- **Açıklama:** Coğrafi veri kümeleme
-- **Stars:** 1K+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Coğrafi veri kümeleme
-
-### Repo #150: nicollash/genart-templates
-- **GitHub:** https://github.com/nicollash/genart-templates
-- **Açıklama:** Generative art şablonları
-- **Stars:** 100+
-- **Kategori:** Particle & Generative Art
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Generative art başlangıç şablonları
-
----
 
 
 ### 🏆 GRUP 7: AWWWARDS SEVİYE TEMPLATE'LER (#151-178)
@@ -1608,16 +773,8 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** React animasyon komponent koleksiyonu
 
-### Repo #159: magicui-designs/magicui
-- **GitHub:** https://github.com/magicui-designs/magicui
-- **Açıklama:** Landing page bileşenleri
-- **Stars:** 3K+
-- **Kategori:** Awwwards Seviye Template'ler
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Landing page UI bileşenleri
-
 ### Repo #160: nextui-org/nextui
-- **GitHub:** https://github.com/nextui-org/nextui
+- **GitHub:** https://github.com/heroui-inc/heroui
 - **Açıklama:** Next.js UI kütüphanesi
 - **Stars:** 25K+
 - **Kategori:** Awwwards Seviye Template'ler
@@ -1704,14 +861,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** KURULU (next-themes@0.4.6)
 - **Nasıl Kullanılır:** Dark/Light mode toggle
 
-### Repo #171: lucide/lucide
-- **GitHub:** https://github.com/lucide/lucide
-- **Açıklama:** İkon kütüphanesi (KURULU)
-- **Stars:** 10K+
-- **Kategori:** Awwwards Seviye Template'ler
-- **Kurulu mu:** KURULU (lucide-react@0.525.0)
-- **Nasıl Kullanılır:** 1600+ SVG ikon, tüm section'larda kullanılır
-
 ### Repo #172: recharts/recharts
 - **GitHub:** https://github.com/recharts/recharts
 - **Açıklama:** React chart kütüphanesi
@@ -1760,97 +909,8 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Alternatif framework referansı
 
-### Repo #178: astro-js/astro
-- **GitHub:** https://github.com/astro-js/astro
-- **Açıklama:** Astro framework (referans)
-- **Stars:** 47K+
-- **Kategori:** Awwwards Seviye Template'ler
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Alternatif framework referansı
-
----
 
 ### 🎨 GRUP 8: GLASSMORPHISM & UI EFEKTLERİ (#179-200)
-
-### Repo #179: nicehash/glassmorphism-css
-- **GitHub:** https://github.com/nicehash/glassmorphism-css
-- **Açıklama:** Glassmorphism CSS koleksiyonu
-- **Stars:** 500+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Glassmorphism CSS örnekleri
-
-### Repo #180: tailwindcomponents/glassmorphism
-- **GitHub:** https://github.com/tailwindcomponents/glassmorphism
-- **Açıklama:** Tailwind glassmorphism
-- **Stars:** 200+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Tailwind glassmorphism CSS class'ları
-
-### Repo #181: nettverk/glassmorphism-ui
-- **GitHub:** https://github.com/nettverk/glassmorphism-ui
-- **Açıklama:** Glassmorphism UI kütüphanesi
-- **Stars:** 100+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Glassmorphism UI component'leri
-
-### Repo #182: marciedarci/glassmorphism
-- **GitHub:** https://github.com/marciedarci/glassmorphism
-- **Açıklama:** CSS glassmorphism örnekleri
-- **Stars:** 50+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Glassmorphism CSS tasarım örnekleri
-
-### Repo #183: niklasvh/glassmorphism-card
-- **GitHub:** https://github.com/niklasvh/glassmorphism-card
-- **Açıklama:** Glassmorphism kart komponenti
-- **Stars:** 100+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Glassmorphism kart component tasarımı
-
-### Repo #184: daniyalbanta/glassmorphism-react
-- **GitHub:** https://github.com/daniyalbanta/glassmorphism-react
-- **Açıklama:** React glassmorphism bileşen
-- **Stars:** 50+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React glassmorphism component
-
-### Repo #185: neumorphism/neumorphism.io
-- **GitHub:** https://github.com/neumorphism/neumorphism.io
-- **Açıklama:** Neumorphism tasarım
-- **Stars:** 1K+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Neumorphism tasarım tekniği
-
-### Repo #186: IonicaBizau/neumorphism
-- **GitHub:** https://github.com/IonicaBizau/neumorphism
-- **Açıklama:** Neumorphism CSS kitabı
-- **Stars:** 100+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Neumorphism CSS rehberi
-
-### Repo #187: useful-dev/neumorphism-ui
-- **GitHub:** https://github.com/useful-dev/neumorphism-ui
-- **Açıklama:** Neumorphism UI
-- **Stars:** 50+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Neumorphism UI component'leri
-
-### Repo #188: loqoiaq/neumorphism-react
-- **GitHub:** https://github.com/loqoiaq/neumorphism-react
-- **Açıklama:** React neumorphism
-- **Stars:** 100+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React neumorphism component
 
 ### Repo #189: designrevision/shards-ui
 - **GitHub:** https://github.com/designrevision/shards-ui
@@ -1867,14 +927,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Glassmorphism & UI Efektleri
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Zengin metin editörü referansı
-
-### Repo #191: tropically/tether
-- **GitHub:** https://github.com/tropically/tether
-- **Açıklama:** UI konumlandırma
-- **Stars:** 9K+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Tooltip ve dropdown konumlandırma
 
 ### Repo #192: floating-ui/floating-ui
 - **GitHub:** https://github.com/floating-ui/floating-ui
@@ -1908,16 +960,8 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Fotoğraf galerisi/lightbox
 
-### Repo #196: microlinkhq/mqlight
-- **GitHub:** https://github.com/microlinkhq/mqlight
-- **Açıklama:** Premium lightbox
-- **Stars:** 1K+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Premium lightbox component
-
 ### Repo #197: animate-ui/animate-ui
-- **GitHub:** https://github.com/animate-ui/animate-ui
+- **GitHub:** https://github.com/imskyleen/animate-ui
 - **Açıklama:** UI animasyon koleksiyonu
 - **Stars:** 500+
 - **Kategori:** Glassmorphism & UI Efektleri
@@ -1932,66 +976,9 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** SVG köşe rozeti tasarımı
 
-### Repo #199: lucasmontano/shadergradient
-- **GitHub:** https://github.com/lucasmontano/shadergradient
-- **Açıklama:** React shader gradient
-- **Stars:** 1K+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React shader gradient component
-
-### Repo #200: DesignerDesign/neubrutalism
-- **GitHub:** https://github.com/DesignerDesign/neubrutalism
-- **Açıklama:** Neubrutalism UI
-- **Stars:** 100+
-- **Kategori:** Glassmorphism & UI Efektleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Neubrutalism tasarım stili
-
----
 
 
 ### 📱 GRUP 9: MICRO-INTERACTIONS & HOVER (#201-225)
-
-### Repo #201: tannerlinsley/react-awesome-slider
-- **GitHub:** https://github.com/tannerlinsley/react-awesome-slider
-- **Açıklama:** React slider
-- **Stars:** 2K+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Premium slider component
-
-### Repo #202: FormidableLabs/react-eva
-- **GitHub:** https://github.com/FormidableLabs/react-eva
-- **Açıklama:** React animasyon kontrol
-- **Stars:** 500+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React animasyon kontrol sistemi
-
-### Repo #203: jamesplease/react-uforms
-- **GitHub:** https://github.com/jamesplease/react-uforms
-- **Açıklama:** Form animasyon
-- **Stars:** 200+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Animasyonlu form component'leri
-
-### Repo #204: thinkdigitalsoftware/react-ripple
-- **GitHub:** https://github.com/thinkdigitalsoftware/react-ripple
-- **Açıklama:** Ripple efekt
-- **Stars:** 100+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Material ripple efekt
-
-### Repo #205: danielezsilva/react-animated-burgers
-- **GitHub:** https://github.com/danielezsilva/react-animated-burgers
-- **Açıklama:** Hamburger menü animasyon
-- **Stars:** 200+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Animasyonlu hamburger menü
 
 ### Repo #206: elrumordelaluz/reactour
 - **GitHub:** https://github.com/elrumordelaluz/reactour
@@ -2001,46 +988,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Site tur rehberi component
 
-### Repo #207: guidepup/react-interactive-guided-tour
-- **GitHub:** https://github.com/guidepup/react-interactive-guided-tour
-- **Açıklama:** Rehber tur
-- **Stars:** 500+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** İnteraktif rehber tur
-
-### Repo #208: sghall/react-clipboard-copy
-- **GitHub:** https://github.com/sghall/react-clipboard-copy
-- **Açıklama:** Kopyalama animasyon
-- **Stars:** 200+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Clipboard kopyalama feedback
-
-### Repo #209: mladenplavsic/counter-button
-- **GitHub:** https://github.com/mladenplavsic/counter-button
-- **Açıklama:** Sayaç buton animasyon
-- **Stars:** 50+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Sayaç buton mikro etkileşim
-
-### Repo #210: sghall/react-morphing-cards
-- **GitHub:** https://github.com/sghall/react-morphing-cards
-- **Açıklama:** Kart morphing
-- **Stars:** 100+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Kart morphing animasyonu
-
-### Repo #211: csanonymity/react-undraw
-- **GitHub:** https://github.com/csanonymity/react-undraw
-- **Açıklama:** React SVG illüstrasyon
-- **Stars:** 2K+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** SVG illüstrasyon component'leri
-
 ### Repo #212: react-icons/react-icons
 - **GitHub:** https://github.com/react-icons/react-icons
 - **Açıklama:** React ikon koleksiyonu
@@ -2049,111 +996,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** React ikon seti
 
-### Repo #213: icflorescu/remarkable
-- **GitHub:** https://github.com/icflorescu/remarkable
-- **Açıklama:** Markdown renderer
-- **Stars:** 6K+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Markdown rendering
-
-### Repo #214: pragmatic-engineering/react-parallax-tilt
-- **GitHub:** https://github.com/pragmatic-engineering/react-parallax-tilt
-- **Açıklama:** Parallax tilt
-- **Stars:** 2K+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Parallax tilt hover efekti
-
-### Repo #215: gs_ml_kit/react-ml-kit
-- **GitHub:** https://github.com/gs_ml_kit/react-ml-kit
-- **Açıklama:** Machine learning UI
-- **Stars:** 100+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** ML UI component referansı
-
-### Repo #216: microlinkhq/vanilla-tilt-react
-- **GitHub:** https://github.com/microlinkhq/vanilla-tilt-react
-- **Açıklama:** React tilt
-- **Stars:** 500+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React 3D tilt efekti
-
-### Repo #217: wellyshen/react-visibility-sensor
-- **GitHub:** https://github.com/wellyshen/react-visibility-sensor
-- **Açıklama:** Görünürlük sensörü
-- **Stars:** 1K+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Element görünürlük sensörü
-
-### Repo #218: obelus-labs/react-remarkable
-- **GitHub:** https://github.com/obelus-labs/react-remarkable
-- **Açıklama:** Markdown + React
-- **Stars:** 200+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React markdown component
-
-### Repo #219: nicollash/react-confetti
-- **GitHub:** https://github.com/nicollash/react-confetti
-- **Açıklama:** Confetti animasyon
-- **Stars:** 500+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Confetti kutlama efekti
-
-### Repo #220: catc/react-hot-toast
-- **GitHub:** https://github.com/catc/react-hot-toast
-- **Açıklama:** Toast notification
-- **Stars:** 8K+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Toast notification component
-
-### Repo #221: EmilTholin/react-transitioner
-- **GitHub:** https://github.com/EmilTholin/react-transitioner
-- **Açıklama:** React geçiş
-- **Stars:** 500+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React geçiş animasyonu
-
-### Repo #222: nicollash/react-loaders
-- **GitHub:** https://github.com/nicollash/react-loaders
-- **Açıklama:** Loading animasyonları
-- **Stars:** 500+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Loading spinner koleksiyonu
-
-### Repo #223: nicollash/react-spinkit
-- **GitHub:** https://github.com/nicollash/react-spinkit
-- **Açıklama:** Spinner koleksiyonu
-- **Stars:** 7K+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CSS spinner component koleksiyonu
-
-### Repo #224: nicollash/react-lottie
-- **GitHub:** https://github.com/nicollash/react-lottie
-- **Açıklama:** Lottie animasyon
-- **Stars:** 30K+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Lottie JSON animasyon oynatıcı
-
-### Repo #225: nicollash/react-icons-kit
-- **GitHub:** https://github.com/nicollash/react-icons-kit
-- **Açıklama:** İkon kit
-- **Stars:** 500+
-- **Kategori:** Micro-Interactions & Hover
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** İkon component kit
-
----
 
 ### 🔤 GRUP 10: TİPOGRAFİ & FONT TOOLS (#226-240)
 
@@ -2165,30 +1007,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Self-hosted font yükleme
 
-### Repo #227: microlinkhq/phase
-- **GitHub:** https://github.com/microlinkhq/phase
-- **Açıklama:** Font testing aracı
-- **Stars:** 100+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Font test ve karşılaştırma
-
-### Repo #228: microlinkhq/knoba
-- **GitHub:** https://github.com/microlinkhq/knoba
-- **Açıklama:** Font showcase
-- **Stars:** 50+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Font sergileme
-
-### Repo #229: microlinkhq/txiki
-- **GitHub:** https://github.com/microlinkhq/txiki
-- **Açıklama:** Hafif font loader
-- **Stars:** 100+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Hafif font yükleme
-
 ### Repo #230: google/fonts
 - **GitHub:** https://github.com/google/fonts
 - **Açıklama:** Google Fonts kütüphanesi
@@ -2197,87 +1015,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Google Fonts referans kaynağı
 
-### Repo #231: nicollash/next-font
-- **GitHub:** https://github.com/nicollash/next-font
-- **Açıklama:** Next.js font optimizasyonu
-- **Stars:** 1K+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Next.js font optimizasyon teknikleri
-
-### Repo #232: nicollash/font-loader
-- **GitHub:** https://github.com/nicollash/font-loader
-- **Açıklama:** Font yükleme API
-- **Stars:** 200+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Font yükleme API'si
-
-### Repo #233: nicollash/letteringjs
-- **GitHub:** https://github.com/nicollash/letteringjs
-- **Açıklama:** Harf bazlı tipografi
-- **Stars:** 200+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Harf bazlı tipografi efekti
-
-### Repo #234: nicollash/fittext
-- **GitHub:** https://github.com/nicollash/fittext
-- **Açıklama:** Responsive tipografi
-- **Stars:** 4K+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Responsive font boyutu
-
-### Repo #235: nicollash/bigtext
-- **GitHub:** https://github.com/nicollash/bigtext
-- **Açıklama:** Büyük metin plugin
-- **Stars:** 1K+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Büyük başlık metin plugin
-
-### Repo #236: nicollash/blurryface
-- **GitHub:** https://github.com/nicollash/blurryface
-- **Açıklama:** Bulanık metin efekti
-- **Stars:** 50+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Blur text efekti
-
-### Repo #237: nicollash/textillate
-- **GitHub:** https://github.com/nicollash/textillate
-- **Açıklama:** Metin animasyon
-- **Stars:** 5K+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Metin animasyon efekti
-
-### Repo #238: nicollash/arctext
-- **GitHub:** https://github.com/nicollash/arctext
-- **Açıklama:** Kavisli metin
-- **Stars:** 1K+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Kavisli/yay metin efekti
-
-### Repo #239: nicollash/letterfx
-- **GitHub:** https://github.com/nicollash/letterfx
-- **Açıklama:** Harf efektleri
-- **Stars:** 300+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Harf bazlı hover efektleri
-
-### Repo #240: nicollash/slabtext
-- **GitHub:** https://github.com/nicollash/slabtext
-- **Açıklama:** Slab metin plugin
-- **Stars:** 500+
-- **Kategori:** Tipografi & Font Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Slab tipografi plugin
-
----
 
 ### 🛠️ GRUP 11: FRONTEND GELİŞTİRME ARAÇLARI (#241-261)
 
@@ -2345,14 +1082,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Hızlı JS runtime
 
-### Repo #249: vercel/turbopack
-- **GitHub:** https://github.com/vercel/turbopack
-- **Açıklama:** Rust tabanlı bundler
-- **Stars:** 27K+
-- **Kategori:** Frontend Geliştirme Araçları
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Rust tabanlı bundler
-
 ### Repo #250: webpack/webpack
 - **GitHub:** https://github.com/webpack/webpack
 - **Açıklama:** Module bundler
@@ -2401,55 +1130,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** CSS vendor prefix otomasyon
 
-### Repo #256: nicollash/cssnano
-- **GitHub:** https://github.com/nicollash/cssnano
-- **Açıklama:** CSS minifier
-- **Stars:** 5K+
-- **Kategori:** Frontend Geliştirme Araçları
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CSS minifikasyon
-
-### Repo #257: nicollash/stylelint
-- **GitHub:** https://github.com/nicollash/stylelint
-- **Açıklama:** CSS linter
-- **Stars:** 11K+
-- **Kategori:** Frontend Geliştirme Araçları
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CSS linting
-
-### Repo #258: nicollash/browserslist
-- **GitHub:** https://github.com/nicollash/browserslist
-- **Açıklama:** Tarayıcı uyumluluk
-- **Stars:** 15K+
-- **Kategori:** Frontend Geliştirme Araçları
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Tarayıcı uyumluluk listesi
-
-### Repo #259: nicollash/caniuse
-- **GitHub:** https://github.com/nicollash/caniuse
-- **Açıklama:** Browser feature support
-- **Stars:** 5K+
-- **Kategori:** Frontend Geliştirme Araçları
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Tarayıcı feature desteği kontrolü
-
-### Repo #260: nicollash/modern-normalize
-- **GitHub:** https://github.com/nicollash/modern-normalize
-- **Açıklama:** CSS normalize
-- **Stars:** 3K+
-- **Kategori:** Frontend Geliştirme Araçları
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Modern CSS normalize
-
-### Repo #261: nicollash/open-props
-- **GitHub:** https://github.com/nicollash/open-props
-- **Açıklama:** CSS custom properties
-- **Stars:** 3K+
-- **Kategori:** Frontend Geliştirme Araçları
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CSS custom property koleksiyonu
-
----
 
 
 ### 📊 GRUP 12: DATA VISUALIZATION & CHARTS (#262-276)
@@ -2462,14 +1142,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** React chart ve grafik oluşturma
 
-### Repo #263: visx/visx
-- **GitHub:** https://github.com/visx/visx
-- **Açıklama:** Airbnb React viz kütüphanesi
-- **Stars:** 9K+
-- **Kategori:** Data Visualization & Charts
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Airbnb React data visualization
-
 ### Repo #264: d3/d3
 - **GitHub:** https://github.com/d3/d3
 - **Açıklama:** D3.js veri görselleştirme
@@ -2477,14 +1149,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Data Visualization & Charts
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** D3.js veri görselleştirme
-
-### Repo #265: nivo/nivo
-- **GitHub:** https://github.com/nivo/nivo
-- **Açıklama:** React charting kütüphanesi
-- **Stars:** 14K+
-- **Kategori:** Data Visualization & Charts
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React charting
 
 ### Repo #266: FormidableLabs/victory
 - **GitHub:** https://github.com/FormidableLabs/victory
@@ -2550,31 +1214,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Harita kütüphanesi
 
-### Repo #274: konva/konva
-- **GitHub:** https://github.com/konva/konva
-- **Açıklama:** Canvas 2D kütüphane
-- **Stars:** 12K+
-- **Kategori:** Data Visualization & Charts
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Canvas 2D kütüphane
-
-### Repo #275: konva/react-konva
-- **GitHub:** https://github.com/konva/react-konva
-- **Açıklama:** React + Konva
-- **Stars:** 8K+
-- **Kategori:** Data Visualization & Charts
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React Konva wrapper
-
-### Repo #276: nicollash/react-chartjs
-- **GitHub:** https://github.com/nicollash/react-chartjs
-- **Açıklama:** React Chart.js wrapper
-- **Stars:** 3K+
-- **Kategori:** Data Visualization & Charts
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React Chart.js wrapper
-
----
 
 ### 🏗️ GRUP 13: E-TİCARET & PREMIUM TEMALAR (#277-286)
 
@@ -2609,22 +1248,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** E-Ticaret & Premium Temalar
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Headless commerce platformu
-
-### Repo #281: shadcn-ui/ecommerce
-- **GitHub:** https://github.com/shadcn-ui/ecommerce
-- **Açıklama:** Shadcn e-ticaret template
-- **Stars:** 1K+
-- **Kategori:** E-Ticaret & Premium Temalar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Shadcn e-ticaret template
-
-### Repo #282: nextjscommerce/nextjscommerce
-- **GitHub:** https://github.com/nextjscommerce/nextjscommerce
-- **Açıklama:** Next.js e-ticaret
-- **Stars:** 2K+
-- **Kategori:** E-Ticaret & Premium Temalar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Next.js e-ticaret referans
 
 ### Repo #283: strapi/strapi
 - **GitHub:** https://github.com/strapi/strapi
@@ -2702,14 +1325,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Harita kütüphanesi
 
-### Repo #292: googlemaps/js-maps
-- **GitHub:** https://github.com/googlemaps/js-maps
-- **Açıklama:** Google Maps JS API
-- **Stars:** 2K+
-- **Kategori:** Emlak & Mimari Siteler
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Google Maps API entegrasyonu
-
 ### Repo #293: Leaflet/Leaflet
 - **GitHub:** https://github.com/Leaflet/Leaflet
 - **Açıklama:** Açık kaynak harita
@@ -2725,14 +1340,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Emlak & Mimari Siteler
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Mapbox GL harita
-
-### Repo #295: Leaflet/React-Leaflet
-- **GitHub:** https://github.com/Leaflet/React-Leaflet
-- **Açıklama:** React + Leaflet
-- **Stars:** 5K+
-- **Kategori:** Emlak & Mimari Siteler
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React Leaflet wrapper
 
 ### Repo #296: visgl/react-map-gl
 - **GitHub:** https://github.com/visgl/react-map-gl
@@ -2750,99 +1357,9 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Three.js mimari 3D örnekleri
 
-### Repo #298: nicollash/house-3d
-- **GitHub:** https://github.com/nicollash/house-3d
-- **Açıklama:** 3D ev model
-- **Stars:** 50+
-- **Kategori:** Emlak & Mimari Siteler
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D ev modelleme
-
-### Repo #299: nicollash/villa-render
-- **GitHub:** https://github.com/nicollash/villa-render
-- **Açıklama:** Villa render
-- **Stars:** 50+
-- **Kategori:** Emlak & Mimari Siteler
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Villa 3D render
-
-### Repo #300: nicollash/blueprint-js
-- **GitHub:** https://github.com/nicollash/blueprint-js
-- **Açıklama:** Blueprint stil
-- **Stars:** 100+
-- **Kategori:** Emlak & Mimari Siteler
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Blueprint CSS tasarım
-
----
 
 ### 🍽️ GRUP 15: RESTORAN & YEMEK SİTELERİ (#301-308)
 
-### Repo #301: nicollash/restaurant-template
-- **GitHub:** https://github.com/nicollash/restaurant-template
-- **Açıklama:** Restoran template
-- **Stars:** 50+
-- **Kategori:** Restoran & Yemek Siteleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Restoran website template yapısı
-
-### Repo #302: nicollash/food-ordering-app
-- **GitHub:** https://github.com/nicollash/food-ordering-app
-- **Açıklama:** Yemek sipariş
-- **Stars:** 100+
-- **Kategori:** Restoran & Yemek Siteleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Yemek sipariş UI tasarımı
-
-### Repo #303: nicollash/cafe-website
-- **GitHub:** https://github.com/nicollash/cafe-website
-- **Açıklama:** Kafe websitesi
-- **Stars:** 50+
-- **Kategori:** Restoran & Yemek Siteleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Kafe website template
-
-### Repo #304: nicollash/restaurant-landing
-- **GitHub:** https://github.com/nicollash/restaurant-landing
-- **Açıklama:** Restoran landing
-- **Stars:** 50+
-- **Kategori:** Restoran & Yemek Siteleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Restoran landing page tasarımı
-
-### Repo #305: nicollash/recipe-app
-- **GitHub:** https://github.com/nicollash/recipe-app
-- **Açıklama:** Tarif uygulaması
-- **Stars:** 200+
-- **Kategori:** Restoran & Yemek Siteleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Tarif uygulaması UI
-
-### Repo #306: nicollash/menu-card
-- **GitHub:** https://github.com/nicollash/menu-card
-- **Açıklama:** Menü kart tasarımı
-- **Stars:** 50+
-- **Kategori:** Restoran & Yemek Siteleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Menü kart component tasarımı
-
-### Repo #307: nicollash/food-delivery
-- **GitHub:** https://github.com/nicollash/food-delivery
-- **Açıklama:** Yemek teslimat
-- **Stars:** 100+
-- **Kategori:** Restoran & Yemek Siteleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Yemek teslimat UI
-
-### Repo #308: deliveryhero/online-ordering
-- **GitHub:** https://github.com/deliveryhero/online-ordering
-- **Açıklama:** Online sipariş
-- **Stars:** 200+
-- **Kategori:** Restoran & Yemek Siteleri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Online sipariş sistemi
-
----
 
 ### 🎮 GRUP 16: SAAS DASHBOARD & ADMIN (#309-323)
 
@@ -2853,14 +1370,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** SaaS Dashboard & Admin
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Shadcn dashboard template
-
-### Repo #310: vercel/dashboard
-- **GitHub:** https://github.com/vercel/dashboard
-- **Açıklama:** Vercel dashboard template
-- **Stars:** 3K+
-- **Kategori:** SaaS Dashboard & Admin
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Vercel dashboard referans
 
 ### Repo #311: supabase/supabase
 - **GitHub:** https://github.com/supabase/supabase
@@ -2886,30 +1395,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Headless CMS
 
-### Repo #314: GraphCMS/graphcms
-- **GitHub:** https://github.com/GraphCMS/graphcms
-- **Açıklama:** GraphCMS
-- **Stars:** 3K+
-- **Kategori:** SaaS Dashboard & Admin
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** GraphQL CMS
-
-### Repo #315: Keyframe-Static-Analysis/keystatic
-- **GitHub:** https://github.com/Keyframe-Static-Analysis/keystatic
-- **Açıklama:** CMS framework
-- **Stars:** 2K+
-- **Kategori:** SaaS Dashboard & Admin
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Statik CMS framework
-
-### Repo #316: tinacms/tina
-- **GitHub:** https://github.com/tinacms/tina
-- **Açıklama:** Git-backed CMS
-- **Stars:** 12K+
-- **Kategori:** SaaS Dashboard & Admin
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Git-backed CMS
-
 ### Repo #317: nextauthjs/next-auth
 - **GitHub:** https://github.com/nextauthjs/next-auth
 - **Açıklama:** Auth kütüphanesi
@@ -2926,22 +1411,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Modern auth kütüphanesi
 
-### Repo #319: convex-hq/convex
-- **GitHub:** https://github.com/convex-hq/convex
-- **Açıklama:** Backend platform
-- **Stars:** 10K+
-- **Kategori:** SaaS Dashboard & Admin
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Backend platform
-
-### Repo #320: nicollash/supabase-auth
-- **GitHub:** https://github.com/nicollash/supabase-auth
-- **Açıklama:** Auth örnekleri
-- **Stars:** 500+
-- **Kategori:** SaaS Dashboard & Admin
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Supabase auth örnekleri
-
 ### Repo #321: marmelab/react-admin
 - **GitHub:** https://github.com/marmelab/react-admin
 - **Açıklama:** Admin panel framework
@@ -2949,14 +1418,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** SaaS Dashboard & Admin
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** React admin panel
-
-### Repo #322: refine-dev/refine
-- **GitHub:** https://github.com/refine-dev/refine
-- **Açıklama:** Admin panel framework
-- **Stars:** 27K+
-- **Kategori:** SaaS Dashboard & Admin
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** React admin panel framework
 
 ### Repo #323: filamentphp/filament
 - **GitHub:** https://github.com/filamentphp/filament
@@ -3059,79 +1520,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Video üretim SaaS
 
-### Repo #335: nicollash/ai-chatbot
-- **GitHub:** https://github.com/nicollash/ai-chatbot
-- **Açıklama:** AI chatbot template
-- **Stars:** 500+
-- **Kategori:** AI Powered Web Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** AI chatbot template
-
-### Repo #336: nicollash/llm-nextjs
-- **GitHub:** https://github.com/nicollash/llm-nextjs
-- **Açıklama:** Next.js + LLM
-- **Stars:** 200+
-- **Kategori:** AI Powered Web Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Next.js LLM entegrasyonu
-
-### Repo #337: nicollash/ai-component
-- **GitHub:** https://github.com/nicollash/ai-component
-- **Açıklama:** AI UI component
-- **Stars:** 100+
-- **Kategori:** AI Powered Web Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** AI UI component tasarımı
-
-### Repo #338: nicollash/ai-image-gen
-- **GitHub:** https://github.com/nicollash/ai-image-gen
-- **Açıklama:** AI görsel üretim UI
-- **Stars:** 100+
-- **Kategori:** AI Powered Web Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** AI görsel üretim UI
-
-### Repo #339: nicollash/ai-copywriter
-- **GitHub:** https://github.com/nicollash/ai-copywriter
-- **Açıklama:** AI metin üretim
-- **Stars:** 50+
-- **Kategori:** AI Powered Web Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** AI metin üretim
-
-### Repo #340: nicollash/ai-seo
-- **GitHub:** https://github.com/nicollash/ai-seo
-- **Açıklama:** AI SEO optimizasyonu
-- **Stars:** 100+
-- **Kategori:** AI Powered Web Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** AI SEO optimizasyonu
-
-### Repo #341: nicollash/ai-translator
-- **GitHub:** https://github.com/nicollash/ai-translator
-- **Açıklama:** AI çeviri
-- **Stars:** 50+
-- **Kategori:** AI Powered Web Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** AI çeviri sistemi
-
-### Repo #342: nicollash/ai-form-builder
-- **GitHub:** https://github.com/nicollash/ai-form-builder
-- **Açıklama:** AI form oluşturucu
-- **Stars:** 100+
-- **Kategori:** AI Powered Web Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** AI form oluşturucu
-
-### Repo #343: nicollash/langchain-nextjs
-- **GitHub:** https://github.com/nicollash/langchain-nextjs
-- **Açıklama:** LangChain + Next.js
-- **Stars:** 500+
-- **Kategori:** AI Powered Web Tools
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** LangChain Next.js entegrasyonu
-
----
 
 ### 🎓 GRUP 18: EĞİTİM & PORTFOLİO (#344-354)
 
@@ -3143,87 +1531,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Topluluk platformu mimarisi
 
-### Repo #345: nicollash/education-platform
-- **GitHub:** https://github.com/nicollash/education-platform
-- **Açıklama:** Eğitim platformu
-- **Stars:** 100+
-- **Kategori:** Eğitim & Portfolio
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Eğitim platformu template
-
-### Repo #346: nicollash/learn-repo
-- **GitHub:** https://github.com/nicollash/learn-repo
-- **Açıklama:** Öğrenme kaynakları
-- **Stars:** 200+
-- **Kategori:** Eğitim & Portfolio
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Öğrenme kaynakları
-
-### Repo #347: nicollash/portfolio-template
-- **GitHub:** https://github.com/nicollash/portfolio-template
-- **Açıklama:** Portfolio template
-- **Stars:** 1K+
-- **Kategori:** Eğitim & Portfolio
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Portfolio template
-
-### Repo #348: nicollash/devportfolio
-- **GitHub:** https://github.com/nicollash/devportfolio
-- **Açıklama:** Geliştirici portfolio
-- **Stars:** 2K+
-- **Kategori:** Eğitim & Portfolio
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Developer portfolio
-
-### Repo #349: bradtraversy/devportfolio
-- **GitHub:** https://github.com/bradtraversy/devportfolio
-- **Açıklama:** Dev portfolio template
-- **Stars:** 5K+
-- **Kategori:** Eğitim & Portfolio
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Developer portfolio template
-
-### Repo #350: nicollash/cv-resume
-- **GitHub:** https://github.com/nicollash/cv-resume
-- **Açıklama:** CV/Resume template
-- **Stars:** 500+
-- **Kategori:** Eğitim & Portfolio
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** CV/Resume template
-
-### Repo #351: nicollash/academic-site
-- **GitHub:** https://github.com/nicollash/academic-site
-- **Açıklama:** Akademik site
-- **Stars:** 100+
-- **Kategori:** Eğitim & Portfolio
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Akademik website template
-
-### Repo #352: nicollash/course-platform
-- **GitHub:** https://github.com/nicollash/course-platform
-- **Açıklama:** Kurs platformu
-- **Stars:** 200+
-- **Kategori:** Eğitim & Portfolio
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Online kurs platformu
-
-### Repo #353: nicollash/quiz-app
-- **GitHub:** https://github.com/nicollash/quiz-app
-- **Açıklama:** Quiz uygulaması
-- **Stars:** 100+
-- **Kategori:** Eğitim & Portfolio
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Quiz uygulaması
-
-### Repo #354: nicollash/lms
-- **GitHub:** https://github.com/nicollash/lms
-- **Açıklama:** Learning Management System
-- **Stars:** 200+
-- **Kategori:** Eğitim & Portfolio
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** LMS platform
-
----
 
 ### 🎥 GRUP 19: VIDEO & MULTIMEDIA (#355-364)
 
@@ -3234,14 +1541,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Video & Multimedia
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** React ile programlı video üretim
-
-### Repo #356: MoePlayer/plyr
-- **GitHub:** https://github.com/MoePlayer/plyr
-- **Açıklama:** Video player
-- **Stars:** 27K+
-- **Kategori:** Video & Multimedia
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Video player component
 
 ### Repo #357: sampotts/plyr
 - **GitHub:** https://github.com/sampotts/plyr
@@ -3267,14 +1566,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** HTML5 video player
 
-### Repo #360: nicehash/vlite
-- **GitHub:** https://github.com/nicehash/vlite
-- **Açıklama:** Hafif video player
-- **Stars:** 100+
-- **Kategori:** Video & Multimedia
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Lightweight video player
-
 ### Repo #361: phaserjs/phaser
 - **GitHub:** https://github.com/phaserjs/phaser
 - **Açıklama:** HTML5 oyun motoru
@@ -3282,14 +1573,6 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kategori:** Video & Multimedia
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** HTML5 oyun motoru
-
-### Repo #362: Howlerjs/howler.js
-- **GitHub:** https://github.com/Howlerjs/howler.js
-- **Açıklama:** Ses kütüphanesi
-- **Stars:** 14K+
-- **Kategori:** Video & Multimedia
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Ses kütüphanesi
 
 ### Repo #363: goldfire/howler.js
 - **GitHub:** https://github.com/goldfire/howler.js
@@ -3312,7 +1595,7 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 ### 🔧 GRUP 20: TOOLING & DEPLOYMENT (#365-377)
 
 ### Repo #365: docker/docker
-- **GitHub:** https://github.com/docker/docker
+- **GitHub:** https://github.com/moby/moby
 - **Açıklama:** Container platform
 - **Stars:** 70K+
 - **Kategori:** Tooling & Deployment
@@ -3327,32 +1610,8 @@ Noise overlay her sayfada: SVG fractalNoise overlay, opacity 0.03, mix-blend-mod
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Self-hosting platform
 
-### Repo #367: portworx/portworx
-- **GitHub:** https://github.com/portworx/portworx
-- **Açıklama:** Container orchestration
-- **Stars:** 5K+
-- **Kategori:** Tooling & Deployment
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Container orchestration
-
-### Repo #368: railwayapp/railway
-- **GitHub:** https://github.com/railwayapp/railway
-- **Açıklama:** Deployment platform
-- **Stars:** 10K+
-- **Kategori:** Tooling & Deployment
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Deployment platform
-
-### Repo #369: vercel/platform
-- **GitHub:** https://github.com/vercel/platform
-- **Açıklama:** Vercel platform
-- **Stars:** 500+
-- **Kategori:** Tooling & Deployment
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Vercel deployment
-
 ### Repo #370: netlify/netlify-cms
-- **GitHub:** https://github.com/netlify/netlify-cms
+- **GitHub:** https://github.com/decaporg/decap-cms
 - **Açıklama:** Static CMS
 - **Stars:** 18K+
 - **Kategori:** Tooling & Deployment
@@ -3713,57 +1972,8 @@ vr, game, oyun → cyberpunk
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Claude'un nasıl çalıştığını anlamak, kendi CLAUDE.md'yi geliştirmek, AI prompt mühendisliği tekniklerini öğrenmek için. NOVA AI sistemini kurgularken Anthropic'in system prompt yaklaşımından referans alınır.
 
-### Repo #379: promptingtools/promptingguide.ai
-- **GitHub:** https://github.com/promptingtools/promptingguide.ai
-- **Açıklama:** Microsoft'un desteğiyle hazırlanan kapsamlı prompt mühendisliği rehberi. ChatGPT, Claude, Gemini, Llama için prompt teknikleri, pattern'ler ve best practices koleksiyonu. Sıfırdan ileri seviyeye kadar her düzeyde prompt yazma kılavuzu sunar.
-- **Stars:** 55K+
-- **Kategori:** AI System Prompts & Claude
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** "tema" komutu için prompt kalıpları oluştururken, CLAUDE.md talimatlarını iyileştirirken ve AI-driven website üretim sistemi için prompt mühendisliği referansı olarak.
-
-### Repo #380: dair-ai/Anthropic
-- **GitHub:** https://github.com/dair-ai/Anthropic
-- **Açıklama:** Anthropic Claude modellerinin araştırma makaleleri, technique'ler ve kullanım örnekleri derlemesi. Constitutional AI, RLHF, güvenlik tabanlı AI geliştirme konularında kaynaklar. Claude'un yeteneklerini ve limitlerini anlamak için.
-- **Stars:** 1K+
-- **Kategori:** AI System Prompts & Claude
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Claude Code ile çalışırken modelin davranış kalıplarını anlamak ve NOVA AI sistemini buna göre optimize etmek için.
-
----
 
 ### 🧊 GRUP 13: THREE.JS 3D MODELLEME & GEOMETRİ (#381-#400)
-
-### Repo #381: protectwise/troika-three-text
-- **GitHub:** https://github.com/protectwise/troika-three-text
-- **Açıklama:** SDF (Signed Distance Field) tabanlı yüksek performanslı 3D metin oluşturma kütüphanesi. Three.js sahnelerinde binlerce metin parçasını aynı anda render edebilir. Metin outline, color, font desteği ile premium 3D başlıklar oluşturur.
-- **Stars:** 3K+
-- **Kategori:** Three.js 3D Modelleme & Geometri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** `<Text3D>` yerine Troika ile performanslı 3D metin, anlık font değiştirme, dinamik başlık sistemleri.
-
-### Repo #382: mikolalysenko/earcut
-- **GitHub:** https://github.com/mikolalysenko/earcut
-- **Açıklama:** Çokgen üçgenleme (polygon triangulation) kütüphanesi. 2D çokgenleri Three.js ExtrudeGeometry için üçgenlere dönüştürür. Harita şekilleri, bina planları, karmaşık 2D formlardan 3D mesh oluşturmak için kritik araç.
-- **Stars:** 3K+
-- **Kategori:** Three.js 3D Modelleme & Geometri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** ShapeGeometry ve ExtrudeGeometry ile karmaşık 2D formları 3D mesh'e dönüştürme, harita/profil oluşturma.
-
-### Repo #383: mikolalysenko/simplify-js
-- **GitHub:** https://github.com/mikolalysenko/simplify-js
-- **Açıklama:** Mesh basitleştirme kütüphanesi. Yüksek poligonlu 3D modelleri düşük poligonlu hale getirir. Performansı artırır, dosya boyutunu küçültür. Ramer-Douglas-Peucker algoritması ile vertex optimizasyonu yapar.
-- **Stars:** 2K+
-- **Kategori:** Three.js 3D Modelleme & Geometri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Büyük 3D modelleri web için optimize etme, LOD (Level of Detail) sistemi oluşturma, mobil performans iyileştirme.
-
-### Repo #384: gkjohnson/three-csg-ts
-- **GitHub:** https://github.com/gkjohnson/three-csg-ts
-- **Açıklama:** Three.js için CSG (Constructive Solid Geometry) kütüphanesi. 3D nesneleri birleştirme, çıkarma ve kesiştirme işlemleri yapar. İki küreyi birleştirmek, bir küpün içinden silindir kesmek gibi Boolean işlemler sağlar.
-- **Stars:** 1K+
-- **Kategori:** Three.js 3D Modelleme & Geometri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Karmaşık 3D formlar oluşturma: birleştirme, kesme, delik açma, mimari modelleme gibi işlemler.
 
 ### Repo #385: gkjohnson/three-bvh-csg
 - **GitHub:** https://github.com/gkjohnson/three-bvh-csg
@@ -3813,48 +2023,8 @@ vr, game, oyun → cyberpunk
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** `npx gltfjsx model.glb` → React component çıktısı. Model importedğinde otomatik component yapısı.
 
-### Repo #391: takahirox/THREE.MeshLine
-- **GitHub:** https://github.com/takahirox/THREE.MeshLine
-- **Açıklama:** Three.js için mesh tabanlı kalın çizgi oluşturma kütüphanesi. Standart THREE.Line'ın aksine çizgi kalınlığı, dashing, gradient ve world-space genişlik desteği sunar. 3D çizgi efektleri için vazgeçilmez.
-- **Stars:** 2K+
-- **Kategori:** Three.js 3D Modelleme & Geometri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D çizgi grafikleri, flow lines, path visualization, blueprint çizgileri, connection efektleri.
-
-### Repo #392: mreinstein/mesh-simplifier
-- **GitHub:** https://github.com/mreinstein/mesh-simplifier
-- **Açıklama:** Three.js mesh basitleştirme kütüphanesi. Vertex reduction ile 3D modelleri anında düşük poligonlu hale getirir. LOD sistemleri için ideal.
-- **Stars:** 300+
-- **Kategori:** Three.js 3D Modelleme & Geometri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Büyük sahnelerde LOD, uzak objeleri düşük poligon gösterme, mobil cihazlarda performans.
-
-### Repo #393: mattdesl/three-mesh-bvh
-- **GitHub:** https://github.com/mattdesl/three-mesh-bvh
-- **Açıklama:** Three.js mesh'ler için Bounding Volume Hierarchy oluşturma. Raycasting ve collision detection hızını 10-100x artırır. Büyük sahnelerde performans kritik.
-- **Stars:** 2K+
-- **Kategori:** Three.js 3D Modelleme & Geometri
-- **Kurulu mu:** KURULU (three-mesh-bvh@0.9.9)
-- **Nasıl Kullanılır:** Hızlı raycasting, 3D collision detection, sahne optimizasyonu.
-
-### Repo #394: makc78/gltf-pipeline
-- **GitHub:** https://github.com/makc78/gltf-pipeline
-- **Açıklama:** glTF dosya işleme pipeline'ı. glTF dosyalarını okuma, dönüştürme, sıkıştırma ve optimize etme. Draco sıkıştırma, texture embedding, animation extraction gibi işlemler.
-- **Stars:** 300+
-- **Kategori:** Three.js 3D Modelleme & Geometri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D modelleri web'e hazırlama, texture optimizasyonu, glTF dönüşüm işlemleri.
-
-### Repo #395: Arrenius/VolumetricFaces
-- **GitHub:** https://github.com/Arrenius/VolumetricFaces
-- **Açıklama:** Three.js volumetrik yüz render sistemi. Fotoğraflardan 3D yüz oluşturma ve volumetrik gösterim. Sıkıştırılmış 4D ışık alanı tekniği ile gerçekçi yüz animasyonu.
-- **Stars:** 2K+
-- **Kategori:** Three.js 3D Modelleme & Geometri
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Fotoğraftan 3D yüz oluşturma, profil sayfaları, interaktif portre, AI avatar efektleri.
-
 ### Repo #396: google/mediapipe
-- **GitHub:** https://github.com/google/mediapipe
+- **GitHub:** https://github.com/google-ai-edge/mediapipe
 - **Açıklama:** Google MediaPipe - yüz mesh takibi, el izleme, pose estimation. Three.js + MediaPipe ile gerçek zamanlı yüz noktaları izleme ve 3D mesh eşleştirme.
 - **Stars:** 20K+
 - **Kategori:** Three.js 3D Modelleme & Geometri
@@ -3897,30 +2067,6 @@ vr, game, oyun → cyberpunk
 
 ### 🔧 GRUP 14: THREE.JS EDITOR, VIEWER & ARAÇLAR (#401-#420)
 
-### Repo #401: nickel-five/gltf-viewer
-- **GitHub:** https://github.com/nickel-five/gltf-viewer
-- **Açıklama:** Modern, hızlı glTF/GLB model görüntüleyici. Three.js tabanlı, PBR materyal desteği, animasyon oynatma, environment map, screenshot alma. Herhangi bir 3D modeli web'de görüntülemek için.
-- **Stars:** 500+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Müşteriye 3D model gösterme, product configurator, model preview, galeri görüntüleme.
-
-### Repo #402: thatopen/js_ifc_openai
-- **GitHub:** https://github.com/thatopen/js_ifc_openai
-- **Açıklama:** IFC (Building Information Modeling) dosyalarını Three.js ile web'de açma kütüphanesi. BIM modellerini 3D olarak görüntüleme, katman kontrolü, element seçme, model navigasyonu.
-- **Stars:** 500+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** İnşaat/mimari projelerde BIM model gösterimi, bina 3D walkthrough, proje sunumu.
-
-### Repo #403: thatopen/components
-- **GitHub:** https://github.com/thatopen/components
-- **Açıklama:** Open BIM Components. That Open'in IFC tabanlı BIM component kütüphanesi. BIM modellerinde arama, filtreleme, sınıflandırma, navigasyon, 2D plan görüntüleme.
-- **Stars:** 300+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Mimari proje web sitelerinde 3D bina modeli, oda navigasyonu, plan görünümü.
-
 ### Repo #404: xeokit/xeokit-sdk
 - **GitHub:** https://github.com/xeokit/xeokit-sdk
 - **Açıklama:** Açık kaynak 3D BIM viewer SDK. IFC, glTF, OBJ, LAS formatlarını destekler. Büyük BIM modellerini (100M+ poly) smoothly render eder. Sectioning, measurement, annotation araçları.
@@ -3937,22 +2083,6 @@ vr, game, oyun → cyberpunk
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Mimarlık/mühendislik projelerinde 3D veri paylaşımı, collaborative 3D modelleme platformu.
 
-### Repo #406: donmccurdy/three-gltf-loader
-- **GitHub:** https://github.com/donmccurdy/three-gltf-loader
-- **Açıklama:** Three.js glTF 2.0 loader eklentisi. PBR materyaller, skinned animation, morph targets, Draco sıkıştırma desteği. Three.js için glTF yüklemenin standart yolu.
-- **Stars:** 2K+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** `useGLTF()` ile 3D model yükleme, animasyon oynatma, PBR materyal desteği.
-
-### Repo #407: Judax/three.js-editor
-- **GitHub:** https://github.com/Judax/three.js-editor
-- **Açıklama:** Three.js sahne editörü. Node-based material editör, sahne hierarchy, property panel, gerçek zamanlı preview. Three.js sahnesini görsel olarak düzenleme.
-- **Stars:** 200+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D sahne oluşturma, material düzenleme, quick prototyping için görsel editör.
-
 ### Repo #408: mrdoob/three.js-editor
 - **GitHub:** https://github.com/mrdoob/three.js/tree/dev/editor
 - **Açıklama:** Three.js resmi sahne editörü. Three.js examples klasöründe bulunur. Sahnede obje ekleme, transform, material atama, lighting, camera ayarı.
@@ -3960,14 +2090,6 @@ vr, game, oyun → cyberpunk
 - **Kategori:** Three.js Editor & Araçlar
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Three.js sahne geliştirme, test, debug. Resmi editör olarak referans.
-
-### Repo #409: Tangent-Animation/blend4web
-- **GitHub:** https://github.com/Tangent-Animation/blend4web
-- **Açıklama:** Blender'dan web'e 3D içerik yayınlama framework'ü. .blend dosyalarını doğrudan web'e aktarır. Blender oyun motoru gibi web'de çalışır.
-- **Stars:** 3K+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Blender 3D sahnelerini web'e dönüştürme, interaktif 3D demo, product configurator.
 
 ### Repo #410: pmndrs/gltfjsx-viewer
 - **GitHub:** https://github.com/pmndrs/gltfjsx
@@ -3977,30 +2099,7 @@ vr, game, oyun → cyberpunk
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** "tema" komutunda 3D product viewer section oluşturma, müşteriye model gösterme.
 
-### Repo #411: mrmkrs/obj2gltf
-- **GitHub:** https://github.com/mrmkrs/obj2gltf
-- **Açıklama:** OBJ ve MTL dosyalarını glTF 2.0'a dönüştürücü. Wavefront OBJ formatını modern web 3D standardına çevirir. Node.js CLI ve JavaScript API.
-- **Stars:** 300+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Eski 3D modelleri modern formata çevirme, legacy model desteği.
-
-### Repo #412: AnalyticalGraphicsInc/3d-tiles-renderer
-- **GitHub:** https://github.com/AnalyticalGraphicsInc/3d-tiles-renderer
-- **Açıklama:** Google Cesium ekibinin 3D Tiles renderer'ı. Devasa 3D sahneleri (şehirler, arazi, point cloud'lar) stream ederek render eder. Google Maps 3D gibi dünya çaplı 3D.
-- **Stars:** 1K+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D harita, şehir modeli, arazi visualizasyonu, Google Maps benzeri 3D deneyim.
-
 ### Repo #413: nzws/nickel-five-model-viewer
-- **GitHub:** https://github.com/nickel-five/gltf-viewer
-- **Açıklama:** Hafif, embed-friendly 3D model viewer component. Tek satır kodla herhangi bir web sayfasına 3D model ekleme. glTF/GLB, auto-rotate, background, lighting desteği.
-- **Stars:** 100+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Hızlı 3D model embed, e-ticaret ürün gösterimi, blog 3D görsel.
-
 ### Repo #414: pmndrs/valtio
 - **GitHub:** https://github.com/pmndrs/valtio
 - **Açıklama:** Proxy tabanlı reaktif state management kütüphanesi. Three.js state yönetimi için ideal. Proxy'ler ile 3D sahne state'ini otomatik reaktif hale getirir.
@@ -4016,30 +2115,6 @@ vr, game, oyun → cyberpunk
 - **Kategori:** Three.js Editor & Araçlar
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** 3D sahne state'i, UI ↔ 3D senkronizasyonu, modüler component state.
-
-### Repo #416: farminf/scene-viewer
-- **GitHub:** https://github.com/farminf/scene-viewer
-- **Açıklama:** Çok formatlı 3D scene viewer. FBX, OBJ, STL, glTF, PLY formatlarını destekler. Three.js tabanlı, cross-platform, measurement ve annotation araçları.
-- **Stars:** 200+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Çoklu 3D format desteği gerektiren projeler, teknik çizim viewer'ı.
-
-### Repo #417: polyscribe/runwayml-three
-- **GitHub:** https://github.com/polyscribe/runwayml-three
-- **Açıklama:** RunwayML AI + Three.js entegrasyonu. AI ile 3D içerik üretme, ML model çıktılarını Three.js sahnesinde gösterme. Generative 3D deneyimler.
-- **Stars:** 200+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** AI ile 3D obje üretme, generatif sanat projeleri, AI-powered 3D web deneyimleri.
-
-### Repo #418: maxogden/voxel.js
-- **GitHub:** https://github.com/maxogden/voxel.js
-- **Açıklama:** Voxel (3D piksel) tabanlı oyun ve visualizasyon kütüphanesi. Minecraft benzeri voxel dünyalar oluşturma. Three.js ile entegre çalışır.
-- **Stars:** 2K+
-- **Kategori:** Three.js Editor & Araçlar
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Voxel tabanlı 3D sahneler, oyun siteleri, retro-stil web deneyimleri.
 
 ### Repo #419: KittenZ/ollama3d
 - **GitHub:** https://github.com/ollama/ollama
@@ -4062,28 +2137,13 @@ vr, game, oyun → cyberpunk
 ### ✨ GRUP 15: THREE.JS PARTİKÜL, EFEKT & SHADER (#421-#440)
 
 ### Repo #421: pmndrs/react-spring/parallax
-- **GitHub:** https://github.com/pmndrs/react-parallax-tilt
-- **Açıklama:** React parallax tilt efekti kütüphanesi. 3D perspektif tilt, glare efekti, hover animasyonları. 3D card'larda ve interaktif elementlerde kullanılır.
-- **Stars:** 6K+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D hover card'lar, glassmorphism tilt, interaktif UI elementleri.
-
 ### Repo #422: FezVrasta/popper.js
-- **GitHub:** https://github.com/FezVrasta/popper.js
+- **GitHub:** https://github.com/floating-ui/floating-ui
 - **Açıklama:** Tooltip ve popover pozisyonlandırma kütüphanesi. 3D sahne üzerinde tooltip, overlay ve bilgi paneli yerleştirme için. Floating UI'nin öncülü.
 - **Stars:** 14K+
 - **Kategori:** Three.js Partikül & Efekt
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** 3D sahne üzerinde tooltip, 3D objeye tıklanınca bilgi paneli.
-
-### Repo #423: vanonm/cursor-effects
-- **GitHub:** https://github.com/vanonm/cursor-effects
-- **Açıklama:** Custom cursor efektleri koleksiyonu. Particle trail, ripple, emoji, ghost cursor efektleri. Web sitesine interaktif cursor deneyimi ekler.
-- **Stars:** 3K+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Premium web sitelerinde interaktif cursor, 3D sahne entegrasyonlu cursor efekti.
 
 ### Repo #424: pmndrs/react-three-volumetric
 - **GitHub:** https://github.com/pmndrs/react-three-fiber/tree/master/packages
@@ -4093,46 +2153,6 @@ vr, game, oyun → cyberpunk
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Atmosferik efektler, duman/sis sahneleri, sanat projesi volumetric render.
 
-### Repo #425: NicoHood/glsl-dissolve
-- **GitHub:** https://github.com/NicoHood/glsl-dissolve
-- **Açıklama:** GLSL dissolve/çözülme efekt shader'ı. Objenin parçacıklara ayrılması efekti. Noise tabanlı dissolve maskesi ile sinematik geçişler.
-- **Stars:** 300+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Obje geçiş animasyonları, reveal efekti, sinematik sahne geçişleri.
-
-### Repo #426: HughRawlinson/glsl-marching-cubes
-- **GitHub:** https://github.com/HughRawlinson/glsl-marching-cubes
-- **Açıklama:** GLSL marching cubes shader implementasyonu. Metaball ve organik formlar oluşturma. Sıvı, baloncuk, organik 3D objeler için ideal.
-- **Stars:** 200+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Organik 3D objeler, sıvı simulasyonu görsel efekti, meta-ball sahneleri.
-
-### Repo #427: Data-Driven-Design/shader-park
-- **GitHub:** https://github.com/Data-Driven-Design/shader-park
-- **Açıklama:** Canlı shader geliştirme ortamı. Gerçek zamanlı shader editörü ile GLSL kodu yazıp anında Three.js sahnesinde görme. Creative coding için.
-- **Stars:** 500+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Shader geliştirme, creative coding, prototipleme, interaktif shader sanatı.
-
-### Repo #428: Morgan3D/shader-game
-- **GitHub:** https://github.com/Morgan3D/shader-game
-- **Açıklama:** Tamamı shader ile yapılmış 3D oyun. Fragment shader ile ray marching, collision, lighting. Shader-only 3D oyun yapımının referans projesi.
-- **Stars:** 200+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Ray marching teknikleri, shader-only render, performanslı 3D görselleştirme.
-
-### Repo #429: EvanWallace/shader-blob
-- **GitHub:** https://github.com/EvanWallace/shader-blob
-- **Açıklama:** Liquid/blob shader efekti. Sıvı damla ve blob animasyonları. SVG + WebGL ile yüksek performanslı organik formlar. Evan Wallace (Figma kurucu).
-- **Stars:** 1K+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Liquid/organik UI efektleri, blob animasyonları, sıvı görselleştirme.
-
 ### Repo #430: antonvh/cannon-es
 - **GitHub:** https://github.com/pmndrs/react-three-rapier
 - **Açıklama:** React Three Fiber için Rapier fizik wrapper. Rigid body, collider, joint, raycast desteği. Rust tabanlı yüksek performanslı fizik.
@@ -4140,22 +2160,6 @@ vr, game, oyun → cyberpunk
 - **Kategori:** Three.js Partikül & Efekt
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** 3D fizik simulasyonu, düşen objeler, collision detection, fizik tabanlı interaksiyon.
-
-### Repo #431: pmndrs/react-three-cannon
-- **GitHub:** https://github.com/pmndrs/react-three-cannon
-- **Açıklama:** React Three Fiber için Cannon-es fizik wrapper. 3D fizik simülasyonu React component olarak. Yerçekimi, çarpışma, constraint desteği.
-- **Stars:** 4K+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Fizik tabanlı 3D sahneler, düşen kartlar, bounce efektleri, interaktif fizik.
-
-### Repo #432: jscastro76/three-mesh-bvh
-- **GitHub:** https://github.com/jscastro76/three-mesh-bvh
-- **Açıklama:** Three.js BVH acceleration structure. Hızlı raycasting ve spatial query'ler için. Büyük sahnelerde performans kritik araç.
-- **Stars:** 2K+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Büyük 3D sahnelerde hızlı sorgu, spatial indexing, performans optimizasyonu.
 
 ### Repo #433: pmndrs/drei#useTexture
 - **GitHub:** https://github.com/pmndrs/drei
@@ -4173,14 +2177,6 @@ vr, game, oyun → cyberpunk
 - **Kurulu mu:** KURULU (@react-three/drei)
 - **Nasıl Kullanılır:** 3D sahne debug, grid plane, axis göstergesi, normal görselleştirme.
 
-### Repo #435: alvarotrigo/page-transitions
-- **GitHub:** https://github.com/alvarotrigo/page-transitions
-- **Açıklama:** CSS page geçiş efektleri koleksiyonu. 30+ farklı geçiş animasyonu: fade, slide, zoom, flip, glitch. 3D sahne geçişlerinde kullanılır.
-- **Stars:** 12K+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D sahneler arası geçiş animasyonları, page transition efektleri.
-
 ### Repo #436: lean/phaser
 - **GitHub:** https://github.com/phaserjs/phaser
 - **Açıklama:** HTML5 2D oyun motoru. Three.js ile birlikte 2D mini-oyunlar, interaktif quiz, gamification elementleri oluşturma. Canvas ve WebGL renderer desteği.
@@ -4189,39 +2185,6 @@ vr, game, oyun → cyberpunk
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Web sitesinde 2D mini-oyun, interaktif quiz, gamification.
 
-### Repo #437: pmndrs/AssetManager
-- **GitHub:** https://github.com/pmndrs/AssetManager
-- **Açıklama:** 3D asset yönetim sistemi. Model, texture, sound asset'lerini organize etme, lazy loading, cache yönetimi.
-- **Stars:** 200+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D proje asset yönetimi, lazy loading, cache optimizasyonu.
-
-### Repo #438: pmndrs/use-assets
-- **GitHub:** https://github.com/pmndrs/use-assets
-- **Açıklama:** React asset management hook'ları. Suspense tabanlı asset yükleme, preload, error handling. Three.js asset'lerini React lifecycle ile yönetme.
-- **Stars:** 100+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D model lazy loading, Suspense ile yükleme durumu gösterme.
-
-### Repo #439: pmndrs/fiber
-- **GitHub:** https://github.com/pmndrs/fiber
-- **Açıklama:** React DOM fiber reconciler. React Three Fiber'in temelindeki reconciliation mekanizması. React render pipeline'ını anlamak için.
-- **Stars:** 26K+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** KURULU (@react-three/fiber)
-- **Nasıl Kullanılır:** R3F render pipeline'ı, custom reconciler, advanced React Three Fiber.
-
-### Repo #440: pmndrs/lingo3d
-- **GitHub:** https://github.com/pmndrs/lingo3d
-- **Açıklama:** pmndrs'in game engine framework'ü. React tabanlı 3D oyun motoru. Entity component system, physics, AI, networking. Three.js oyun geliştirme platformu.
-- **Stars:** 500+
-- **Kategori:** Three.js Partikül & Efekt
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** 3D oyun/interaktif deneyim, ECS pattern, game loop mimarisi.
-
----
 
 ### 🌍 GRUP 16: THREE.JS TERRAIN, MEDYA & SOSYAL (#441-#460)
 
@@ -4290,31 +2253,15 @@ vr, game, oyun → cyberpunk
 - **Nasıl Kullanılır:** 3D dünya visualizasyonu, geospatial data, terrain rendering.
 
 ### Repo #449: turbosrc/turbo
-- **GitHub:** https://github.com/vercel/turbo
+- **GitHub:** https://github.com/vercel/turboreporepo
 - **Açıklama:** Turborepo monorepo management. Çoklu proje/website yönetimi. "tema" komutunda birden fazla site template yönetimi.
 - **Stars:** 28K+
 - **Kategori:** Three.js Terrain & Environment
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Monorepo yönetimi, çoklu site template sistemi, shared component library.
 
-### Repo #450: vercel/turborepo-examples
-- **GitHub:** https://github.com/vercel/turborepo-examples
-- **Açıklama:** Turborepo ile multi-app Next.js projesi örneği. Shared UI, shared config, app-specific code yapısı. Sistem mimari referansı.
-- **Stars:** 500+
-- **Kategori:** Three.js Terrain & Environment
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** NOVA AI sistem mimarisi referansı, multi-app structure.
-
-### Repo #451: Kryptos-FIA/GLSL-SHADER-TEMPLATE
-- **GitHub:** https://github.com/Kryptos-FIA/GLSL-SHADER-TEMPLATE
-- **Açıklama:** GLSL shader şablonu ve boilerplate. Vertex + fragment shader yapısı, uniform'lar, varying'lar, texture sampling. Shader geliştirmeye başlangıç noktası.
-- **Stars:** 100+
-- **Kategori:** Three.js Terrain & Environment
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Custom shader yazmaya başlangıç, shader template, educational resource.
-
 ### Repo #452: N8python/aframe-react
-- **GitHub:** https://github.com/aframevr/aframe-react
+- **GitHub:** https://github.com/supermedium/aframe-react
 - **Açıklama:** A-Frame + React entegrasyonu. A-Frame VR sahnesini React component olarak kullanma. WebXR deneyimleri için.
 - **Stars:** 1K+
 - **Kategori:** Three.js Terrain & Environment
@@ -4346,13 +2293,6 @@ vr, game, oyun → cyberpunk
 - **Nasıl Kullanılır:** Typesafe API geliştirme, Next.js API routes, type-safe client-server.
 
 ### Repo #456: TailwindLabs/tailwindcss-animate
-- **GitHub:** https://github.com/tailwindcss/tailwindcss-animate
-- **Açıklama:** Tailwind CSS animasyon eklentisi. animate-in, animate-out, fade-in, slide-in gibi utility sınıfları. shadcn/ui ile birlikte kullanılır.
-- **Stars:** 2K+
-- **Kategori:** Three.js Terrain & Environment
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Tailwind animasyonları, section reveal, component animation, shadcn/ui animasyon.
-
 ### Repo #457: capricorn86/happy-dom
 - **GitHub:** https://github.com/capricorn86/happy-dom
 - **Açıklama:** Hafif JavaScript DOM implementasyonu. JSDOM alternatifi. Test ortamında DOM simülasyonu. Next.js testing için.
@@ -4370,22 +2310,13 @@ vr, game, oyun → cyberpunk
 - **Nasıl Kullanılır:** Dark/light mode toggle, sistem tema uyumu, CSS variable tema.
 
 ### Repo #459: framer/motion
-- **GitHub:** https://github.com/framer/motion
+- **GitHub:** https://github.com/motiondivision/motion
 - **Açıklama:** React animasyon kütüphanesi. Page transitions, layout animations, gesture support. ScrollTrigger alternatifi olarak.
 - **Stars:** 50K+
 - **Kategori:** Three.js Terrain & Environment
 - **Kurulu mu:** KURULU (framer-motion@12.23.2)
 - **Nasıl Kullanılır:** React animasyon, page transition, layout animation, scroll animation.
 
-### Repo #460: lucide/lucide
-- **GitHub:** https://github.com/lucide/lucide
-- **Açıklama:** 1600+ SVG ikon kütüphanesi. Feather Icons fork'u. Tree-shakeable, TypeScript destekli, React component olarak.
-- **Stars:** 10K+
-- **Kategori:** Three.js Terrain & Environment
-- **Kurulu mu:** KURULU (lucide-react@0.525.0)
-- **Nasıl Kullanılır:** Navbar, Hero, Footer, Contact section'larında ikonlar. Tüm UI'da kullanılır.
-
----
 
 ### 🎨 GRUP 17: THREE.JS MATERIAL, TEXTURE & POST-PROCESSING (#461-#480)
 
@@ -4493,54 +2424,8 @@ vr, game, oyun → cyberpunk
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Generatif sanat, creative coding, experimental web design.
 
-### Repo #474: polyhaven/hdris
-- **GitHub:** https://github.com/polyhaven/hdris
-- **Açıklama:** 1500+ ücretsiz HDRI environment map. 1K-16K çözünürlük, CC0 lisans. Three.js Environment component için mükemmel kaynak.
-- **Stars:** 4K+
-- **Kategori:** Three.js Material & Texture
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Three.js `<Environment>` texture'ları, realistic lighting, PBR environment.
-
-### Repo #475: polyhaven/textures
-- **GitHub:** https://github.com/polyhaven/textures
-- **Açıklama:** 3000+ ücretsiz PBR texture seti. Albedo, Normal, Roughness, Displacement, AO map'leri. CC0 lisans, 1K-8K çözünürlük.
-- **Stars:** 3K+
-- **Kategori:** Three.js Material & Texture
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Three.js PBR materyaller için texture source, realistic material oluşturma.
-
-### Repo #476: polyhaven/models
-- **GitHub:** https://github.com/polyhaven/models
-- **Açıklama:** 100+ ücretsiz 3D model. glTF formatında, PBR materyaller ile. CC0 lisans. Masa, sandalye, araba, mobilya, dekorasyon objeleri.
-- **Stars:** 2K+
-- **Kategori:** Three.js Material & Texture
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Ücretsiz 3D model source, mekan sahneleme, product showcase.
-
 ### Repo #477: KhronosGroup/glTF-PBR
-- **GitHub:** https://github.com/KhronosGroup/glTF-Spec
-- **Açıklama:** glTF PBR (Physically Based Rendering) materyal spesifikasyonu. Metalness, Roughness, Base Color, Normal, AO map standartları.
-- **Stars:** 1K+
-- **Kategori:** Three.js Material & Texture
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** PBR materyal oluşturma standartları, realistic material reference.
-
-### Repo #478: nmbrhd/matcap-textures
-- **GitHub:** https://github.com/nmbrhd/matcap-textures
-- **Açıklama:** Three.js matcap texture koleksiyonu. Matcap ile quick PBR-like materyal efekti. Preview kalitesinde materyal.
-- **Stars:** 500+
-- **Kategori:** Three.js Material & Texture
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Quick materyal preview, stylized render, matcap materyaller.
-
 ### Repo #479: Nvidia/FILM
-- **GitHub:** https://github.com/NVIDIA/NVIDIA-FILM
-- **Açıklama:** NVIDIA FIlm grain efekti. Sinematik film grain post-processing. Noise pattern ve intensity kontrolü ile gerçekçi film efekti.
-- **Stars:** 1K+
-- **Kategori:** Three.js Material & Texture
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Sinematik film grain, premium atmosphere, retro film efekti.
-
 ### Repo #480: mrdoob/three.js-noise
 - **GitHub:** https://github.com/mrdoob/three.js/tree/master/examples
 - **Açıklama:** Procedural noise texture üreteci. Perlin, simplex, worley noise texture oluşturma. Canvas API ile runtime texture generation.
@@ -4593,14 +2478,6 @@ vr, game, oyun → cyberpunk
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Claude Code resmi skill kalıpları, Anthropic'in önerdiği yetenek mimarisi, skill geliştirme best practices.
 
-### Repo #486: muratcankoylan/Agent-Skills-for-Content-Creator
-- **GitHub:** https://github.com/muratcankoylan/Agent-Skills-for-Content-Creator
-- **Açıklama:** İçerik üreticileri için AI agent skills koleksiyonu. 30 branch ile aktif geliştirme. Claude Plugin desteği ile içerik üretimi, blog yazma, sosyal medya yönetimi, SEO optimizasyonu gibi yetenekler kazandırır.
-- **Stars:** 500+
-- **Kategori:** AI Agent Skills & Claude Code Plugins
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Claude Code ile içerik üretimi, blog/SMM otomasyonu, SEO odaklı yazı yazma.
-
 ### Repo #487: AgriciDaniel/claude-seo
 - **GitHub:** https://github.com/AgriciDaniel/claude-seo
 - **Açıklama:** Claude Code için SEO yetenekleri. AI agent'ın web sitelerini SEO açısından analiz etmesini sağlar. Meta tag'ler, keyword analizi, site performansı, erişilebilirlik skorları. Visibility artırma odaklı. 3 branch, 2 issue.
@@ -4617,15 +2494,6 @@ vr, game, oyun → cyberpunk
 - **Kurulu mu:** Referans
 - **Nasıl Kullanılır:** Toplu görsel/metin üretimi, batch processing, otomatik içerik pipeline'ı.
 
-### Repo #489: anthropic/claude-code-best-practice (Bonus)
-- **GitHub:** https://github.com/anthropic/claude-code-best-practice
-- **Açıklama:** Anthropic'in resmi Claude Code en iyi uygulamalar deposu. Limit yönetimi, model seçimi (/model opusplan), bağlam optimizasyonu, multi-agent çalışma, CLAUDE.md yapılandırma. NOVA AI sistemini kurarken birincil referans.
-- **Stars:** 5K+
-- **Kategori:** AI Agent Skills & Claude Code Plugins
-- **Kurulu mu:** Referans
-- **Nasıl Kullanılır:** Claude Code yapılandırması, prompt mühendisliği, bağlam yönetimi, NOVA AI CLAUDE.md geliştirme.
-
----
 
 > **TOPLAM:** 489 GitHub Repo | 19 Kurulu Paket | 14 Sektör Template | 10 Renk Paleti | 6 Yanlış Palet | 16 AI Skill
 > **Son Güncelleme:** 2026-04-12
@@ -4643,100 +2511,9 @@ vr, game, oyun → cyberpunk
 ### 1. 🗣️ CONVERSATIONAL AI & CHATBOT SİSTEMLERİ (~25 Repo)
 - **Ne İşe Yarar:** Web sitelerine AI chatbot, canlı destek, sesli asistan entegrasyonu
 - **Örnek Repo'lar:**
-  - `vercel/ai-chatbot` → https://github.com/vercel/ai-chatbot — Vercel'in resmi AI chatbot, Next.js ile entegre
-  - `lobehub/lobe-chat` → https://github.com/lobehub/lobe-chat — Açık kaynak ChatGPT alternatifi UI
+  - `vercel/chatbot` → https://github.com/vercel/chatbot — Vercel'in resmi AI chatbot, Next.js ile entegre
+  - `lobehub/lobehub` → https://github.com/lobehub/lobehub — Açık kaynak ChatGPT alternatifi UI
   - `di-sukharev/opencommit` → https://github.com/di-sukharev/opencommit — AI ile otomatik git commit mesajı
-  - `all-hands-ai/openhands` → https://github.com/All-Hands-OpenAI/OpenHands — AI coding agent platformu
-  - `TransformerOptimus/SuperAGI` → https://github.com/TransformerOptimus/SuperAGI — AI agent framework
-- **Ne Zaman Eklenecek:** Kullanıcı chatbot özellikli site istediğinde
-
-### 2. 📊 ANALYTICS & TRACKING SİSTEMLERİ (~20 Repo)
-- **Ne İşe Yarar:** Site analitikleri, kullanıcı takibi, heat map, A/B test
-- **Örnek Repo'lar:**
-  - `posthog/posthog` → https://github.com/PostHog/posthog — Açık kaynak product analytics
-  - `plausible/analytics` → https://github.com/plausible/analytics — GDPR dostu analytics
-  - `umami-software/umami` → https://github.com/umami-software/umami — Self-hosted analytics
-  - `microsoft/clarity` → https://github.com/microsoft/clarity — Heat map ve session recording
-  - `growthbook/growthbook` → https://github.com/growthbook/growthbook — A/B test platformu
-- **Ne Zaman Eklenecek:** Kullanıcı dashboard/analytics özellikli site istediğinde
-
-### 3. 🔐 AUTH & GÜVENLİK SİSTEMLERİ (~15 Repo)
-- **Ne İşe Yarar:** Kullanıcı girişi, OAuth, 2FA, role-based access
-- **Örnek Repo'lar:**
-  - `nextauthjs/next-auth` → https://github.com/nextauthjs/next-auth — Next.js auth (mevcut: NextAuth.js v4)
-  - `supabase/supabase` → https://github.com/supabase/supabase — Auth + DB bir arada
-  - `clerk/clerk` → https://github.com/clerk/clerk — Modern auth UI + backend
-- **Ne Zaman Eklenecek:** Kullanıcı login/kayıt gerektiren site istediğinde
-
-### 4. 💳 ÖDEME & E-TİCARET ALTYAPISI (~20 Repo)
-- **Ne İşe Yarar:** Stripe/PayTR entegrasyonu, sepet sistemi, kargo takip
-- **Örnek Repo'lar:**
-  - `vercel/commerce` → https://github.com/vercel/commerce — Next.js e-ticaret template
-  - `stripe/stripe-node` → https://github.com/stripe/stripe-node — Stripe Node.js SDK
-  - `medusajs/medusa` → https://github.com/medusajs/medusa — Açık kaynak Shopify alternatifi
-  - `saleor/saleor` → https://github.com/saleor/saleor — GraphQL e-ticaret platformu
-- **Ne Zaman Eklenecek:** Kullanıcı e-ticaret sitesi istediğinde
-
-### 5. 🌍 MULTILINGUAL & i18n SİSTEMLERİ (~10 Repo)
-- **Ne İşe Yarar:** Otomatik çeviri, çok dilli site, dil algılama
-- **Örnek Repo'lar:**
-  - `i18next/react-i18next` → https://github.com/i18next/react-i18next — React i18n framework
-  - `vercel/next-intl` → https://github.com/amannn/next-intl — Next.js i18n
-  - `argosopentech/argos-translate` → https://github.com/argosopentech/argos-translate — Açık kaynak makine çeviri
-- **Ne Zaman Eklenecek:** 3'ten fazla dil desteği istendiğinde
-
-### 6. 📱 PROGRESSIVE WEB APP (PWA) (~10 Repo)
-- **Ne İşe Yarar:** Offline destek, push notification, app-like deneyim
-- **Örnek Repo'lar:**
-  - `shadowwalker/next-pwa` → https://github.com/shadowwalker/next-pwa — Next.js PWA desteği
-  - `GoogleChrome/workbox` → https://github.com/GoogleChrome/workbox — PWA toolkit
-- **Ne Zaman Eklenecek:** Kullanıcı mobil app deneyimi istediğinde
-
-### 7. 🎮 WEBXR & VR/AR DENEYİMLERİ (~15 Repo)
-- **Ne İşe Yarar:** Web tabanlı VR/AR, 360° tur, sanal showroom
-- **Örnek Repo'lar:**
-  - `aframevr/aframe` → https://github.com/aframevr/aframe — WebVR framework
-  - `google/model-viewer` → https://github.com/google/model-viewer — AR 3D viewer
-- **Ne Zaman Eklenecek:** Kullanıcı VR/AR deneyimi istediğinde
-
-### 8. 🤖 AI IMAGE & VIDEO GENERATION (~20 Repo)
-- **Ne İşe Yarar:** Web sitesi için AI görsel, video, müzik üretimi
-- **Örnek Repo'lar:**
-  - `Comfy-Org/ComfyUI` → https://github.com/Comfy-Org/ComfyUI — Node-based AI içerik üretimi
-  - `replicate/replicate` → https://github.com/replicate/replicate — AI model API
-- **Ne Zaman Eklenecek:** Kullanıcı AI görsel üretimi istediğinde
-
-### 9. 📧 EMAIL & NOTIFICATION SİSTEMLERİ (~10 Repo)
-- **Ne İşe Yarar:** Otomatik email, SMS, push notification, bülten
-- **Örnek Repo'lar:**
-  - `resend/react-email` → https://github.com/resendl/react-email — Email template (mevcut #168)
-  - `novuhq/novu` → https://github.com/novuhq/novu — Açık kaynak notification platformu
-- **Ne Zaman Eklenecek:** Kullanıcı email otomasyonu istediğinde
-
-### 10. 🏗️ CMS & CONTENT MANAGEMENT (~15 Repo)
-- **Ne İşe Yarar:** Headless CMS, blog sistemi, dinamik içerik
-- **Örnek Repo'lar:**
-  - `strapi/strapi` → https://github.com/strapi/strapi — Headless CMS (mevcut)
-  - `payloadcms/payload` → https://github.com/payloadcms/payload — Next.js CMS
-  - `sanity-io/sanity` → https://github.com/sanity-io/sanity — Real-time CMS
-  - `tinacms/tinacms` → https://github.com/tinacms/tinacms — Git-backed CMS
-- **Ne Zaman Eklenecek:** Kullanıcı CMS/blog sistemi istediğinde
-
-### 11. 🔍 SEO & PERFORMANS OPTİMİZASYONU (~10 Repo)
-- **Ne İşe Yarar:** Core Web Vitals, Lighthouse, SEO audit, image optimization
-- **Örnek Repo'lar:**
-  - `GoogleChrome/lighthouse` → https://github.com/GoogleChrome/lighthouse — Performance audit
-  - `addyosmani/web-quality-skills` → https://github.com/addyosmani/web-quality-skills — Web kalitesi (mevcut)
-- **Ne Zaman Eklenecek:** Site performans optimizasyonu gerektiğinde
-
-### 12. 🌐 REAL-TIME & WEBSOCKET (~10 Repo)
-- **Ne İşe Yarar:** Canlı sohbet, gerçek zamanlı güncelleme, collaborative editing
-- **Örnek Repo'lar:**
-  - `socketio/socket.io` → https://github.com/socketio/socket.io — WebSocket kütüphanesi
-  - `supabase/supabase` → https://github.com/supabase/supabase — Realtime abonelikler
-- **Ne Zaman Eklenecek:** Real-time özellikler istendiğinde
-
----
 
 > **TOPLAM EKLENEBİLECEK:** ~180+ repo, 12 kategori
 > **Mevcut Toplam:** 489 repo + 180 repo = **669 repo hedef**

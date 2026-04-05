@@ -38,7 +38,7 @@
 | 16 | `framer/motion` | React animasyon library | Page transitions, scroll animations, gesture handling | Reel | Reel |
 | 17 | `animate-css/animate.css` | 80+ hazır CSS animasyonu | Tarayıcıda oyun, animasyon, interaktif içerik yapmak istiyorsan bu kütüphane hayatını değiştirecek | [Part 33] DUbNWiiDCT2 | Part 33 |
 | 18 | `addyosmani/web-quality-skills` | Lighthouse skorlarını yeşile dönmek için | Coding agent'ına web kalite uzmanı gibi davranmayı öğretiyor. Performans, erişilebilirlik, SEO, güvenlik tek pakette. 150+ Lighthouse kuralı | DVl38HXjOoE | Part 60 |
-| 19 | `magicui-designs/magicui` | Landing page premium bileşenleri | Landing page'in sıradan mı görünüyor? Magic UI ile fark yarat | [Part 6] DTVrti7jICW | Part 6 |
+| 19 | `magicuidesign/magicui` | Landing page premium bileşenleri | Landing page'in sıradan mı görünüyor? Magic UI ile fark yarat | [Part 6] DTVrti7jICW | Part 6 |
 
 ### 🎬 Video & Medya Üretimi
 
@@ -196,7 +196,7 @@
 | Part | Repo | Konu | Reel URL |
 |------|------|------|----------|
 | Part 1 | (AI Infografik Motoru) | Metin yaz, infografik hazır | DTAzhYEDN83 |
-| Part 6 | magicui-designs/magicui | Landing page premium bileşenleri | DTVrti7jICW |
+| Part 6 | magicuidesign/magicui | Landing page premium bileşenleri | DTVrti7jICW |
 | Part 7 | anomalyco/opencode | Claude Code alternatifi | DTYQy28jFKI |
 | Part 8 | CodeWiki | Repo analizi + GitHub ipuçları | DUOa-iQiLi5 |
 | Part 13 | public-apis/public-apis | Ücretsiz API listesi | DTnt94bDCL4 |
@@ -275,7 +275,7 @@ get-shit-done    → Meta-prompting ile vibe coding'de planlı ilerle
 |---|------|----------|--------|
 | 59 | `greensock/GSAP` | Profesyonel web animasyon platformu. Timeline, ScrollTrigger, stagger efektleri | İnternet |
 | 60 | `animejs/animejs` | Hafif JavaScript animasyon kütüphanesi. CSS, SVG, DOM attribute animasyonları | İnternet |
-| 61 | `FormidableLabs/react-spring` | React için fizik-tabanlı spring animasyon kütüphanesi | İnternet |
+| 61 | `pmndrs/react-spring` | React için fizik-tabanlı spring animasyon kütüphanesi | İnternet |
 | 62 | `popmotion/popmotion` | Basit ama güçlü JavaScript animasyon kütüphanesi | İnternet |
 | 63 | `mojs/mojs` | Web için motion graphics araç seti. Complex animasyonlar için | İnternet |
 
@@ -351,7 +351,7 @@ get-shit-done    → Meta-prompting ile vibe coding'de planlı ilerle
 | 99 | `chenglou/react-motion` | React spring-tabanlı animasyon | İnternet |
 | 100 | `sxizm/awesome-svg-animation` | SVG animasyon kaynak derlemesi | İnternet |
 | 101 | `christian-fei/SVG-Morpheus` | SVG path morphing efekti | İnternet |
-| 102 | `lucide/lucide` | Açık kaynak, güzel SVG ikon seti. 1600+ ikon | İnternet |
+| 102 | `lucide-icons/lucide` | Açık kaynak, güzel SVG ikon seti. 1600+ ikon | İnternet |
 | 103 | `pacocoursey/next-themes` | Next.js dark mode tema yönetimi | İnternet |
 
 #### 📱 Active Theory Referans
@@ -360,7 +360,7 @@ get-shit-done    → Meta-prompting ile vibe coding'de planlı ilerle
 |---|------|----------|--------|
 | 104 | `activetheory` (org) | Active Theory stüdyosunun GitHub organizasyonu (10 repo) | İnternet |
 | 105 | `rayjasson98/WebGL-interactive-animation` | WebGL interaktif 3D animasyon | İnternet |
-| 106 | `NickCis/tailwindcss-animate` | Tailwind CSS animasyon eklentisi | İnternet |
+| 106 | `tailwindcss/tailwindcss-animate` | Tailwind CSS animasyon eklentisi | İnternet |
 | 107 | `csstools/postcss-plugins` | PostCSS eklenti koleksiyonu | İnternet |
 
 ---
@@ -436,7 +436,7 @@ get-shit-done    → Meta-prompting ile vibe coding'de planlı ilerle
 | 165 | `streamich/react-use` | 100+ React hooks. Sensor, animation, state, UI | ~44K | Web Arama |
 | 166 | `adobe/react-spectrum` | Adobe'nin UI component library. Accessibility-first | ~12K | Web Arama |
 | 167 | `blueprintjs/blueprint` | Palantir'ın React UI toolkit. Data-dense uygulamalar | ~21K | Web Arama |
-| 168 | `resendl/react-email` | Email template builder with React components | ~14K | Web Arama |
+| 168 | `resend/react-email` | Email template builder with React components | ~14K | Web Arama |
 | 169 | `postcss/autoprefixer` | CSS vendor prefix otomatik ekleme. Parse CSS | ~24K | Web Arama |
 | 170 | `tailwindlabs/prettier-plugin-tailwindcss` | Tailwind CSS class sorting for Prettier | ~5K | Web Arama |
 | 171 | `highlightjs/highlight.js` | Syntax highlighting library. 190+ dil desteği | ~24K | Web Arama |
