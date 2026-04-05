@@ -1,5 +1,6 @@
 import Navbar from '@/components/sections/Navbar'
 import HeroSection from '@/components/sections/HeroSection'
+import MarqueeStrip from '@/components/sections/MarqueeStrip'
 import AboutSection from '@/components/sections/AboutSection'
 import ServicesSection from '@/components/sections/ServicesSection'
 import ProjectsSection from '@/components/sections/ProjectsSection'
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       <Navbar />
       <HeroSection />
+      <MarqueeStrip />
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />

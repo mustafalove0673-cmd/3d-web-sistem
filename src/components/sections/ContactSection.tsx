@@ -2,51 +2,41 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
-import { Send, Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react'
+import { Send, CheckCircle2, MapPin, Phone, Mail, Clock } from 'lucide-react'
 
-function AnimatedCounter({ end, suffix }: { end: number; suffix: string }) {
+function Counter({ end, suffix }: { end: number; suffix: string }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-50px' })
+  const inView = useInView(ref, { once: true })
   const [count, setCount] = useState(0)
-
   useEffect(() => {
-    if (!isInView) return
-    let start = 0
-    const duration = 2000
-    const stepTime = 20
-    const steps = duration / stepTime
-    const increment = end / steps
-
-    const timer = setInterval(() => {
-      start += increment
-      if (start >= end) {
-        setCount(end)
-        clearInterval(timer)
-      } else {
-        setCount(Math.floor(start))
-      }
-    }, stepTime)
-
-    return () => clearInterval(timer)
-  }, [isInView, end])
-
-  return (
-    <span ref={ref} className="font-heading text-3xl sm:text-4xl font-bold text-primary">
-      {count}{suffix}
-    </span>
-  )
+    if (!inView) return
+    let v = 0
+    const t = setInterval(() => {
+      v += end / 60
+      if (v >= end) { setCount(end); clearInterval(t) }
+      else setCount(Math.floor(v))
+    }, 16)
+    return () => clearInterval(t)
+  }, [inView, end])
+  return <span ref={ref}>{count}{suffix}</span>
 }
 
 const stats = [
-  { number: 15, suffix: 'K+', label: 'm² İnşaat Alanı' },
+  { number: 15000, suffix: '+m²', label: 'İnşaat Alanı' },
   { number: 8, suffix: '+', label: 'Şehir' },
   { number: 100, suffix: '%', label: 'Zamanında Teslim' },
-  { number: 24, suffix: '/7', label: 'Destek' },
+]
+
+const contactInfo = [
+  { icon: MapPin, label: 'Atatürk Cad. No:123, Çankaya, Ankara', value: '' },
+  { icon: Phone, label: '+90 312 000 00 00', value: '' },
+  { icon: Mail, label: 'info@ozkanyapi.com.tr', value: '' },
+  { icon: Clock, label: 'Pzt - Cmt: 09:00 - 18:00', value: '' },
 ]
 
 export default function ContactSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const inView = useInView(ref, { once: true, margin: '-80px' })
   const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -56,116 +46,123 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 bg-muted/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
-        {/* Section Header */}
+    <section id="contact" className="relative py-24 md:py-40">
+      {/* BG accent */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-primary/[0.03] blur-[120px]" />
+
+      <div className="relative max-w-[1400px] mx-auto px-6 lg:px-10" ref={ref}>
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <span className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-3 block">İletişim</span>
-          <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-            Projenizi <span className="gradient-text">Konuşalım</span>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="w-16 h-[2px] bg-primary" />
+            <span className="text-xs font-bold text-primary uppercase tracking-[0.25em] font-heading">İletişim</span>
+            <div className="w-16 h-[2px] bg-primary" />
+          </div>
+          <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight mb-4">
+            <span className="text-foreground">Projenizi </span>
+            <span className="text-gradient">Konuşalım</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            Hayalinizdeki projeyi birlikte planlayalım. Ücretsiz keşif ve teklif için bize ulaşın.
+          <p className="text-muted-foreground max-w-lg mx-auto text-sm leading-relaxed">
+            Ücretsiz keşif ve teklif için bize ulaşın. Hayalinizdeki projeyi birlikte planlayalım.
           </p>
         </motion.div>
 
-        {/* Stats Bar */}
+        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16"
+          className="grid grid-cols-3 gap-4 mb-16"
         >
           {stats.map((stat) => (
-            <div key={stat.label} className="text-center p-4 bg-card border border-border/40 rounded-xl">
-              <AnimatedCounter end={stat.number} suffix={stat.suffix} />
-              <p className="text-xs text-muted-foreground mt-1.5">{stat.label}</p>
+            <div key={stat.label} className="text-center p-6 rounded-2xl bg-card border border-white/[0.04]">
+              <div className="font-heading text-2xl md:text-4xl font-bold text-primary">
+                <Counter end={stat.number} suffix={stat.suffix} />
+              </div>
+              <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
             </div>
           ))}
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Contact Info */}
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-16">
+          {/* Info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            initial={{ opacity: 0, x: -40 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className="lg:col-span-2 space-y-6"
           >
-            <div className="space-y-5">
-              {[
-                { icon: MapPin, label: 'Adres', value: 'Atatürk Cad. No:123, Çankaya, Ankara' },
-                { icon: Phone, label: 'Telefon', value: '+90 312 000 00 00' },
-                { icon: Mail, label: 'Email', value: 'info@novayapi.com.tr' },
-                { icon: Clock, label: 'Çalışma Saatleri', value: 'Pazartesi - Cumartesi: 09:00 - 18:00' },
-              ].map((item) => (
-                <div key={item.label} className="flex items-start gap-4 group">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <item.icon className="w-5 h-5 text-primary" />
+            <h3 className="font-heading font-bold text-xl text-foreground">Bize Ulaşın</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Projeniz hakkında bilgi almak veya ücretsiz keşif randevusu 
+              oluşturmak için aşağıdaki kanallardan bize ulaşabilirsiniz.
+            </p>
+            <div className="space-y-4">
+              {contactInfo.map((item) => (
+                <div key={item.label} className="flex items-start gap-3 group">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
+                    <item.icon className="w-4 h-4 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground mb-0.5">{item.label}</p>
-                    <p className="text-sm font-medium">{item.value}</p>
-                  </div>
+                  <p className="text-sm text-muted-foreground pt-2">{item.label}</p>
                 </div>
               ))}
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.4 }}
+            initial={{ opacity: 0, x: 40 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="lg:col-span-3"
           >
-            <form onSubmit={handleSubmit} className="p-6 md:p-8 bg-card border border-border/40 rounded-2xl space-y-5">
+            <form onSubmit={handleSubmit} className="p-8 rounded-2xl bg-card border border-white/[0.04] space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="text-xs text-muted-foreground mb-1.5 block">Ad Soyad</label>
+                  <label className="text-[11px] text-muted-foreground mb-2 block uppercase tracking-wider font-semibold">Ad Soyad</label>
                   <input
                     type="text"
-                    placeholder="John Doe"
-                    className="w-full px-4 py-3 bg-muted/50 border border-border/40 rounded-xl text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors"
+                    placeholder="Adınız Soyadınız"
+                    className="w-full px-4 py-3.5 bg-muted/50 border border-white/[0.06] rounded-xl text-sm placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/10 transition-all duration-300 text-foreground"
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-muted-foreground mb-1.5 block">Telefon</label>
+                  <label className="text-[11px] text-muted-foreground mb-2 block uppercase tracking-wider font-semibold">Telefon</label>
                   <input
                     type="tel"
                     placeholder="+90 555 000 00 00"
-                    className="w-full px-4 py-3 bg-muted/50 border border-border/40 rounded-xl text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors"
+                    className="w-full px-4 py-3.5 bg-muted/50 border border-white/[0.06] rounded-xl text-sm placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/10 transition-all duration-300 text-foreground"
                   />
                 </div>
               </div>
               <div>
-                <label className="text-xs text-muted-foreground mb-1.5 block">Email</label>
+                <label className="text-[11px] text-muted-foreground mb-2 block uppercase tracking-wider font-semibold">Email</label>
                 <input
                   type="email"
                   placeholder="info@example.com"
-                  className="w-full px-4 py-3 bg-muted/50 border border-border/40 rounded-xl text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors"
+                  className="w-full px-4 py-3.5 bg-muted/50 border border-white/[0.06] rounded-xl text-sm placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/10 transition-all duration-300 text-foreground"
                 />
               </div>
               <div>
-                <label className="text-xs text-muted-foreground mb-1.5 block">Mesaj</label>
+                <label className="text-[11px] text-muted-foreground mb-2 block uppercase tracking-wider font-semibold">Proje Detayı</label>
                 <textarea
                   rows={4}
                   placeholder="Projeniz hakkında kısaca bilgi verin..."
-                  className="w-full px-4 py-3 bg-muted/50 border border-border/40 rounded-xl text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors resize-none"
+                  className="w-full px-4 py-3.5 bg-muted/50 border border-white/[0.06] rounded-xl text-sm placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/10 transition-all duration-300 resize-none text-foreground"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground rounded-xl font-heading font-semibold text-sm hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-heading font-semibold text-sm transition-all duration-300 hover:shadow-[0_0_50px_rgba(230,57,70,0.2)]"
               >
                 {submitted ? (
                   <>
-                    <CheckCircle className="w-4 h-4" />
+                    <CheckCircle2 className="w-4 h-4" />
                     Gönderildi!
                   </>
                 ) : (

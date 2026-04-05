@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Josefin_Sans, DM_Sans } from "next/font/google";
+import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 
-const josefinSans = Josefin_Sans({
+const spaceGrotesk = Space_Grotesk({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
@@ -17,22 +17,17 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "NOVA Yapı | Premium İnşaat & Mimari",
-  description: "Hayallerinizi gerçeğe dönüştüren premium inşaat ve mimari çözümler. 20+ yıllık deneyim, modern tasarım, dayanıklı yapılar.",
-  keywords: "inşaat, mimari, villa, yapı, premium, modern",
+  title: "ÖZKAN YAPI | Sinematik İnşaat Deneyimi",
+  description: "Dramatik mimari, sarsıcı yapılar. 20+ yıl deneyim.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="tr" suppressHydrationWarning>
-      <body
-        className={`${josefinSans.variable} ${dmSans.variable} font-body antialiased`}
-      >
-        <div className="noise-overlay" />
+      <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased`}>
+        <div className="noise" />
         {children}
       </body>
     </html>
