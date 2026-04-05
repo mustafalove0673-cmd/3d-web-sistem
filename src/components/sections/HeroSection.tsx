@@ -5,10 +5,10 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { ChevronDown, Play, Zap } from 'lucide-react'
 
 const stats = [
-  { value: '13', label: 'Video İçerik' },
+  { value: '20', label: 'Video İçerik' },
+  { value: '7', label: 'Yüklü Video' },
+  { value: '16', label: 'Skills Görsel' },
   { value: '4K+', label: 'Toplam Beğeni' },
-  { value: '155+', label: 'Yorum' },
-  { value: '7', label: 'GitHub Repo' },
 ]
 
 export default function HeroSection() {

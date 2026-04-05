@@ -9,6 +9,7 @@ import VideoCard from '@/components/sections/VideoCard'
 import VideoModal from '@/components/sections/VideoModal'
 import PopularSection from '@/components/sections/PopularSection'
 import StatsSection from '@/components/sections/StatsSection'
+import SkillsGallery from '@/components/sections/SkillsGallery'
 import Footer from '@/components/sections/Footer'
 import { videos, type Video } from '@/lib/video-data'
 
@@ -102,6 +103,7 @@ export default function Home() {
         )}
       </section>
 
+      <SkillsGallery />
       <StatsSection />
       <Footer />
 

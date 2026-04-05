@@ -7,6 +7,7 @@ import { Menu, X, Play, Search } from 'lucide-react'
 const navLinks = [
   { label: 'Videolar', href: '#videos' },
   { label: 'Kategoriler', href: '#categories' },
+  { label: 'Skills', href: '#skills' },
   { label: 'İstatistikler', href: '#stats' },
 ]
 
