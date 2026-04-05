@@ -412,13 +412,57 @@ Reel thumbnail'inde görülen premium web sitesi tasarım özellikleri:
 
 ---
 
+### 11. @selahattin.unlu Instagram Reels - GitHub Repo Analizi (2026-04-06)
+
+**Kaynak:** https://www.instagram.com/selahattin.unlu
+**Toplam Reel:** 103 (103 posts, 342 following)
+**GitHub Repo Reels:** ~85 adet
+**Derlenen Repo:** 38 adet (detaylı liste: `knowledge-base/GITHUB_REPOS.md`)
+**GitHub:** github.com/selahattinunlu (45 repos)
+
+#### Selahattin Ünlü Profil
+- Full Stack Developer (2013'ten beri)
+- React, Next.js, TypeScript uzmanı
+- YouTube, TikTok, Instagram aktif içerik üreticisi
+- Website: selahattinunlu.com
+
+#### Ana Reel Serileri
+1. **"Bu Repo Tam Sana Göre"** - Format: [Problem] → [Repo] → [3 Özellik]
+2. **"Harika GitHub Repoları"** - Part 1'den Part 86+'ya kadar
+3. **"Trending GitHub Repos"** - Haftalık trending repos
+4. **Claude Code İpuçları** - /simplify, /model opusplan, superpowers
+5. **İşe Yarar Repolar** - Genel geliştirici araçları
+
+#### Öne Çıkan Repo'lar (En Çok Beğenilen)
+
+| Repo | Reel | Beğeni | Konu |
+|------|------|--------|------|
+| `Donchitos/Claude-Code-Game-Studios` | Oyun geliştirme | 2,161 | Claude Code ile oyun stüdyosu |
+| `Comfy-Org/ComfyUI` | AI içerik üretimi | 1,4K+ | Görsel, video, müzik, 3D üret |
+| `shadcn-ui/ui` | UI component | 9.2K+ | Button, modal, dropdown |
+| `BloopAI/vibe-kanban` | AI agent yönetimi | 82K+ views | Claude Code 10x verimli |
+| `microsoft/generative-ai-for-beginners` | AI öğrenme | 105K+ stars | 21 ders, Türkçe |
+
+#### Claude Code İpuçları (Önemli!)
+```
+/simplify        → Son değişiklikleri incele, 3 paralel review al, birleştir
+/model opusplan  → Güçlü modeli sadece karmaşık task'lerde kullan
+superpowers      → AI coding agent'lerin bağlam kaybını önle
+vibe-kanban      → AI coding agent'ları paralel çalıştır, kanban ile yönet
+gstack           → CEO, tasarımcı, QA, güvenlik uzmanı rollerinde çoklu ajan
+```
+
+---
+
 ## GÜNCELLEME GEÇMİŞİ
 
 | Tarih | Bölüm | Değişiklik |
 |-------|-------|-----------|
 | 2026-04-05 | Tümü | İlk oluşturma - 10 bölüm, tüm araştırmalar |
+| 2026-04-06 | Bölüm 11 | @selahattin.unlu 38 GitHub repo analizi eklendi |
 
 ---
 
 > **Not:** Bu dosya canlı bir dokümandır. Her yeni araştırma ve öğrenilen ders eklenmelidir.
 > Güncelleme yaparken tarih ve bölüm bilgisi ekleyin.
+> **Detaylı GitHub Repo Kataloğu:** `knowledge-base/GITHUB_REPOS.md`

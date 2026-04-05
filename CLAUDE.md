@@ -549,12 +549,41 @@ z-ai function -n web_search -a '{"query":"next.js performance optimization 2025 
 | `webstudio-is/webstudio` | Açık kaynak website builder | 8K+ |
 | `remotion-dev/remotion` | React ile MP4 video üret | 21K+ |
 | `siddharthvaddem/openscreen` | SaaS ürün tanıtım videosu | Yeni |
+| `BloopAI/vibe-kanban` | Claude Code'u 10x verimli kullan | 82K+ views |
+| `garrytan/gstack` | CEO, tasarımcı, QA, güvenlik - 23 ajan | Yeni |
+| `Donchitos/Claude-Code-Game-Studios` | Claude Code ile oyun geliştirme | 2.1K+ likes |
+| `msitarzewski/agency-agents` | AI agent takım kurma (80+ rol) | Yeni |
+| `iamlukethedev/Claw3D` | AI agent görsel yönetim ortamı | Yeni |
+| `Comfy-Org/ComfyUI` | AI ile görsel, video, müzik, 3D üret | Yeni |
+| `vikhyat/moondream` | Görselleri anlayan VLM modeli | Yeni |
+| `roboflow/supervision` | Computer vision toolkit | Yeni |
+| `shadcn-ui/ui` | UI component kütüphanesi | 9.2K+ likes |
+| `DavidHDev/react-bits` | React animasyon koleksiyonu | Yeni |
+| `recharts/recharts` | React veri görselleştirme | Yeni |
+| `phaserjs/phaser` | HTML5 2D oyun motoru | Yeni |
+| `pascalorg/editor` | 3D mimari tasarım | 883+ likes |
+| `bigskysoftware/htmx` | JS olmadan dinamik web uygulamaları | Yeni |
+| `strapi/strapi` | Ücretsiz headless CMS | Yeni |
+| `gitroomhq/postiz-app` | Self-hosted sosyal medya yönetimi | 976+ likes |
+| `coreyhaines31/marketingskills` | Geliştirici marketing becerileri | Yeni |
+| `transmute-app/transmute` | Self-hosted dosya dönüştürme | Yeni |
+| `free-for-dev` | Ücretsiz araç ve servis listesi | Yeni |
+| `public-apis/public-apis` | Ücretsiz API koleksiyonu | 44K+ likes |
+| `filamentphp/filament` | Laravel admin paneli (3 komut) | Yeni |
+| `basecamp/omarchy` | Modern Linux dağıtımı | Yeni |
+| `selahattinunlu/yt-music-cli` | Reklamsız YouTube Music CLI | 453+ likes |
+| `memvid` | AI agent long-term memory | Yeni |
+| `awesome-chatgpt-prompts` | 130K+ AI prompt koleksiyonu | 130K+ |
+| `superpowers` | Claude Code context kaybını önle | Yeni |
+| `selahattinunlu/cloud-code-repo` | Cloud Code otopilot repo | Yeni |
 
 #### Claude Code İpuçları (@selahattin.unlu)
 ```
 /simplify        → Son değişiklikleri incele, 3 paralel review al, birleştir
 /model opusplan  → Güçlü modeli sadece karmaşık task'lerde kullan, limitleri tasarruf et
 superpowers      → AI coding agent'lerin bağlam kaybını önle (Claude Code extension)
+vibe-kanban      → AI coding agent'ları paralel çalıştır, kanban ile yönet
+gstack           → CEO, tasarımcı, QA, güvenlik uzmanı rollerinde çoklu ajan
 ```
 
 #### Performans & Test Araçları (@selahattin.unlu)
@@ -564,6 +593,24 @@ Lighthouse      → Performance, accessibility, best practices, SEO skorları
 Code Splitting  → Bundle boyutunu küçült, lazy loading ile yüklenme hızını artır
 Lazy Loading    → Görseller ve heavy component'ları gecikmeli yükle
 ```
+
+#### "tema" Komutunda Selahattin Ünlü Repo Referansları
+```
+"tema" komutu çalıştığında, projeye uygun repo'ları otomatik seç:
+
+Lüks/Premium Website  → three.js + react-bits + framer/motion + shadcn/ui
+SaaS Dashboard        → shadcn/ui + recharts + storybook + filament
+AI Chatbot            → generative-ai-for-beginners + moondream + agency-agents
+Oyun                  → phaser + Claude-Code-Game-Studios
+Sosyal Medya Aracı    → postiz-app + htmx + strapi
+Eğitim Platformu      → forem + strapi + htmx
+E-ticaret             → shadcn/ui + strapi + recharts
+3D/Mimari             → three.js + pascalorg/editor
+Video/Medya           → remotion + ComfyUI + openscreen
+Portfolio             → three.js + react-bits + framer/motion
+```
+
+**Detaylı Katalog:** `knowledge-base/GITHUB_REPOS.md` dosyasına bak.
 
 ---
 
