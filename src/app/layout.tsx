@@ -11,14 +11,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "VİDEO | Teknoloji & Yazılım İçerikleri",
-  description: "En iyi teknoloji, yazılım ve yapay zeka videolarını keşfedin.",
+  title: "VİDEO VAULT | Teknoloji & İçerik Arşivi",
+  description: "Tüm teknoloji videolarını tek bir yerde keşfedin.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="tr" className="dark" suppressHydrationWarning>
-      <body className={`${inter.variable} font-body antialiased`}>
+      <body className={`${inter.variable} font-body antialiased noise-bg`}>
+        {/* Scanline overlay */}
+        <div className="fixed inset-0 pointer-events-none z-[200] overflow-hidden opacity-[0.015]">
+          <div className="w-full h-px bg-accent animate-scanline" />
+        </div>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

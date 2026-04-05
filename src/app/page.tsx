@@ -4,12 +4,13 @@ import { useState, useMemo } from 'react'
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion'
 import Navbar from '@/components/sections/Navbar'
 import HeroSection from '@/components/sections/HeroSection'
+import MarqueeSection from '@/components/sections/MarqueeSection'
+import PopularSection from '@/components/sections/PopularSection'
 import CategoryFilter from '@/components/sections/CategoryFilter'
 import VideoCard from '@/components/sections/VideoCard'
 import VideoModal from '@/components/sections/VideoModal'
-import PopularSection from '@/components/sections/PopularSection'
-import StatsSection from '@/components/sections/StatsSection'
 import SkillsGallery from '@/components/sections/SkillsGallery'
+import StatsSection from '@/components/sections/StatsSection'
 import Footer from '@/components/sections/Footer'
 import { videos, type Video } from '@/lib/video-data'
 
@@ -39,16 +40,27 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       <Navbar />
       <HeroSection />
+      <MarqueeSection />
       <PopularSection />
       <CategoryFilter active={activeCategory} onChange={setActiveCategory} />
 
-      {/* Search + Video Grid */}
-      <section id="videos" className="pb-16 md:pb-24 px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        {/* Search Bar */}
-        <div className="mb-8">
-          <div className="relative max-w-md">
+      {/* Video Grid */}
+      <section id="videos" className="pb-12 md:pb-20 px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        {/* Header + Search */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div>
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-8 h-[2px] bg-hot" />
+              <span className="text-[11px] font-bold text-hot tracking-[0.2em] uppercase">Video Arşivi</span>
+            </div>
+            <h2 className="font-heading text-2xl md:text-3xl font-black tracking-tight">
+              Tüm Videolar
+            </h2>
+          </div>
+
+          <div className="relative w-full sm:w-72">
             <svg
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground"
+              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/50"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -57,24 +69,28 @@ export default function Home() {
             </svg>
             <input
               type="text"
-              placeholder="Video ara..."
+              placeholder="Ara..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 bg-muted/50 border border-border rounded-xl text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent/40 focus:ring-1 focus:ring-accent/20 transition-all"
+              className="w-full pl-10 pr-4 py-2.5 bg-muted/20 border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/10 transition-all"
             />
           </div>
         </div>
 
-        {/* Results count */}
-        <div className="mb-6">
-          <span className="text-sm text-muted-foreground">
-            {filteredVideos.length} video bulundu
+        {/* Count */}
+        <motion.div
+          layout
+          className="mb-6 flex items-center gap-3"
+        >
+          <span className="text-sm text-muted-foreground font-medium">
+            {filteredVideos.length} video
           </span>
-        </div>
+          <div className="h-[1px] flex-1 bg-border/50" />
+        </motion.div>
 
-        {/* Video Grid */}
+        {/* Grid */}
         <LayoutGroup>
-          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             <AnimatePresence mode="popLayout">
               {filteredVideos.map((video, i) => (
                 <VideoCard
@@ -94,11 +110,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center py-20"
           >
-            <div className="text-4xl mb-4">🎬</div>
-            <h3 className="font-heading text-xl font-semibold mb-2">Video Bulunamadı</h3>
-            <p className="text-muted-foreground text-sm">
-              Farklı bir kategori veya arama terimi deneyin.
-            </p>
+            <div className="text-5xl mb-4 opacity-20">🎬</div>
+            <h3 className="font-heading text-lg font-bold mb-2">Sonuç Bulunamadı</h3>
+            <p className="text-muted-foreground text-sm">Farklı filtre veya arama terimi deneyin.</p>
           </motion.div>
         )}
       </section>
@@ -107,7 +121,6 @@ export default function Home() {
       <StatsSection />
       <Footer />
 
-      {/* Video Modal */}
       <VideoModal video={selectedVideo} onClose={() => setSelectedVideo(null)} />
     </main>
   )
