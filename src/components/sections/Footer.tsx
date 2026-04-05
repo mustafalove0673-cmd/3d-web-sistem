@@ -33,7 +33,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-dark overflow-hidden">
+    <footer className="relative bg-dark overflow-hidden mt-auto">
       {/* Marquee */}
       <div className="relative py-6 border-t border-b border-white/5 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
