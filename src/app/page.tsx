@@ -1,10 +1,23 @@
+'use client'
+
+import Navbar from '@/components/sections/Navbar'
+import HeroSection from '@/components/sections/HeroSection'
+import TechSection from '@/components/sections/TechSection'
+import CatalogSection from '@/components/sections/CatalogSection'
+import PaymentSection from '@/components/sections/PaymentSection'
+import StepsSection from '@/components/sections/StepsSection'
+import Footer from '@/components/sections/Footer'
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-black tracking-tight">YAPIPRO</h1>
-        <p className="text-muted-foreground mt-2">Sistem hazır.</p>
-      </div>
+    <main className="min-h-screen flex flex-col">
+      <Navbar />
+      <HeroSection />
+      <TechSection />
+      <CatalogSection />
+      <PaymentSection />
+      <StepsSection />
+      <Footer />
     </main>
   )
 }

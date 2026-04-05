@@ -6,12 +6,12 @@ const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "YAPIPRO",
-  description: "Profesyonel çözümler.",
+  title: "AhşapVilla | Prefabrik Ahşap Evler",
+  description: "Modern ahşap ev teknolojisi ile hayalinizdeki evi 2 ayda teslim ediyoruz.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
