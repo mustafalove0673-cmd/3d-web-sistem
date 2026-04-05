@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Phone } from 'lucide-react'
 
 const navLinks = [
   { label: 'Ana Sayfa', href: '#hero' },
@@ -17,7 +17,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const h = () => setScrolled(window.scrollY > 80)
+    const h = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', h, { passive: true })
     return () => window.removeEventListener('scroll', h)
   }, [])
@@ -26,77 +26,56 @@ export default function Navbar() {
     <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        scrolled
-          ? 'bg-[#0A0A0A]/80 backdrop-blur-2xl border-b border-white/[0.04]'
-          : 'bg-transparent'
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled ? 'bg-white/90 backdrop-blur-xl shadow-sm border-b border-border' : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="flex items-center justify-between h-20">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-18">
           {/* Logo */}
-          <a href="#hero" className="relative z-10 flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center group-hover:shadow-[0_0_30px_rgba(230,57,70,0.3)] transition-shadow duration-500">
-              <span className="font-heading font-bold text-white text-xl leading-none">Ö</span>
+          <a href="#hero" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center group-hover:shadow-lg transition-shadow duration-300">
+              <span className="font-heading font-bold text-primary-foreground text-lg">Ö</span>
             </div>
-            <div>
-              <span className="font-heading font-bold text-[15px] tracking-tight text-foreground">ÖZKAN</span>
-              <span className="text-[11px] text-muted-foreground ml-1.5 font-light tracking-wider">YAPI</span>
+            <div className="hidden sm:block">
+              <span className="font-heading font-bold text-[15px] text-foreground">ÖZKAN</span>
+              <span className="text-muted-foreground text-[11px] ml-1.5 font-light">YAPI</span>
             </div>
           </a>
 
           {/* Desktop */}
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="relative px-5 py-2 text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 group"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-6 rounded-full" />
-              </a>
+            {navLinks.map((l) => (
+              <a key={l.href} href={l.href}
+                className={`px-4 py-2 text-[13px] font-medium rounded-lg transition-all duration-300 ${
+                  scrolled ? 'text-muted-foreground hover:text-foreground hover:bg-primary/5' : 'text-foreground/70 hover:text-foreground'
+                }`}>{l.label}</a>
             ))}
           </div>
 
-          {/* CTA */}
-          <a
-            href="#contact"
-            className="hidden md:flex items-center gap-2 px-6 py-2.5 bg-primary hover:bg-primary/90 text-white rounded-full text-[13px] font-semibold transition-all duration-300 hover:shadow-[0_0_40px_rgba(230,57,70,0.25)]"
-          >
+          <a href="#contact"
+            className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-lg text-[13px] font-semibold hover:bg-primary/90 transition-all duration-300 hover:shadow-md">
+            <Phone className="w-4 h-4" />
             Teklif Al
           </a>
 
-          {/* Mobile */}
-          <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden relative z-10 w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
-            {menuOpen ? <X className="w-5 h-5 text-foreground" /> : <Menu className="w-5 h-5 text-foreground" />}
+          <button onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden fixed inset-0 bg-[#0A0A0A]/98 backdrop-blur-3xl z-40 flex items-center justify-center"
-          >
-            <div className="text-center space-y-6">
-              {navLinks.map((link, i) => (
-                <motion.a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 + i * 0.08 }}
-                  className="block text-3xl font-heading font-bold text-foreground hover:text-primary transition-colors"
-                >
-                  {link.label}
-                </motion.a>
+          <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}
+            className="md:hidden bg-white border-b border-border shadow-lg">
+            <div className="px-6 py-4 space-y-1">
+              {navLinks.map((l, i) => (
+                <motion.a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
+                  initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }}
+                  className="block px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-lg">{l.label}</motion.a>
               ))}
             </div>
           </motion.div>

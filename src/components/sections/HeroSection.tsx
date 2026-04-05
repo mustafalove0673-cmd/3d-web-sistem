@@ -5,165 +5,91 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { ChevronDown } from 'lucide-react'
 
-const HeroScene = dynamic(
-  () => import('@/components/three/HeroScene'),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="absolute inset-0 z-[2] flex items-center justify-center">
-        <div className="w-6 h-6 border-2 border-primary/30 border-t-primary rounded-full animate-spin" />
-      </div>
-    ),
-  }
-)
+const HeroScene = dynamic(() => import('@/components/three/HeroScene'), {
+  ssr: false,
+  loading: () => (
+    <div className="absolute inset-0 z-[2] flex items-center justify-center">
+      <div className="w-6 h-6 border-2 border-primary/30 border-t-primary rounded-full animate-spin" />
+    </div>
+  ),
+})
 
-const letterVariants = {
-  hidden: { y: 100, opacity: 0, rotateX: -80 },
-  visible: (i: number) => ({
-    y: 0,
-    opacity: 1,
-    rotateX: 0,
-    transition: {
-      duration: 0.8,
-      delay: 0.8 + i * 0.04,
-      ease: [0.215, 0.61, 0.355, 1] as [number, number, number, number],
-    },
-  }),
-}
-
-const line1 = 'YAPILAR'
-const line2 = 'GELECEĞİ'
-const line3 = 'İNŞA EDİYORUZ'
-
-function AnimatedText({ text }: { text: string }) {
-  return (
-    <span className="inline-flex overflow-hidden">
-      {text.split('').map((char, i) => (
-        <motion.span
-          key={`${text}-${i}`}
-          custom={i}
-          variants={letterVariants}
-          initial="hidden"
-          animate="visible"
-          className="inline-block"
-          style={{ perspective: '500px' }}
-        >
-          {char === ' ' ? '\u00A0' : char}
-        </motion.span>
-      ))}
-    </span>
-  )
-}
+const words = ['Hayallerinizi', 'Gerçeğe', 'Dönüştürüyoruz']
 
 export default function HeroSection() {
   const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  })
-
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95])
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
+  const y = useTransform(scrollYProgress, [0, 1], [0, 150])
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0])
 
   return (
-    <section id="hero" ref={ref} className="relative h-screen overflow-hidden flex items-center justify-center">
-      {/* 3D Background */}
-      <div className="absolute inset-0 z-[1]">
+    <section id="hero" ref={ref} className="relative h-screen overflow-hidden flex items-center">
+      {/* 3D BG */}
+      <div className="absolute inset-0">
         <HeroScene />
       </div>
+      {/* Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/40 to-white z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent z-[2]" />
 
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/70 via-transparent to-[#0A0A0A] z-[2]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/80 via-transparent to-transparent z-[2]" />
+      {/* Content */}
+      <motion.div style={{ y, opacity }} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
+        <div className="max-w-2xl">
+          {/* Badge */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-8">
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span className="text-xs font-semibold text-primary">20+ Yıllık Deneyim</span>
+          </motion.div>
 
-      {/* Diagonal lines */}
-      <div className="absolute inset-0 z-[3] opacity-[0.02]" style={{
-        backgroundImage: 'repeating-linear-gradient(-45deg, transparent, transparent 100px, rgba(255,255,255,0.15) 100px, rgba(255,255,255,0.15) 101px)',
-      }} />
-
-      {/* Main Content */}
-      <motion.div style={{ y, opacity, scale }} className="relative z-10 text-center px-6">
-        {/* Overline */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex items-center justify-center gap-3 mb-8"
-        >
-          <div className="w-12 h-[1px] bg-primary" />
-          <span className="text-xs font-semibold text-primary uppercase tracking-[0.3em]">
-            ÖZKAN YAPI — 2004&apos;den Beri
-          </span>
-          <div className="w-12 h-[1px] bg-primary" />
-        </motion.div>
-
-        {/* Big Typography */}
-        <div className="font-heading font-bold leading-[0.9] tracking-tighter mb-8">
-          <div className="text-[clamp(3rem,10vw,9rem)] text-foreground/90">
-            <AnimatedText text={line1} />
+          {/* Heading - Word by word reveal */}
+          <div className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
+            {words.map((word, i) => (
+              <motion.span
+                key={word}
+                initial={{ opacity: 0, y: 60, rotateX: -15 }}
+                animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 + i * 0.2, ease: [0.22, 1, 0.36, 1] }}
+                className={`inline-block mr-4 ${i === 1 ? 'text-gradient' : 'text-foreground'}`}
+              >
+                {word}
+              </motion.span>
+            ))}
           </div>
-          <div className="text-[clamp(3rem,10vw,9rem)] text-gradient mt-1">
-            <AnimatedText text={line2} />
-          </div>
-          <div className="text-[clamp(3rem,10vw,9rem)] text-foreground/90 mt-1">
-            <AnimatedText text={line3} />
-          </div>
+
+          {/* Subtitle */}
+          <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="text-muted-foreground text-base md:text-lg leading-relaxed mb-10 max-w-lg">
+            Modern mimari, kaliteli malzeme ve zamanında teslim garantisiyle
+            projelerinizi hayata geçiriyoruz.
+          </motion.p>
+
+          {/* CTA */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.5 }}
+            className="flex flex-wrap gap-4">
+            <a href="#projects"
+              className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-heading font-semibold text-sm hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              Projelerimiz
+            </a>
+            <a href="#about"
+              className="px-8 py-4 border border-border text-foreground rounded-xl font-heading font-semibold text-sm hover:bg-muted transition-all duration-300">
+              Daha Fazla
+            </a>
+          </motion.div>
         </div>
-
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.4 }}
-          className="text-white/50 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
-        >
-          Sinematik mimari, dayanıklı yapılar ve zamanında teslim garantisiyle
-          hayalinizdeki projeyi birlikte inşa ediyoruz.
-        </motion.p>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
-          className="flex items-center justify-center gap-4"
-        >
-          <a
-            href="#projects"
-            className="group relative px-10 py-4 bg-primary text-white rounded-full text-sm font-semibold overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(230,57,70,0.3)]"
-          >
-            <span className="relative z-10">Projeleri Keşfet</span>
-            <motion.div
-              className="absolute inset-0 bg-white/20"
-              initial={{ x: '-100%' }}
-              whileHover={{ x: '100%' }}
-              transition={{ duration: 0.5 }}
-            />
-          </a>
-          <a
-            href="#about"
-            className="px-10 py-4 border border-white/10 text-foreground rounded-full text-sm font-semibold hover:border-white/25 hover:bg-white/5 transition-all duration-300"
-          >
-            Hakkımızda
-          </a>
-        </motion.div>
       </motion.div>
 
-      {/* Scroll Down */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-      >
-        <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>
-          <ChevronDown className="w-6 h-6 text-white/30" />
+      {/* Scroll indicator */}
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+        <span className="text-[11px] text-muted-foreground tracking-widest uppercase">Keşfet</span>
+        <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+          <ChevronDown className="w-5 h-5 text-muted-foreground/50" />
         </motion.div>
       </motion.div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A0A0A] to-transparent z-[5]" />
     </section>
   )
 }

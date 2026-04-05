@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/hooks/use-lenis";
 
-const spaceGrotesk = Space_Grotesk({
+const playfair = Playfair_Display({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
@@ -18,20 +18,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ÖZKAN YAPI | Sinematik İnşaat Deneyimi",
-  description: "Dramatik mimari, sarsıcı yapılar. 20+ yıl deneyim.",
+  title: "ÖZKAN Yapı | Klasik İnşaat & Mimari",
+  description: "20+ yıl deneyimle güvenilir inşaat çözümleri.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="tr" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased`}>
-        <SmoothScroll>
-          <div className="noise" />
-          {children}
-        </SmoothScroll>
+      <body className={`${playfair.variable} ${inter.variable} font-body antialiased`}>
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
