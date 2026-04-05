@@ -1,43 +1,25 @@
 import type { Metadata } from "next";
-import { Josefin_Sans, Source_Sans_3 } from "next/font/google";
+import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const josefin = Josefin_Sans({
-  variable: "--font-josefin",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const sourceSans = Source_Sans_3({
-  variable: "--font-source-sans",
+const dmSans = DM_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "NOVA Construction | Premium Villa Construction",
-  description:
-    "NOVA Construction - Premium villa construction with 25+ years of experience. Smart home integration, pool & spa design, interior design, landscape architecture and more.",
-  keywords: [
-    "NOVA Construction",
-    "Villa Construction",
-    "Premium Villa",
-    "Interior Design",
-    "Landscape Architecture",
-    "Smart Home",
-    "Pool Design",
-    "Luxury Villa",
-    "Istanbul Construction",
-  ],
-  authors: [{ name: "NOVA Construction" }],
-  openGraph: {
-    title: "NOVA Construction | Premium Villa Construction",
-    description:
-      "25+ years of excellence in premium villa construction. Smart homes, luxury interiors, and world-class craftsmanship.",
-    type: "website",
-  },
+  title: "NOVA AI | Web Site Üretim Sistemi",
+  description: "Tek komutla Awwwards-seviye web sitesi üret. 19 paket, 777+ repo referansı, 14 sektör template'i.",
+  keywords: ["NOVA AI", "website generator", "3D website", "Awwwards", "AI web"],
 };
 
 export default function RootLayout({
@@ -46,10 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${josefin.variable} ${sourceSans.variable} font-body antialiased bg-dark text-foreground`}
-      >
+    <html lang="tr" suppressHydrationWarning>
+      <body className={`${spaceGrotesk.variable} ${dmSans.variable} font-body antialiased`}>
         {children}
       </body>
     </html>
