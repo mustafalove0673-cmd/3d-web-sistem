@@ -11,18 +11,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "VİDEO VAULT | Teknoloji & İçerik Arşivi",
-  description: "Tüm teknoloji videolarını tek bir yerde keşfedin.",
+  title: "YAPI PRO | Profesyonel İnşaat & Mimarlık Çözümleri",
+  description: "25 yılı aşkın deneyimle, hayalinizdeki yapıyı gerçeğe dönüştürüyoruz. Konut, ticari ve endüstriyel inşaat projeleri.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="tr" className="dark" suppressHydrationWarning>
+    <html lang="tr" suppressHydrationWarning>
       <body className={`${inter.variable} font-body antialiased noise-bg`}>
-        {/* Scanline overlay */}
-        <div className="fixed inset-0 pointer-events-none z-[200] overflow-hidden opacity-[0.015]">
-          <div className="w-full h-px bg-accent animate-scanline" />
-        </div>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

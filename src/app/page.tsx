@@ -1,127 +1,31 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import { motion, AnimatePresence, LayoutGroup } from 'framer-motion'
 import Navbar from '@/components/sections/Navbar'
 import HeroSection from '@/components/sections/HeroSection'
 import MarqueeSection from '@/components/sections/MarqueeSection'
-import PopularSection from '@/components/sections/PopularSection'
-import CategoryFilter from '@/components/sections/CategoryFilter'
-import VideoCard from '@/components/sections/VideoCard'
-import VideoModal from '@/components/sections/VideoModal'
-import SkillsGallery from '@/components/sections/SkillsGallery'
+import AboutSection from '@/components/sections/AboutSection'
+import ServicesSection from '@/components/sections/ServicesSection'
+import ProjectsSection from '@/components/sections/ProjectsSection'
 import StatsSection from '@/components/sections/StatsSection'
+import TestimonialsSection from '@/components/sections/TestimonialsSection'
+import CTASection from '@/components/sections/CTASection'
+import ContactSection from '@/components/sections/ContactSection'
 import Footer from '@/components/sections/Footer'
-import { videos, type Video } from '@/lib/video-data'
 
 export default function Home() {
-  const [activeCategory, setActiveCategory] = useState('Tümü')
-  const [selectedVideo, setSelectedVideo] = useState<Video | null>(null)
-  const [searchQuery, setSearchQuery] = useState('')
-
-  const filteredVideos = useMemo(() => {
-    let result = videos
-    if (activeCategory !== 'Tümü') {
-      result = result.filter((v) => v.category === activeCategory)
-    }
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase()
-      result = result.filter(
-        (v) =>
-          v.title.toLowerCase().includes(q) ||
-          v.description.toLowerCase().includes(q) ||
-          v.tags.some((t) => t.toLowerCase().includes(q))
-      )
-    }
-    return result
-  }, [activeCategory, searchQuery])
-
   return (
     <main className="min-h-screen flex flex-col">
       <Navbar />
       <HeroSection />
       <MarqueeSection />
-      <PopularSection />
-      <CategoryFilter active={activeCategory} onChange={setActiveCategory} />
-
-      {/* Video Grid */}
-      <section id="videos" className="pb-12 md:pb-20 px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        {/* Header + Search */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-8 h-[2px] bg-hot" />
-              <span className="text-[11px] font-bold text-hot tracking-[0.2em] uppercase">Video Arşivi</span>
-            </div>
-            <h2 className="font-heading text-2xl md:text-3xl font-black tracking-tight">
-              Tüm Videolar
-            </h2>
-          </div>
-
-          <div className="relative w-full sm:w-72">
-            <svg
-              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/50"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <input
-              type="text"
-              placeholder="Ara..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-muted/20 border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/10 transition-all"
-            />
-          </div>
-        </div>
-
-        {/* Count */}
-        <motion.div
-          layout
-          className="mb-6 flex items-center gap-3"
-        >
-          <span className="text-sm text-muted-foreground font-medium">
-            {filteredVideos.length} video
-          </span>
-          <div className="h-[1px] flex-1 bg-border/50" />
-        </motion.div>
-
-        {/* Grid */}
-        <LayoutGroup>
-          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-            <AnimatePresence mode="popLayout">
-              {filteredVideos.map((video, i) => (
-                <VideoCard
-                  key={video.id}
-                  video={video}
-                  index={i}
-                  onClick={setSelectedVideo}
-                />
-              ))}
-            </AnimatePresence>
-          </motion.div>
-        </LayoutGroup>
-
-        {filteredVideos.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center py-20"
-          >
-            <div className="text-5xl mb-4 opacity-20">🎬</div>
-            <h3 className="font-heading text-lg font-bold mb-2">Sonuç Bulunamadı</h3>
-            <p className="text-muted-foreground text-sm">Farklı filtre veya arama terimi deneyin.</p>
-          </motion.div>
-        )}
-      </section>
-
-      <SkillsGallery />
+      <AboutSection />
+      <ServicesSection />
+      <ProjectsSection />
       <StatsSection />
+      <TestimonialsSection />
+      <CTASection />
+      <ContactSection />
       <Footer />
-
-      <VideoModal video={selectedVideo} onClose={() => setSelectedVideo(null)} />
     </main>
   )
 }

@@ -2,109 +2,121 @@
 
 import { useRef, useEffect, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { TrendingUp, Film, Grid3X3, Star } from 'lucide-react'
+import { Building2, Users, Award, HardHat, TrendingUp, Shield } from 'lucide-react'
 
-const statsData = [
-  { icon: Film, label: 'Toplam Video', value: 20, suffix: '', color: 'text-accent', glow: 'shadow-accent/20' },
-  { icon: TrendingUp, label: 'Toplam Beğeni', value: 4876, suffix: '+', color: 'text-hot', glow: 'shadow-hot/20' },
-  { icon: Grid3X3, label: 'Skills Görsel', value: 16, suffix: '', color: 'text-lime', glow: 'shadow-lime/20' },
-  { icon: Star, label: 'GitHub Repo', value: 7, suffix: '', color: 'text-violet', glow: 'shadow-violet/20' },
+const stats = [
+  { icon: Building2, value: 350, suffix: '+', label: 'Tamamlanan Proje', color: 'text-accent' },
+  { icon: Users, value: 500, suffix: '+', label: 'Mutlu Müşteri', color: 'text-gold' },
+  { icon: Award, value: 28, suffix: '', label: 'Ödül & Sertifika', color: 'text-accent' },
+  { icon: TrendingUp, value: 25, suffix: '+', label: 'Yıllık Deneyim', color: 'text-gold' },
+  { icon: HardHat, value: 120, suffix: '+', label: 'Profesyonel Ekip', color: 'text-accent' },
+  { icon: Shield, value: 100, suffix: '%', label: 'Müşteri Memnuniyeti', color: 'text-gold' },
 ]
 
-function useCountUp(end: number, duration: number, inView: boolean) {
+function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {
   const [count, setCount] = useState(0)
-  useEffect(() => {
-    if (!inView) return
-    let start = 0
-    const increment = end / (duration / 16)
-    const timer = setInterval(() => {
-      start += increment
-      if (start >= end) { setCount(end); clearInterval(timer) }
-      else setCount(Math.floor(start))
-    }, 16)
-    return () => clearInterval(timer)
-  }, [end, duration, inView])
-  return count
-}
+  const [started, setStarted] = useState(false)
 
-function StatCard({ stat, index }: { stat: typeof statsData[0]; index: number }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-50px' })
-  const count = useCountUp(stat.value, 2000, inView)
-  const Icon = stat.icon
+  useEffect(() => {
+    if (!started) return
+    let current = 0
+    const step = target / 60
+    const timer = setInterval(() => {
+      current += step
+      if (current >= target) {
+        setCount(target)
+        clearInterval(timer)
+      } else {
+        setCount(Math.floor(current))
+      }
+    }, 25)
+    return () => clearInterval(timer)
+  }, [started, target])
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40, scale: 0.9 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -4, scale: 1.02 }}
-      className="relative group bg-card border border-border rounded-xl p-5 md:p-6 overflow-hidden transition-all duration-300 hover:border-accent/20"
-    >
-      {/* BG gradient glow */}
-      <div className={`absolute -top-12 -right-12 w-32 h-32 rounded-full bg-gradient-to-br blur-[60px] opacity-0 group-hover:opacity-30 transition-opacity duration-700 ${
-        stat.color === 'text-accent' ? 'from-accent/40 to-transparent' :
-        stat.color === 'text-hot' ? 'from-hot/40 to-transparent' :
-        stat.color === 'text-lime' ? 'from-lime/40 to-transparent' :
-        'from-violet/40 to-transparent'
-      }`} />
-
-      <div className="relative">
-        <div className={`w-10 h-10 rounded-lg bg-muted/30 border border-border flex items-center justify-center mb-4 ${stat.color}`}>
-          <Icon className="w-4.5 h-4.5" />
-        </div>
-        <motion.div
-          className="text-3xl md:text-4xl font-black tracking-tight mb-0.5"
-          key={inView ? 'visible' : 'hidden'}
-        >
-          <span className={stat.color}>{count.toLocaleString('tr-TR')}</span>
-          <span className="text-lg text-muted-foreground">{stat.suffix}</span>
-        </motion.div>
-        <div className="text-[11px] text-muted-foreground uppercase tracking-widest font-medium">{stat.label}</div>
-      </div>
-
-      {/* Top accent */}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.1 + 0.3, duration: 0.6 }}
-        className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent ${
-          stat.color === 'text-accent' ? 'via-accent/60' :
-          stat.color === 'text-hot' ? 'via-hot/60' :
-          stat.color === 'text-lime' ? 'via-lime/60' :
-          'via-violet/60'
-        } to-transparent origin-left`}
-      />
-    </motion.div>
+    <span ref={() => setStarted(true)}>
+      {count}
+      {suffix}
+    </span>
   )
 }
 
 export default function StatsSection() {
-  return (
-    <section id="stats" className="py-12 md:py-20 px-6 lg:px-8 max-w-7xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-100px' }}
-        transition={{ duration: 0.6 }}
-        className="mb-8"
-      >
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-8 h-[2px] bg-lime" />
-          <span className="text-[11px] font-bold text-lime tracking-[0.2em] uppercase">İstatistikler</span>
-        </div>
-        <h2 className="font-heading text-2xl md:text-3xl font-black tracking-tight">
-          Rakamlarla
-        </h2>
-      </motion.div>
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-100px' })
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
-        {statsData.map((stat, i) => (
-          <StatCard key={stat.label} stat={stat} index={i} />
-        ))}
+  return (
+    <section ref={ref} className="relative py-24 md:py-32 bg-dark overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 grid-pattern-dark" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-accent/[0.06] rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-gold/[0.04] rounded-full blur-[100px]" />
+
+      {/* Geometric shapes */}
+      <div className="absolute top-16 right-16 w-24 h-24 border border-white/[0.04] rounded-xl animate-rotate-slower" />
+      <div className="absolute bottom-16 left-16 w-16 h-16 border border-accent/10 rounded-full animate-float-slow" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-3 mb-4"
+          >
+            <div className="w-10 h-[2px] bg-accent" />
+            <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-accent">
+              Rakamlarla Biz
+            </span>
+            <div className="w-10 h-[2px] bg-accent" />
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white mb-5"
+          >
+            Güveni Rakamlarla{' '}
+            <span className="text-gradient-gold">Kanıtlıyoruz</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-white/50 text-base leading-relaxed"
+          >
+            25 yılı aşkın inşaat tecrübemizle sektörde fark yaratıyoruz
+          </motion.p>
+        </div>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5">
+          {stats.map((stat, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
+              className="group relative p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] hover:border-accent/20 transition-all duration-500 text-center"
+            >
+              {/* Glow */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ boxShadow: `0 0 40px -15px ${stat.color === 'text-accent' ? 'rgba(200,121,65,0.15)' : 'rgba(184,134,11,0.15)'}` }} />
+
+              <div className="relative z-10">
+                <div className="w-12 h-12 rounded-xl bg-white/[0.06] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <stat.icon className={`w-6 h-6 ${stat.color}`} />
+                </div>
+                <div className="text-3xl md:text-4xl font-black text-white mb-1">
+                  {isInView ? <AnimatedCounter target={stat.value} suffix={stat.suffix} /> : '0'}
+                </div>
+                <div className="text-xs text-white/40 font-medium tracking-wide">
+                  {stat.label}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )
