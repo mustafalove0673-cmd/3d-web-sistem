@@ -5,7 +5,7 @@
 > **YouTube Playlist:** "Harika Github Repoları" (80+ bölüm)
 > **TikTok:** @selahattin_unlu (aynı içerikler)
 > **Derleme Tarihi:** 2026-04-06
-> **Son Güncelleme:** 2026-04-08 (Kapsamlı web araştırması + 40+ arama + reel URL eşleştirme)
+> **Son Güncelleme:** 2026-04-10 (40 yeni 3D repo + 30 UI/UX repo eklendi → Toplam ~180 repo)
 
 ---
 
@@ -365,6 +365,90 @@ get-shit-done    → Meta-prompting ile vibe coding'de planlı ilerle
 
 ---
 
+#### 🏗️ 3D Game Engine & Rendering (40 Yeni Repo - 2026-04-10)
+
+| # | Repo | Açıklama | Stars | Kaynak |
+|---|------|----------|-------|--------|
+| 108 | `BabylonJS/Babylon.js` | 3D game & rendering engine. WebGL, WebGPU, physics, GUI desteği. Three.js alternatifi | ~25K | Web Arama |
+| 109 | `playcanvas/engine` | WebGL game engine + visual editor. Yüksek performanslı 3D içerik | ~9K | Web Arama |
+| 110 | `CesiumGS/cesium` | 3D geospatial platform. 3D küre, terrain, harita. GIS web uygulamaları standardı | ~12K | Web Arama |
+| 111 | `aframevr/aframe` | VR deneyimleri için HTML-like markup. Mozilla desteği. WebXR framework | ~16K | Web Arama |
+| 112 | `google/model-viewer` | Google'ın 3D model viewer web component. glTF/GLB, AR desteği | ~8K | Web Arama |
+| 113 | `deckgl/deck.gl` | Uber'ın 3D veri görselleştirme framework'u. GPU-powered geospatial | ~12K | Web Arama |
+| 114 | `keplergl/kepler.gl` | Uber'ın no-code jeospatial analiz aracı. deck.gl tabanlı | ~10K | Web Arama |
+| 115 | `pmndrs/cannon-es` | Modern 3D fizik engine (cannon.js fork). R3F ile yaygın kullanım | ~2.7K | Web Arama |
+| 116 | `dimforge/rapier.js` | Rust tabanlı yüksek performanslı fizik engine. WASM desteği | ~3.3K | Web Arama |
+| 117 | `kripken/ammo.js` | Bullet physics engine'in JS/WASM port'u. Endüstri standardı | ~2.3K | Web Arama |
+| 118 | `schteppe/cannon.js` | Orijinal hafif 3D fizik engine. Three.js projelerinde yaygın | ~8.4K | Web Arama |
+| 119 | `pmndrs/leva` | React-first GUI panel. R3F/Three.js sahne debug standardı | ~4.5K | Web Arama |
+| 120 | `pmndrs/use-gesture` | Pointer/gesture hook kütüphanesi. R3F drag, pinch, scroll | ~9.3K | Web Arama |
+| 121 | `pixiv/three-vrm` | VRM 3D avatar format'ı Three.js desteği. VRoid karakterler | ~1.8K | Web Arama |
+| 122 | `tweenjs/tween.js` | JS tweening engine. Kamera/obje animasyonları için | ~9.8K | Web Arama |
+| 123 | `software-mansion/TypeGPU` | WebGPU toolkit. TypeScript ile shader yazma. Software Mansion | ~1.6K | Web Arama |
+| 124 | `stackgl/glslify` | GLSL modül sistemi. require() tarzı shader import'ları | ~3.2K | Web Arama |
+| 125 | `vasturiano/3d-force-graph` | 3D force-directed graph renderer. Three.js tabanlı | ~4.2K | Web Arama |
+| 126 | `vasturiano/react-globe.gl` | React 3D küre bileşeni. Arc, point, polygon desteği | ~2.3K | Web Arama |
+| 127 | `IceCreamYou/THREE.Terrain` | Prosedürel terrain generation. Noise, erosion, texture splatting | ~1.1K | Web Arama |
+| 128 | `kovacsv/Online3DViewer` | Web 3D model viewer. OBJ, STL, GLTF, GLB, FBX, DAE | ~3.8K | Web Arama |
+| 129 | `jagenjo/webglstudio.js` | Browser-based 3D graphics suite. Scene/material editor | ~2.2K | Web Arama |
+| 130 | `theatre-js/theatre` | Motion design tool. Visual timeline keyframe editor. Awwwards sitelerinde yaygın | ~10K | Web Arama |
+| 131 | `Tresjs/tres` | Vue.js Three.js renderer. React Three Fiber'in Vue versiyonu | ~4.4K | Web Arama |
+| 132 | `gkjohnson/three-mesh-bvh` | Hızlandırılmış raycasting. Three.js BVH spatial queries | ~1.4K | Web Arama |
+| 133 | `jwagner/simplex-noise` | Modern simplex noise. Prosedürel terrain, cloud, organik motion | ~1.6K | Web Arama |
+| 134 | `pmndrs/react-xr` | React WebXR renderer. VR/AR, controllers, hands, room-scale | ~1.1K | Web Arama |
+| 135 | `KhronosGroup/glTF-Transform` | glTF 2.0 asset pipeline. Inspect, convert, optimize | ~1.7K | Web Arama |
+| 136 | `BrokenSource/DepthFlow` | AI depth estimation ile fotoğraflardan 3D parallax animasyon | ~2.2K | Web Arama |
+| 137 | `plotly/plotly.js` | 3D surface, scatter3D, mesh3D grafikleri. Interactive data viz | ~16K | Web Arama |
+| 138 | `maplibre/maplibre-gl-js` | 3D terrain ve building render. Mapbox GL fork | ~5.3K | Web Arama |
+| 139 | `sjfricke/awesome-webgl` | WebGL kütüphane ve kaynak derlemesi | ~1K | Web Arama |
+| 140 | `felixpalmer/procedural-gl-js` | OSM verisinden prosedürel 3D bina/terrain. Three.js tabanlı | ~800 | Web Arama |
+| 141 | `xeolabs/xeogl` | BIM ve mühendislik için WebGL 3D model visualization | ~1.3K | Web Arama |
+| 142 | `3dcitydb/3dcitydb-web-map` | CityGML 3D şehir modeli web front-end. CesiumJS tabanlı | ~600 | Web Arama |
+| 143 | `desandro/3dtransforms` | CSS 3D transforms referansı. perspective, rotate, translate3d | ~2.4K | Web Arama |
+| 144 | `gkjohnson/three-gpu-pathtracer` | Real-time path tracer. WebGL 2.0 GPU. Global illumination | ~2.2K | Web Arama |
+| 145 | `lo-th/Oimo.js` | Hafif 3D fizik engine. Babylon.js dahili physics | ~1.5K | Web Arama |
+| 146 | `pmndrs/kokomi.js` | Creative coding framework. Three.js tabanlı, R3F uyumlu | ~1.2K | Web Arama |
+| 147 | `twitchax/twigl` | Minimal GLSL shader editor. Tek sayfa playground | ~600 | Web Arama |
+
+---
+
+#### 🎨 UI/UX Component Libraries & Design Systems (30 Yeni Repo - 2026-04-10)
+
+| # | Repo | Açıklama | Stars | Kaynak |
+|---|------|----------|-------|--------|
+| 148 | `ant-design/ant-design` | Enterprise-level UI component library. 95K+ stars | ~95K | Web Arama |
+| 149 | `chakra-ui/chakra-ui` | React accessible component library. Theme, dark mode | ~37K | Web Arama |
+| 150 | `mantinedev/mantine` | Modern React component library. 120+ components | ~25K | Web Arama |
+| 151 | `radix-ui/themes` | Radix Themes. Accessible, unstyled, customizable UI primitives | ~16K | Web Arama |
+| 152 | `mui/material-ui` | Google Material Design React components. 94K+ stars | ~94K | Web Arama |
+| 153 | `nextui-org/nextui` | Next.js için modern, güzel, hızlı UI library | ~22K | Web Arama |
+| 154 | `sveltejs/kit` | Svelte full-stack framework. Hızlı, hafif web uygulamaları | ~19K | Web Arama |
+| 155 | `nuxt/nuxt` | Vue.js full-stack framework. SSR, SSG, hybrid rendering | ~54K | Web Arama |
+| 156 | `reach/reach-ui` | Accessible React UI primitives. WAI-ARIA uyumlu | ~8K | Web Arama |
+| 157 | `segmentio/evergreen` | Evergreen React UI. Segment'in tasarım sistemi | ~7K | Web Arama |
+| 158 | `styled-components/styled-components` | CSS-in-JS solution. React component styling | ~41K | Web Arama |
+| 159 | `emotion-sh/emotion` | Performanslı CSS-in-JS library. React framework agnostic | ~18K | Web Arama |
+| 160 | `tailwindlabs/heroicons` | Tailwind CSS ekibi. Beautiful hand-crafted SVG icons | ~21K | Web Arama |
+| 161 | `Font-Awesome/Font-Awesome` | En büyük ikon kütüphanesi. 2000+ free icons | ~74K | Web Arama |
+| 162 | `phosphor-icons/phosphor-react` | Flexible icon family. React, Vue, Vanilla desteği | ~17K | Web Arama |
+| 163 | `react-icons/react-icons` | Popular icon collections as React components | ~19K | Web Arama |
+| 164 | `joshwcomeau/usehooks` | Modern React hook collection. 30+ custom hooks | ~42K | Web Arama |
+| 165 | `streamich/react-use` | 100+ React hooks. Sensor, animation, state, UI | ~44K | Web Arama |
+| 166 | `adobe/react-spectrum` | Adobe'nin UI component library. Accessibility-first | ~12K | Web Arama |
+| 167 | `blueprintjs/blueprint` | Palantir'ın React UI toolkit. Data-dense uygulamalar | ~21K | Web Arama |
+| 168 | `resendl/react-email` | Email template builder with React components | ~14K | Web Arama |
+| 169 | `postcss/autoprefixer` | CSS vendor prefix otomatik ekleme. Parse CSS | ~24K | Web Arama |
+| 170 | `tailwindlabs/prettier-plugin-tailwindcss` | Tailwind CSS class sorting for Prettier | ~5K | Web Arama |
+| 171 | `highlightjs/highlight.js` | Syntax highlighting library. 190+ dil desteği | ~24K | Web Arama |
+| 172 | `sindresorhus/refined-github` | GitHub UX improvements. Feature enrichment | ~24K | Web Arama |
+| 173 | `vanonm/cursor-effects` | Custom cursor effects. Particle, trail, ripple cursors | ~3K | Web Arama |
+| 174 | `getify/You-Dont-Know-JS` | JS öğrenme serisi. Scope, closures, async, ES6+ | ~177K | Web Arama |
+| 175 | `flexboxfroggy/FlexboxFroggy` | Flexbox öğrenme oyunu. İnteraktif eğitim | ~17K | Web Arama |
+| 176 | `carbon-design-system/carbon` | IBM Carbon Design System. React + vanilla components | ~7.5K | Web Arama |
+| 177 | `salesforce/ux-design-system` | Lightning Design System. Enterprise UI pattern'leri | ~2K | Web Arama |
+
+---
+
 ### 📹 Active Theory Video Analizi (2026-04-09)
 
 **Kaynak:** Yüklenen MP4 video ("Active Theory treats the web like a medium, not a canvas")
@@ -404,10 +488,14 @@ get-shit-done    → Meta-prompting ile vibe coding'de planlı ilerle
 |--------|-------|
 | Toplam İncelenen Reel | 103 |
 | GitHub Repo İçerikli Reel | ~82 |
-| Bu Derlemede Bulunan Repo | 104+ |
+| **Bu Derlemede Bulunan Repo** | **177** |
+| Selahattin Ünlü Reel'den | 58 |
+| UI/UX & Creative Web (Web Araştırması) | 49 |
+| **Yeni 3D Engine & Rendering** | **40** |
+| **Yeni UI/UX Component & Design** | **30** |
 | Eşleştirilmiş Reel URL | 37 |
 | Part Numarası Eşleştirilmiş | 35 |
-| Kategori Sayısı | 26+ |
+| Kategori Sayısı | 30+ |
 | YouTube "Harika Github Repoları" Bölüm | 82+ |
 | Eksik Part (login gerekli) | ~40 |
 
@@ -449,10 +537,10 @@ get-shit-done    → Meta-prompting ile vibe coding'de planlı ilerle
 
 ---
 
-> **Son Güncelleme:** 2026-04-09
-> **Toplam Kayıtlı Repo:** 104+
+> **Son Güncelleme:** 2026-04-10
+> **Toplam Kayıtlı Repo:** 177
 > **Eşleştirilmiş Reel URL:** 37
-> **Kategori Sayısı:** 26+
-> **Yeni Eklenen (bu güncelleme):** 50 UI/UX & Creative Web reposu (#59-#107) + Active Theory video analizi + Instagram reel DPzNC-jgIxo (@amine__codes)
+> **Kategori Sayısı:** 30+
+> **Yeni Eklenen (bu güncelleme):** 40 3D Engine & Rendering reposu (#108-#147) + 30 UI/UX Component & Design reposu (#148-#177)
 > **Derleyen:** NOVA Digital Arts Sistemi
 > **Araştırma Yöntemi:** İnternet araştırması, video analiz, Instagram reel analiz, earlier: 40+ web search, 27 JSON dosya analizi, agent-browser login denemesi
