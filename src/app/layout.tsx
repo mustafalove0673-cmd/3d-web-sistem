@@ -1,41 +1,41 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Josefin_Sans, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const josefin = Josefin_Sans({
+  variable: "--font-josefin",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const sourceSans = Source_Sans_3({
+  variable: "--font-source-sans",
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Melek Yüksel Hair Beauty | Saç ve Güzellik Merkezi",
+  title: "NOVA Construction | Premium Villa & Construction",
   description:
-    "Melek Yüksel Hair Beauty - Pursaklar, Ankara'da profesyonel saç kesimi, ombre, renk, cilt bakımı ve güzellik hizmetleri. Randevu için hemen arayın!",
+    "NOVA Construction - Premium villa inşaatı, iç mimarlık ve peyzaj tasarımı. 25 yılı aşkın deneyim ile hayalinizdeki yaşam alanını gerçeğe dönüştürüyoruz.",
   keywords: [
-    "Melek Yüksel",
-    "Hair Beauty",
-    "Saç Kesimi",
-    "Ombre",
-    "Cilt Bakımı",
-    "Güzellik Merkezi",
-    "Pursaklar",
-    "Ankara",
+    "NOVA Construction",
+    "Villa İnşaatı",
+    "Premium Villa",
+    "İç Mimarlık",
+    "Peyzaj Tasarımı",
+    "İstanbul",
+    "Lüks Villa",
+    "Akıllı Ev",
+    "Havuz İnşaatı",
   ],
-  authors: [{ name: "Melek Yüksel Hair Beauty" }],
+  authors: [{ name: "NOVA Construction" }],
   openGraph: {
-    title: "Melek Yüksel Hair Beauty | Saç ve Güzellik Merkezi",
+    title: "NOVA Construction | Premium Villa & Construction",
     description:
-      "Pursaklar, Ankara'da profesyonel saç ve güzellik hizmetleri. Güzelliğinize değer katıyoruz.",
+      "25 yılı aşkın deneyim ile premium villa inşaatı, iç mimarlık ve peyzaj tasarımı.",
     type: "website",
   },
 };
@@ -48,10 +48,9 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${inter.variable} font-body antialiased bg-dark text-foreground`}
+        className={`${josefin.variable} ${sourceSans.variable} font-body antialiased bg-dark text-foreground`}
       >
         {children}
-        <Toaster />
       </body>
     </html>
   );

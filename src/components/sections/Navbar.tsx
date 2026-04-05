@@ -1,164 +1,176 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { useLanguageStore, translations } from '@/lib/language-store';
+import { Menu, Globe, ChevronDown } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
+import { useLanguageStore } from '@/lib/language-store';
 
 const navLinks = [
-  { href: '#hero', tr: 'Ana Sayfa', en: 'Home' },
-  { href: '#about', tr: 'Hakkımızda', en: 'About' },
-  { href: '#services', tr: 'Hizmetler', en: 'Services' },
-  { href: '#gallery', tr: 'Galeri', en: 'Gallery' },
-  { href: '#booking', tr: 'Randevu', en: 'Booking' },
-  { href: '#contact', tr: 'İletişim', en: 'Contact' },
+  { key: 'nav.home', href: '#home' },
+  { key: 'nav.about', href: '#about' },
+  { key: 'nav.services', href: '#services' },
+  { key: 'nav.projects', href: '#projects' },
+  { key: 'nav.contact', href: '#contact' },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
-  const { language, setLanguage } = useLanguageStore();
-  const t = translations[language];
+  const { t, language, toggleLanguage } = useLanguageStore();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-
-      const sections = navLinks.map(l => l.href.slice(1));
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && el.getBoundingClientRect().top <= 150) {
-          setActiveSection(sections[i]);
-          break;
-        }
-      }
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollTo = useCallback((href: string) => {
+  const handleNavClick = (href: string) => {
     setMobileOpen(false);
     const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  }, []);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <>
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? 'glass-strong py-3'
-            : 'bg-transparent py-5'
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? 'glass-strong shadow-lg shadow-black/20'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <motion.a
-            href="#hero"
-            onClick={(e) => { e.preventDefault(); scrollTo('#hero'); }}
-            className="flex flex-col items-start group"
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('#home');
+            }}
+            className="flex items-center gap-1"
             whileHover={{ scale: 1.02 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <span className="font-display text-xl md:text-2xl font-bold tracking-wide text-cream">
-              Melek Yüksel
+            <span className="font-display text-2xl md:text-3xl font-bold tracking-wider">
+              NOV
             </span>
-            <span className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-gradient-gold font-body">
-              Hair Beauty
+            <span className="font-display text-2xl md:text-3xl font-bold tracking-wider text-gold">
+              A
             </span>
           </motion.a>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link, i) => (
+          {/* Desktop Nav Links */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
               <motion.a
-                key={link.href}
+                key={link.key}
                 href={link.href}
-                onClick={(e) => { e.preventDefault(); scrollTo(link.href); }}
-                className={`relative px-4 py-2 text-sm font-body tracking-wide transition-colors duration-300 ${
-                  activeSection === link.href.slice(1)
-                    ? 'text-cream'
-                    : 'text-cream/50 hover:text-cream/80'
-                }`}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * i, duration: 0.5 }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(link.href);
+                }}
+                className="font-body text-sm tracking-wide text-text-secondary hover:text-text-primary transition-colors duration-300 relative group"
+                whileHover={{ y: -1 }}
               >
-                {language === 'tr' ? link.tr : link.en}
-                {activeSection === link.href.slice(1) && (
-                  <motion.div
-                    layoutId="nav-indicator"
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-rose"
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
+                {t(link.key)}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full" />
               </motion.a>
             ))}
-
-            {/* Language Toggle */}
-            <motion.button
-              onClick={() => setLanguage(language === 'tr' ? 'en' : 'tr')}
-              className="ml-4 px-3 py-1.5 text-xs tracking-wider uppercase glass rounded-full text-cream/70 hover:text-cream hover:border-gold/30 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {language === 'tr' ? 'EN' : 'TR'}
-            </motion.button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-3 lg:hidden">
-            <button
-              onClick={() => setLanguage(language === 'tr' ? 'en' : 'tr')}
-              className="px-3 py-1.5 text-xs tracking-wider uppercase glass rounded-full text-cream/70"
+          {/* Right side: Language + CTA */}
+          <div className="hidden md:flex items-center gap-3">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="text-text-secondary hover:text-text-primary gap-1.5 px-3"
             >
-              {language === 'tr' ? 'EN' : 'TR'}
-            </button>
-            <motion.button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="relative w-10 h-10 flex items-center justify-center text-cream"
-              whileTap={{ scale: 0.9 }}
+              <Globe className="size-4" />
+              <span className="text-xs font-bold uppercase">{language}</span>
+            </Button>
+
+            <Button
+              onClick={() => handleNavClick('#contact')}
+              className="bg-gold hover:bg-gold-light text-dark font-semibold text-sm px-5 h-9 transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
+              size="sm"
             >
-              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-            </motion.button>
+              {t('nav.quote')}
+            </Button>
+          </div>
+
+          {/* Mobile Menu */}
+          <div className="flex items-center gap-2 md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleLanguage}
+              className="text-text-secondary hover:text-text-primary"
+            >
+              <Globe className="size-4" />
+            </Button>
+
+            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-text-primary"
+                >
+                  <Menu className="size-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-dark-lighter border-dark-lighter w-72">
+                <SheetTitle className="text-gold font-display text-xl font-bold">
+                  NOVA
+                </SheetTitle>
+                <div className="flex flex-col gap-1 mt-8">
+                  {navLinks.map((link, i) => (
+                    <motion.a
+                      key={link.key}
+                      href={link.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleNavClick(link.href);
+                      }}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.08 }}
+                      className="flex items-center justify-between px-4 py-3 text-text-secondary hover:text-text-primary hover:bg-white/5 rounded-lg transition-colors font-body text-base"
+                    >
+                      {t(link.key)}
+                      <ChevronDown className="size-4 rotate-[-90deg] opacity-50" />
+                    </motion.a>
+                  ))}
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="mt-4 px-4"
+                  >
+                    <Button
+                      onClick={() => handleNavClick('#contact')}
+                      className="w-full bg-gold hover:bg-gold-light text-dark font-semibold"
+                    >
+                      {t('nav.quote')}
+                    </Button>
+                  </motion.div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
-      </motion.nav>
-
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-dark/95 backdrop-blur-xl flex items-center justify-center lg:hidden"
-          >
-            <nav className="flex flex-col items-center gap-6">
-              {navLinks.map((link, i) => (
-                <motion.a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => { e.preventDefault(); scrollTo(link.href); }}
-                  className="text-3xl font-display text-cream/80 hover:text-cream transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ delay: 0.05 * i, duration: 0.4 }}
-                >
-                  {language === 'tr' ? link.tr : link.en}
-                </motion.a>
-              ))}
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+      </div>
+    </motion.nav>
   );
 }
